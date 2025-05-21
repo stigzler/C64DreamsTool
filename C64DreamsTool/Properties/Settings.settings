@@ -1,0 +1,30 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="C64DreamsTool.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="DarkButtonBG" Type="System.Drawing.Color" Scope="Application">
+      <Value Profile="(Default)">32, 32, 32</Value>
+    </Setting>
+    <Setting Name="DarkButtonText" Type="System.Drawing.Color" Scope="Application">
+      <Value Profile="(Default)">230, 230, 230</Value>
+    </Setting>
+    <Setting Name="LightButtonBG" Type="System.Drawing.Color" Scope="Application">
+      <Value Profile="(Default)">240, 240, 240</Value>
+    </Setting>
+    <Setting Name="LightButtonText" Type="System.Drawing.Color" Scope="Application">
+      <Value Profile="(Default)">32, 32, 32</Value>
+    </Setting>
+    <Setting Name="LaunchboxRootPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">{Please Set}</Value>
+    </Setting>
+    <Setting Name="C64DreamsRootPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">{Please Set}</Value>
+    </Setting>
+    <Setting Name="ValidLbPath" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="ValidC64dPath" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
