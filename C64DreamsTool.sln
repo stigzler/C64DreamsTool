@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36109.1 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C64DreamsTool", "C64DreamsTool\C64DreamsTool.csproj", "{C26393C9-3F2B-478C-9DFF-234B245F197B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C26393C9-3F2B-478C-9DFF-234B245F197B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C26393C9-3F2B-478C-9DFF-234B245F197B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C26393C9-3F2B-478C-9DFF-234B245F197B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C26393C9-3F2B-478C-9DFF-234B245F197B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {84B49E7A-6E34-4477-8204-019D3B418760}
+	EndGlobalSection
+EndGlobal
