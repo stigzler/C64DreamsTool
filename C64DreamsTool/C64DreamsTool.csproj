@@ -15,7 +15,7 @@
 
   <ItemGroup>
     <PackageReference Include="stigzler.Utilities.Base" Version="1.1.14" />
-    <PackageReference Include="stigzler.Winforms.Base" Version="1.1.9" />
+    <PackageReference Include="stigzler.Winforms.Base" Version="1.1.10" />
   </ItemGroup>
 
   <ItemGroup>

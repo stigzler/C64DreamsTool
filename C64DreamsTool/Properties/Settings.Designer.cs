@@ -106,5 +106,17 @@ namespace C64DreamsTool.Properties {
                 this["ValidC64dPath"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool NavBarCollapsedOnClose {
+            get {
+                return ((bool)(this["NavBarCollapsedOnClose"]));
+            }
+            set {
+                this["NavBarCollapsedOnClose"] = value;
+            }
+        }
     }
 }
