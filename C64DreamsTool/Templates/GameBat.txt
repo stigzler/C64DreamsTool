@@ -1,0 +1,37 @@
+﻿start ..\..\Retroarch\Controller.exe
+
+for %%I in (.) do set folder=%%~nxI
+set manual="%folder% Manual.cbz"
+set pdf="%folder% Manual.pdf"
+set cmd="%folder%.cmd"
+set m3u="%folder%.m3u"
+set crt="%folder%.crt"
+set d81="%folder%.d81"
+
+if exist %manual% (
+start ..\..\Retroarch\Manuals.exe
+start ..\..\Utilities\Cdisplayex\Cdisplayex.exe %manual%
+)
+
+if exist %pdf% (
+start ..\..\Retroarch\Manuals.exe
+start ..\..\Utilities\Cdisplayex\Cdisplayex.exe %pdf%
+)
+
+REM Timeout 1
+
+if exist %cmd% (
+..\..\Retroarch\Retroarch.exe -L "..\..\Retroarch\cores\vice_x64_libretro.dll" %cmd%
+)
+
+if exist %m3u% (
+..\..\Retroarch\Retroarch.exe -L "..\..\Retroarch\cores\vice_x64_libretro.dll" %m3u%
+)
+
+if exist %crt% (
+..\..\Retroarch\Retroarch.exe -L "..\..\Retroarch\cores\vice_x64_libretro.dll" %crt%
+)
+
+if exist %d81% (
+..\..\Retroarch\Retroarch.exe -L "..\..\Retroarch\cores\vice_x64_libretro.dll" %d81%
+)

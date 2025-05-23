@@ -1,0 +1,3 @@
+﻿Start ..\..\..\Utilities\AutoHotkey\AutoHotkey.exe ".\Review.ahk"
+cd ..\..\..\Utilities\Mpxplay
+Start MagazineMusic.exe

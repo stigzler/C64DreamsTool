@@ -113,10 +113,52 @@ namespace C64DreamsTool.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap eraser {
+            get {
+                object obj = ResourceManager.GetObject("eraser", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap FolderOpen {
             get {
                 object obj = ResourceManager.GetObject("FolderOpen", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to start ..\..\Retroarch\Controller.exe
+        ///
+        ///for %%I in (.) do set folder=%%~nxI
+        ///set manual=&quot;%folder% Manual.cbz&quot;
+        ///set pdf=&quot;%folder% Manual.pdf&quot;
+        ///set cmd=&quot;%folder%.cmd&quot;
+        ///set m3u=&quot;%folder%.m3u&quot;
+        ///set crt=&quot;%folder%.crt&quot;
+        ///set d81=&quot;%folder%.d81&quot;
+        ///
+        ///if exist %manual% (
+        ///start ..\..\Retroarch\Manuals.exe
+        ///start ..\..\Utilities\Cdisplayex\Cdisplayex.exe %manual%
+        ///)
+        ///
+        ///if exist %pdf% (
+        ///start ..\..\Retroarch\Manuals.exe
+        ///start ..\..\Utilities\Cdisplayex\Cdisplayex.exe %pdf%
+        ///)
+        ///
+        ///REM Timeout 1
+        ///
+        ///if exist %cmd% (
+        ///..\.. [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string GameBat {
+            get {
+                return ResourceManager.GetString("GameBat", resourceCulture);
             }
         }
         
@@ -126,6 +168,40 @@ namespace C64DreamsTool.Properties {
         internal static System.Drawing.Bitmap games {
             get {
                 object obj = ResourceManager.GetObject("games", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Set WshShell = CreateObject(&quot;WScript.Shell&quot; ) 
+        ///WshShell.Run chr(34) &amp; &quot;Game.bat&quot; &amp; Chr(34), 0 
+        ///Set WshShell = Nothing 
+        ///WScript.Sleep 2000
+        ///Dim ObjShell :Set ObjShell = CreateObject(&quot;Wscript.Shell&quot;)
+        ///ObjShell.AppActivate(&quot;Retroarch VICE&quot;).
+        /// </summary>
+        internal static string GameVbs {
+            get {
+                return ResourceManager.GetString("GameVbs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap greenCheck {
+            get {
+                object obj = ResourceManager.GetObject("greenCheck", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap greenPlus {
+            get {
+                object obj = ResourceManager.GetObject("greenPlus", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -207,6 +283,73 @@ namespace C64DreamsTool.Properties {
             get {
                 object obj = ResourceManager.GetObject("minus", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap plus_circle {
+            get {
+                object obj = ResourceManager.GetObject("plus-circle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap redCross {
+            get {
+                object obj = ResourceManager.GetObject("redCross", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to #SingleInstance Force
+        ///#WinActivateForce
+        ///
+        ///Run, &quot;..\..\..\Utilities\SumatraPDF\SumatraPDF.exe&quot; &quot;[MAGAZINEFILE]&quot; -fullscreen -view &quot;book view&quot; -page [PAGENUMBER]
+        ///
+        ///Gui, -dpiscale
+        ///Gui, +AlwaysOnTop
+        ///Gui, -Caption			;removes caption and border
+        ///Gui, color, Black				; sets window color
+        ///Gui, Add, Picture, W%A_ScreenWidth% H%A_ScreenHeight%, ..\..\..\Utilities\SumatraPDF\Loading.png
+        ///Gui, Show, , Blocker
+        ///
+        ///SetTitleMatchMode, 2
+        ///WinWait, SumatraPDF
+        ///WinActivate, SumatraPDF
+        ///Sleep, 1500
+        ///WinSet, Transparent, 2 [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ReviewAhk {
+            get {
+                return ResourceManager.GetString("ReviewAhk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Start ..\..\..\Utilities\AutoHotkey\AutoHotkey.exe &quot;.\Review.ahk&quot;
+        ///cd ..\..\..\Utilities\Mpxplay
+        ///Start MagazineMusic.exe.
+        /// </summary>
+        internal static string ReviewBat {
+            get {
+                return ResourceManager.GetString("ReviewBat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Set WshShell = CreateObject(&quot;WScript.Shell&quot; ) 
+        ///WshShell.Run chr(34) &amp; &quot;Review.bat&quot; &amp; Chr(34), 0 
+        ///Set WshShell = Nothing.
+        /// </summary>
+        internal static string ReviewVbs {
+            get {
+                return ResourceManager.GetString("ReviewVbs", resourceCulture);
             }
         }
         

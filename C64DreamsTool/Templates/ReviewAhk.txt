@@ -1,0 +1,95 @@
+﻿#SingleInstance Force
+#WinActivateForce
+
+Run, "..\..\..\Utilities\SumatraPDF\SumatraPDF.exe" "[MAGAZINEFILE]" -fullscreen -view "book view" -page [PAGENUMBER]
+
+Gui, -dpiscale
+Gui, +AlwaysOnTop
+Gui, -Caption			;removes caption and border
+Gui, color, Black				; sets window color
+Gui, Add, Picture, W%A_ScreenWidth% H%A_ScreenHeight%, ..\..\..\Utilities\SumatraPDF\Loading.png
+Gui, Show, , Blocker
+
+SetTitleMatchMode, 2
+WinWait, SumatraPDF
+WinActivate, SumatraPDF
+Sleep, 1500
+WinSet, Transparent, 255, Blocker
+Sleep, 50
+WinSet, Transparent, 245, Blocker
+Sleep, 50
+WinSet, Transparent, 235, Blocker
+Sleep, 50
+WinSet, Transparent, 225, Blocker
+Sleep, 50
+WinSet, Transparent, 215, Blocker
+Sleep, 50
+WinSet, Transparent, 205, Blocker
+Sleep, 50
+WinSet, Transparent, 195, Blocker
+Sleep, 50
+WinSet, Transparent, 185, Blocker
+Sleep, 50
+WinSet, Transparent, 175, Blocker
+Sleep, 50
+WinSet, Transparent, 165, Blocker
+Sleep, 50
+WinSet, Transparent, 155, Blocker
+Sleep, 50
+WinSet, Transparent, 145, Blocker
+Sleep, 50
+WinSet, Transparent, 135, Blocker
+Sleep, 50
+WinSet, Transparent, 125, Blocker
+Sleep, 50
+WinSet, Transparent, 115, Blocker
+Sleep, 50
+WinSet, Transparent, 105, Blocker
+Sleep, 50
+WinSet, Transparent, 95, Blocker
+Sleep, 50
+WinSet, Transparent, 85, Blocker
+Sleep, 50
+WinSet, Transparent, 75, Blocker
+Sleep, 50
+WinSet, Transparent, 65, Blocker
+Sleep, 50
+WinSet, Transparent, 55, Blocker
+Sleep, 50
+WinSet, Transparent, 45, Blocker
+Sleep, 50
+WinSet, Transparent, 35, Blocker
+Sleep, 50
+WinSet, Transparent, 25, Blocker
+Sleep, 50
+WinSet, Transparent, 15, Blocker
+Sleep, 50
+WinSet, Transparent, 5, Blocker
+Sleep, 50
+Gui, -AlwaysOnTop
+Gui, Hide
+
+SetTimer, MyFunction, 5000  
+
+ProcessExist(Name){
+   Process,Exist,%Name%
+   return Errorlevel
+}
+
+Return
+
+MyFunction:
+iF ProcessExist("SumatraPDF.exe")
+{ 
+
+}
+else
+{
+    ExitApp
+}
+return
+
+ESC::
+Process, Close, SumatraPDF.exe
+ExitApp
+return

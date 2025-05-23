@@ -153,7 +153,7 @@
         FrkJZFfGUfsLaSPfpSsy0PUFQ/PgVFeVIKEAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="fileObjectTextBox4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="ImagePathFB.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
         dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAEgSURBVDhPpdPBSgJhFIbh74rmHrqQWrhp2yKioAiV
@@ -164,7 +164,7 @@
         FrkJZFfGUfsLaSPfpSsy0PUFQ/PgVFeVIKEAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="fileObjectTextBox3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="MagazineFB.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
         dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAEgSURBVDhPpdPBSgJhFIbh74rmHrqQWrhp2yKioAiV
@@ -175,7 +175,7 @@
         FrkJZFfGUfsLaSPfpSsy0PUFQ/PgVFeVIKEAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="fileObjectTextBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="SidFB.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
         dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAEgSURBVDhPpdPBSgJhFIbh74rmHrqQWrhp2yKioAiV
@@ -186,7 +186,7 @@
         FrkJZFfGUfsLaSPfpSsy0PUFQ/PgVFeVIKEAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="fileObjectTextBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="GameFIleFB.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
         dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAEgSURBVDhPpdPBSgJhFIbh74rmHrqQWrhp2yKioAiV
@@ -196,6 +196,20 @@
         ttaobrJapJEWhzMofNyu0ruytEgjLfamUVTXS3x1UlqkkRa7Uyi9NzPsnC9okUZabE7iQDUz9C5SWqSR
         FrkJZFfGUfsLaSPfpSsy0PUFQ/PgVFeVIKEAAAAASUVORK5CYII=
 </value>
+  </data>
+  <data name="ManualFB.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAEgSURBVDhPpdPBSgJhFIbh74rmHrqQWrhp2yKioAiV
+        cYZKAynIQAKFKKSIFi4iF0FQ2oRBRJBQQWQONfHTiGgy88WBWsSMi78Wz+ac8y4PSOI/0LBGc2wYjo3k
+        CIbcyGGiYSE9ShCG9Pt9tpViy3U5Vg9pVLv83idwZsKkv89QVX6RWcex2bm0I7ufvbQ4TcMOvB0OX0oR
+        gaqwXTd5fzwbS1qcJLE8dMscPBVjfbrlWMO3bUqL2iJyg+ct9h42tEgjLY7mke89Fujf5bVIIy2qc1jv
+        ttaobrJapJEWhzMofNyu0ruytEgjLfamUVTXS3x1UlqkkRa7Uyi9NzPsnC9okUZabE7iQDUz9C5SWqSR
+        FrkJZFfGUfsLaSPfpSsy0PUFQ/PgVFeVIKEAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="label20.ToolTipText" xml:space="preserve">
+    <value>This is the name of the C64 gameslist (essentially a Platform created by C64Dreams). By default this is "Games" but some may have changed this name. If so, enter the new 'Platform' name here. Be precise. Note: untested feature.</value>
   </data>
   <data name="label5.ToolTipText" xml:space="preserve">
     <value>This should point to the root "C64 Dreams" Directory. This directory also contains a directory of the same name, so be careful. You'll know you're in the right one if you can see Launcbox.exe in there and NOT Configurator.exe.</value>

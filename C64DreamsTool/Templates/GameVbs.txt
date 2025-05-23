@@ -1,0 +1,6 @@
+﻿Set WshShell = CreateObject("WScript.Shell" ) 
+WshShell.Run chr(34) & "Game.bat" & Chr(34), 0 
+Set WshShell = Nothing 
+WScript.Sleep 2000
+Dim ObjShell :Set ObjShell = CreateObject("Wscript.Shell")
+ObjShell.AppActivate("Retroarch VICE")

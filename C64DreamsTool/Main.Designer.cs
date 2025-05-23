@@ -54,6 +54,9 @@
             ConsoleRTB = new stigzler.Winforms.Base.UIElements.RichTextBox();
             label6 = new stigzler.Winforms.Base.UIElements.Label();
             InstallTopPN = new stigzler.Winforms.Base.UIElements.Panel();
+            MagPackInstallIL = new stigzler.Winforms.Base.UIElements.ImageLabel();
+            HotfixInstalledIL = new stigzler.Winforms.Base.UIElements.ImageLabel();
+            C64DInstalledIL = new stigzler.Winforms.Base.UIElements.ImageLabel();
             PageTitleLB = new stigzler.Winforms.Base.UIElements.Label();
             InstallButtonsFLP = new FlowLayoutPanel();
             Import64DBT = new stigzler.Winforms.Base.UIElements.Button();
@@ -61,21 +64,37 @@
             ImportMagsBT = new stigzler.Winforms.Base.UIElements.Button();
             PathsWarningLB = new stigzler.Winforms.Base.UIElements.Label();
             GamesTP = new TabPage();
-            button1 = new stigzler.Winforms.Base.UIElements.Button();
-            label14 = new stigzler.Winforms.Base.UIElements.Label();
-            fileObjectTextBox4 = new stigzler.Winforms.Base.UserControls.FileObjectTextBox();
-            label13 = new stigzler.Winforms.Base.UIElements.Label();
-            numericUpDown1 = new stigzler.Winforms.Base.UIElements.NumericUpDown();
-            label12 = new stigzler.Winforms.Base.UIElements.Label();
-            textBox2 = new stigzler.Winforms.Base.UIElements.TextBox();
-            label11 = new stigzler.Winforms.Base.UIElements.Label();
-            fileObjectTextBox3 = new stigzler.Winforms.Base.UserControls.FileObjectTextBox();
-            label10 = new stigzler.Winforms.Base.UIElements.Label();
-            fileObjectTextBox2 = new stigzler.Winforms.Base.UserControls.FileObjectTextBox();
-            label9 = new stigzler.Winforms.Base.UIElements.Label();
-            fileObjectTextBox1 = new stigzler.Winforms.Base.UserControls.FileObjectTextBox();
+            AddGameWarningLB = new stigzler.Winforms.Base.UIElements.Label();
+            AddGamePN = new stigzler.Winforms.Base.UIElements.Panel();
+            AddGameBT = new stigzler.Winforms.Base.UIElements.Button();
+            label19 = new stigzler.Winforms.Base.UIElements.Label();
+            label18 = new stigzler.Winforms.Base.UIElements.Label();
+            RemoveIMageBT = new stigzler.Winforms.Base.UIElements.Button();
+            ImagePathFB = new stigzler.Winforms.Base.UserControls.FileObjectTextBox();
+            GameImagePB = new stigzler.Winforms.Base.UIElements.PictureBox();
+            ImagesCB = new stigzler.Winforms.Base.UIElements.ComboBox();
+            WarnOnOverwriteChB = new stigzler.Winforms.Base.UIElements.CheckBox();
+            AlsoUpdateLbChB = new stigzler.Winforms.Base.UIElements.CheckBox();
+            label17 = new stigzler.Winforms.Base.UIElements.Label();
+            NotesTB = new stigzler.Winforms.Base.UIElements.TextBox();
+            label16 = new stigzler.Winforms.Base.UIElements.Label();
+            label15 = new stigzler.Winforms.Base.UIElements.Label();
+            PublisherTB = new stigzler.Winforms.Base.UIElements.TextBox();
+            DeveloperTB = new stigzler.Winforms.Base.UIElements.TextBox();
+            GameNameTB = new stigzler.Winforms.Base.UIElements.TextBox();
             label8 = new stigzler.Winforms.Base.UIElements.Label();
-            textBox1 = new stigzler.Winforms.Base.UIElements.TextBox();
+            label11 = new stigzler.Winforms.Base.UIElements.Label();
+            MagazineFB = new stigzler.Winforms.Base.UserControls.FileObjectTextBox();
+            SidFB = new stigzler.Winforms.Base.UserControls.FileObjectTextBox();
+            label14 = new stigzler.Winforms.Base.UIElements.Label();
+            label9 = new stigzler.Winforms.Base.UIElements.Label();
+            GameFIleFB = new stigzler.Winforms.Base.UserControls.FileObjectTextBox();
+            ManualFB = new stigzler.Winforms.Base.UserControls.FileObjectTextBox();
+            label13 = new stigzler.Winforms.Base.UIElements.Label();
+            label10 = new stigzler.Winforms.Base.UIElements.Label();
+            PageNumberNUM = new stigzler.Winforms.Base.UIElements.NumericUpDown();
+            label12 = new stigzler.Winforms.Base.UIElements.Label();
+            CustomCmdTB = new stigzler.Winforms.Base.UIElements.TextBox();
             label2 = new stigzler.Winforms.Base.UIElements.Label();
             SettingsTP = new TabPage();
             groupBox2 = new stigzler.Winforms.Base.UIElements.GroupBox();
@@ -83,6 +102,8 @@
             SettsOpenUtilsBT = new stigzler.Winforms.Base.UIElements.Button();
             SettsOPenConfigBT = new stigzler.Winforms.Base.UIElements.Button();
             groupBox1 = new stigzler.Winforms.Base.UIElements.GroupBox();
+            label20 = new stigzler.Winforms.Base.UIElements.Label();
+            GameslistNameTB = new stigzler.Winforms.Base.UIElements.TextBox();
             label5 = new stigzler.Winforms.Base.UIElements.Label();
             label4 = new stigzler.Winforms.Base.UIElements.Label();
             LaunchboxFBD = new stigzler.Winforms.Base.UserControls.FileObjectTextBox();
@@ -100,7 +121,9 @@
             InstallTopPN.SuspendLayout();
             InstallButtonsFLP.SuspendLayout();
             GamesTP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            AddGamePN.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)GameImagePB).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)PageNumberNUM).BeginInit();
             SettingsTP.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox1.SuspendLayout();
@@ -180,7 +203,7 @@
             statusStrip1.BackColor = Color.FromArgb(25, 25, 25);
             statusStrip1.ForeColor = Color.FromArgb(220, 220, 220);
             statusStrip1.Items.AddRange(new ToolStripItem[] { label7, StatusPB, StatusPrimaryOpLB, StatusSecondaryOpLB });
-            statusStrip1.Location = new Point(0, 415);
+            statusStrip1.Location = new Point(0, 609);
             statusStrip1.Name = "statusStrip1";
             statusStrip1.ShowItemToolTips = true;
             statusStrip1.Size = new Size(704, 23);
@@ -338,7 +361,7 @@
             NavBarPN.ForeColor = Color.FromArgb(220, 220, 220);
             NavBarPN.Location = new Point(0, 48);
             NavBarPN.Name = "NavBarPN";
-            NavBarPN.Size = new Size(160, 367);
+            NavBarPN.Size = new Size(160, 561);
             NavBarPN.TabIndex = 4;
             // 
             // NavGamesBT
@@ -397,7 +420,7 @@
             MainTC.Name = "MainTC";
             MainTC.SelectedIndex = 0;
             MainTC.SelectedTabColor = Color.FromArgb(34, 120, 187);
-            MainTC.Size = new Size(544, 367);
+            MainTC.Size = new Size(544, 561);
             MainTC.TabIndex = 5;
             MainTC.TabOutlineColor = Color.FromArgb(125, 125, 125);
             MainTC.UnselectedTabBackColor = Color.FromArgb(20, 20, 20);
@@ -411,7 +434,7 @@
             InstallTP.Location = new Point(4, 22);
             InstallTP.Name = "InstallTP";
             InstallTP.Padding = new Padding(3);
-            InstallTP.Size = new Size(536, 341);
+            InstallTP.Size = new Size(536, 535);
             InstallTP.TabIndex = 0;
             InstallTP.Text = "Install";
             // 
@@ -423,9 +446,9 @@
             InstallPN.Controls.Add(label6);
             InstallPN.Dock = DockStyle.Fill;
             InstallPN.ForeColor = Color.FromArgb(220, 220, 220);
-            InstallPN.Location = new Point(3, 121);
+            InstallPN.Location = new Point(3, 142);
             InstallPN.Name = "InstallPN";
-            InstallPN.Size = new Size(530, 217);
+            InstallPN.Size = new Size(530, 390);
             InstallPN.TabIndex = 11;
             // 
             // ConsoleRTB
@@ -439,7 +462,7 @@
             ConsoleRTB.Name = "ConsoleRTB";
             ConsoleRTB.OverrideTheme = true;
             ConsoleRTB.ReadOnly = true;
-            ConsoleRTB.Size = new Size(519, 188);
+            ConsoleRTB.Size = new Size(519, 361);
             ConsoleRTB.TabIndex = 9;
             ConsoleRTB.Text = "Greetings Professor Falken.\nShall we play a game?\n[oops sorry - wrong meeting]\n> Awaiting operation...\n";
             // 
@@ -466,6 +489,9 @@
             // 
             InstallTopPN.BackColor = Color.FromArgb(35, 35, 35);
             InstallTopPN.BackgroundShadeFactor = 1D;
+            InstallTopPN.Controls.Add(MagPackInstallIL);
+            InstallTopPN.Controls.Add(HotfixInstalledIL);
+            InstallTopPN.Controls.Add(C64DInstalledIL);
             InstallTopPN.Controls.Add(PageTitleLB);
             InstallTopPN.Controls.Add(InstallButtonsFLP);
             InstallTopPN.Controls.Add(PathsWarningLB);
@@ -473,8 +499,80 @@
             InstallTopPN.ForeColor = Color.FromArgb(220, 220, 220);
             InstallTopPN.Location = new Point(3, 3);
             InstallTopPN.Name = "InstallTopPN";
-            InstallTopPN.Size = new Size(530, 118);
+            InstallTopPN.Size = new Size(530, 139);
             InstallTopPN.TabIndex = 12;
+            // 
+            // MagPackInstallIL
+            // 
+            MagPackInstallIL.BackColor = Color.Transparent;
+            MagPackInstallIL.Font = new Font("Segoe UI", 9F);
+            MagPackInstallIL.FontStyle = FontStyle.Regular;
+            MagPackInstallIL.ForeColor = Color.Gray;
+            MagPackInstallIL.Image = Properties.Resources.redCross;
+            MagPackInstallIL.ImagePadding = 0;
+            MagPackInstallIL.ImagePosition = stigzler.Winforms.Base.UIElements.ImageLabel.ImagePlacement.Near;
+            MagPackInstallIL.ImageTextGap = 2;
+            MagPackInstallIL.Location = new Point(354, 97);
+            MagPackInstallIL.Name = "MagPackInstallIL";
+            MagPackInstallIL.OverrideTheme = true;
+            MagPackInstallIL.ResizeImage = true;
+            MagPackInstallIL.ScaleFont = 100;
+            MagPackInstallIL.Size = new Size(98, 22);
+            MagPackInstallIL.TabIndex = 12;
+            MagPackInstallIL.Text = "Not Installed";
+            MagPackInstallIL.ToolTip = MainTT;
+            MagPackInstallIL.ToolTipHorizontalAlignment = HorizontalAlignment.Right;
+            MagPackInstallIL.ToolTipImage = null;
+            MagPackInstallIL.ToolTipText = null;
+            MagPackInstallIL.ToolTipTitle = null;
+            // 
+            // HotfixInstalledIL
+            // 
+            HotfixInstalledIL.BackColor = Color.Transparent;
+            HotfixInstalledIL.Font = new Font("Segoe UI", 9F);
+            HotfixInstalledIL.FontStyle = FontStyle.Regular;
+            HotfixInstalledIL.ForeColor = Color.Gray;
+            HotfixInstalledIL.Image = Properties.Resources.redCross;
+            HotfixInstalledIL.ImagePadding = 0;
+            HotfixInstalledIL.ImagePosition = stigzler.Winforms.Base.UIElements.ImageLabel.ImagePlacement.Near;
+            HotfixInstalledIL.ImageTextGap = 2;
+            HotfixInstalledIL.Location = new Point(180, 97);
+            HotfixInstalledIL.Name = "HotfixInstalledIL";
+            HotfixInstalledIL.OverrideTheme = true;
+            HotfixInstalledIL.ResizeImage = true;
+            HotfixInstalledIL.ScaleFont = 100;
+            HotfixInstalledIL.Size = new Size(98, 22);
+            HotfixInstalledIL.TabIndex = 11;
+            HotfixInstalledIL.Text = "Not Installed";
+            HotfixInstalledIL.ToolTip = MainTT;
+            HotfixInstalledIL.ToolTipHorizontalAlignment = HorizontalAlignment.Right;
+            HotfixInstalledIL.ToolTipImage = null;
+            HotfixInstalledIL.ToolTipText = null;
+            HotfixInstalledIL.ToolTipTitle = null;
+            // 
+            // C64DInstalledIL
+            // 
+            C64DInstalledIL.BackColor = Color.Transparent;
+            C64DInstalledIL.Font = new Font("Segoe UI", 9F);
+            C64DInstalledIL.FontStyle = FontStyle.Regular;
+            C64DInstalledIL.ForeColor = Color.Gray;
+            C64DInstalledIL.Image = Properties.Resources.redCross;
+            C64DInstalledIL.ImagePadding = 0;
+            C64DInstalledIL.ImagePosition = stigzler.Winforms.Base.UIElements.ImageLabel.ImagePlacement.Near;
+            C64DInstalledIL.ImageTextGap = 2;
+            C64DInstalledIL.Location = new Point(6, 100);
+            C64DInstalledIL.Name = "C64DInstalledIL";
+            C64DInstalledIL.OverrideTheme = true;
+            C64DInstalledIL.ResizeImage = true;
+            C64DInstalledIL.ScaleFont = 100;
+            C64DInstalledIL.Size = new Size(98, 19);
+            C64DInstalledIL.TabIndex = 10;
+            C64DInstalledIL.Text = "Not Installed";
+            C64DInstalledIL.ToolTip = MainTT;
+            C64DInstalledIL.ToolTipHorizontalAlignment = HorizontalAlignment.Right;
+            C64DInstalledIL.ToolTipImage = null;
+            C64DInstalledIL.ToolTipText = null;
+            C64DInstalledIL.ToolTipTitle = null;
             // 
             // PageTitleLB
             // 
@@ -596,7 +694,7 @@
             PathsWarningLB.Font = new Font("Segoe UI", 9F);
             PathsWarningLB.FontStyle = FontStyle.Italic;
             PathsWarningLB.ForeColor = Color.Red;
-            PathsWarningLB.Location = new Point(3, 100);
+            PathsWarningLB.Location = new Point(6, 119);
             PathsWarningLB.Name = "PathsWarningLB";
             PathsWarningLB.OverrideTheme = true;
             PathsWarningLB.ScaleFont = 100;
@@ -613,160 +711,384 @@
             // GamesTP
             // 
             GamesTP.BackColor = Color.FromArgb(35, 35, 35);
-            GamesTP.Controls.Add(button1);
-            GamesTP.Controls.Add(label14);
-            GamesTP.Controls.Add(fileObjectTextBox4);
-            GamesTP.Controls.Add(label13);
-            GamesTP.Controls.Add(numericUpDown1);
-            GamesTP.Controls.Add(label12);
-            GamesTP.Controls.Add(textBox2);
-            GamesTP.Controls.Add(label11);
-            GamesTP.Controls.Add(fileObjectTextBox3);
-            GamesTP.Controls.Add(label10);
-            GamesTP.Controls.Add(fileObjectTextBox2);
-            GamesTP.Controls.Add(label9);
-            GamesTP.Controls.Add(fileObjectTextBox1);
-            GamesTP.Controls.Add(label8);
-            GamesTP.Controls.Add(textBox1);
+            GamesTP.Controls.Add(AddGameWarningLB);
+            GamesTP.Controls.Add(AddGamePN);
             GamesTP.Controls.Add(label2);
             GamesTP.ForeColor = Color.FromArgb(220, 220, 220);
             GamesTP.Location = new Point(4, 22);
             GamesTP.Name = "GamesTP";
             GamesTP.Padding = new Padding(3);
-            GamesTP.Size = new Size(536, 341);
+            GamesTP.Size = new Size(536, 535);
             GamesTP.TabIndex = 2;
             GamesTP.Text = "Games";
             // 
-            // button1
+            // AddGameWarningLB
             // 
-            button1.BackColor = Color.FromArgb(55, 55, 55);
-            button1.DefocusOnClick = true;
-            button1.DisabledBackColor = Color.FromArgb(30, 30, 30);
-            button1.DisabledBorderColor = Color.FromArgb(60, 60, 60);
-            button1.DisabledForeColor = Color.FromArgb(125, 125, 125);
-            button1.FlatAppearance.BorderColor = Color.FromArgb(100, 100, 100);
-            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 102, 215);
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = Color.FromArgb(240, 240, 240);
-            button1.Image = Properties.Resources.add;
-            button1.Location = new Point(100, 221);
-            button1.Name = "button1";
-            button1.Size = new Size(91, 38);
-            button1.TabIndex = 19;
-            button1.Text = "Add Game";
-            button1.TextImageRelation = TextImageRelation.TextBeforeImage;
-            button1.ToolTip = MainTT;
-            button1.ToolTipImage = null;
-            button1.ToolTipText = null;
-            button1.ToolTipTitle = null;
-            button1.UseVisualStyleBackColor = false;
+            AddGameWarningLB.AutoSize = true;
+            AddGameWarningLB.Font = new Font("Segoe UI", 9F);
+            AddGameWarningLB.FontStyle = FontStyle.Italic;
+            AddGameWarningLB.ForeColor = Color.Red;
+            AddGameWarningLB.Location = new Point(6, 33);
+            AddGameWarningLB.Name = "AddGameWarningLB";
+            AddGameWarningLB.OverrideTheme = true;
+            AddGameWarningLB.ScaleFont = 100;
+            AddGameWarningLB.Size = new Size(361, 15);
+            AddGameWarningLB.TabIndex = 20;
+            AddGameWarningLB.Text = "Valid Launchbox path (Settings) and C64 Dreams insalled required.";
+            AddGameWarningLB.ToolTip = MainTT;
+            AddGameWarningLB.ToolTipHorizontalAlignment = HorizontalAlignment.Right;
+            AddGameWarningLB.ToolTipImage = null;
+            AddGameWarningLB.ToolTipText = null;
+            AddGameWarningLB.ToolTipTitle = null;
+            AddGameWarningLB.Visible = false;
             // 
-            // label14
+            // AddGamePN
             // 
-            label14.AutoSize = true;
-            label14.Font = new Font("Segoe UI", 9F);
-            label14.FontStyle = FontStyle.Regular;
-            label14.ForeColor = Color.FromArgb(220, 220, 220);
-            label14.Location = new Point(32, 66);
-            label14.Name = "label14";
-            label14.ScaleFont = 100;
-            label14.Size = new Size(62, 15);
-            label14.TabIndex = 18;
-            label14.Text = "Game File:";
-            label14.ToolTip = MainTT;
-            label14.ToolTipHorizontalAlignment = HorizontalAlignment.Right;
-            label14.ToolTipImage = null;
-            label14.ToolTipText = null;
-            label14.ToolTipTitle = null;
+            AddGamePN.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            AddGamePN.BackColor = Color.FromArgb(35, 35, 35);
+            AddGamePN.BackgroundShadeFactor = 1D;
+            AddGamePN.Controls.Add(AddGameBT);
+            AddGamePN.Controls.Add(label19);
+            AddGamePN.Controls.Add(label18);
+            AddGamePN.Controls.Add(RemoveIMageBT);
+            AddGamePN.Controls.Add(ImagePathFB);
+            AddGamePN.Controls.Add(GameImagePB);
+            AddGamePN.Controls.Add(ImagesCB);
+            AddGamePN.Controls.Add(WarnOnOverwriteChB);
+            AddGamePN.Controls.Add(AlsoUpdateLbChB);
+            AddGamePN.Controls.Add(label17);
+            AddGamePN.Controls.Add(NotesTB);
+            AddGamePN.Controls.Add(label16);
+            AddGamePN.Controls.Add(label15);
+            AddGamePN.Controls.Add(PublisherTB);
+            AddGamePN.Controls.Add(DeveloperTB);
+            AddGamePN.Controls.Add(GameNameTB);
+            AddGamePN.Controls.Add(label8);
+            AddGamePN.Controls.Add(label11);
+            AddGamePN.Controls.Add(MagazineFB);
+            AddGamePN.Controls.Add(SidFB);
+            AddGamePN.Controls.Add(label14);
+            AddGamePN.Controls.Add(label9);
+            AddGamePN.Controls.Add(GameFIleFB);
+            AddGamePN.Controls.Add(ManualFB);
+            AddGamePN.Controls.Add(label13);
+            AddGamePN.Controls.Add(label10);
+            AddGamePN.Controls.Add(PageNumberNUM);
+            AddGamePN.Controls.Add(label12);
+            AddGamePN.Controls.Add(CustomCmdTB);
+            AddGamePN.Enabled = false;
+            AddGamePN.ForeColor = Color.FromArgb(220, 220, 220);
+            AddGamePN.Location = new Point(6, 51);
+            AddGamePN.Name = "AddGamePN";
+            AddGamePN.Size = new Size(522, 478);
+            AddGamePN.TabIndex = 21;
             // 
-            // fileObjectTextBox4
+            // AddGameBT
             // 
-            fileObjectTextBox4.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            fileObjectTextBox4.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            fileObjectTextBox4.BackColor = Color.Transparent;
-            fileObjectTextBox4.BrowserPrompt = null;
-            fileObjectTextBox4.DarkMode = false;
-            fileObjectTextBox4.EllipsisPosition = stigzler.Winforms.Base.UserControls.FileObjectTextBox.EllipsisPositions.End;
-            fileObjectTextBox4.FileSystemObjectMode = stigzler.Winforms.Base.UserControls.FileObjectTextBox.FileSystemObjectType.File;
-            fileObjectTextBox4.FontStyle = FontStyle.Regular;
-            fileObjectTextBox4.Image = (Image)resources.GetObject("fileObjectTextBox4.Image");
-            fileObjectTextBox4.ImageLayout = ImageLayout.Center;
-            fileObjectTextBox4.Location = new Point(100, 62);
-            fileObjectTextBox4.Margin = new Padding(0);
-            fileObjectTextBox4.MultiSelect = false;
-            fileObjectTextBox4.Name = "fileObjectTextBox4";
-            fileObjectTextBox4.Path = "";
-            fileObjectTextBox4.ReadOnly = true;
-            fileObjectTextBox4.ScaleFont = 100;
-            fileObjectTextBox4.Size = new Size(428, 23);
-            fileObjectTextBox4.TabIndex = 17;
-            fileObjectTextBox4.TextFont = new Font("Segoe UI", 9F);
+            AddGameBT.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            AddGameBT.BackColor = Color.FromArgb(55, 55, 55);
+            AddGameBT.DefocusOnClick = true;
+            AddGameBT.DisabledBackColor = Color.FromArgb(30, 30, 30);
+            AddGameBT.DisabledBorderColor = Color.FromArgb(60, 60, 60);
+            AddGameBT.DisabledForeColor = Color.FromArgb(125, 125, 125);
+            AddGameBT.FlatAppearance.BorderColor = Color.FromArgb(100, 100, 100);
+            AddGameBT.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 102, 215);
+            AddGameBT.FlatStyle = FlatStyle.Flat;
+            AddGameBT.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            AddGameBT.ForeColor = Color.FromArgb(240, 240, 240);
+            AddGameBT.Image = Properties.Resources.plus_circle;
+            AddGameBT.ImageAlign = ContentAlignment.MiddleRight;
+            AddGameBT.Location = new Point(348, 412);
+            AddGameBT.Name = "AddGameBT";
+            AddGameBT.Size = new Size(171, 56);
+            AddGameBT.TabIndex = 15;
+            AddGameBT.Text = "Add Game";
+            AddGameBT.TextImageRelation = TextImageRelation.TextBeforeImage;
+            AddGameBT.ToolTip = MainTT;
+            AddGameBT.ToolTipImage = null;
+            AddGameBT.ToolTipText = null;
+            AddGameBT.ToolTipTitle = null;
+            AddGameBT.UseVisualStyleBackColor = false;
+            AddGameBT.Click += AddGameBT_Click;
             // 
-            // label13
+            // label19
             // 
-            label13.AutoSize = true;
-            label13.Font = new Font("Segoe UI", 9F);
-            label13.FontStyle = FontStyle.Regular;
-            label13.ForeColor = Color.FromArgb(220, 220, 220);
-            label13.Location = new Point(13, 196);
-            label13.Name = "label13";
-            label13.ScaleFont = 100;
-            label13.Size = new Size(81, 15);
-            label13.TabIndex = 16;
-            label13.Text = "Page number:";
-            label13.ToolTip = MainTT;
-            label13.ToolTipHorizontalAlignment = HorizontalAlignment.Right;
-            label13.ToolTipImage = null;
-            label13.ToolTipText = null;
-            label13.ToolTipTitle = null;
+            label19.AutoSize = true;
+            label19.Font = new Font("Segoe UI", 9F);
+            label19.FontStyle = FontStyle.Regular;
+            label19.ForeColor = Color.FromArgb(220, 220, 220);
+            label19.Location = new Point(7, 453);
+            label19.Name = "label19";
+            label19.ScaleFont = 100;
+            label19.Size = new Size(70, 15);
+            label19.TabIndex = 32;
+            label19.Text = "(* Required)";
+            label19.ToolTip = MainTT;
+            label19.ToolTipHorizontalAlignment = HorizontalAlignment.Right;
+            label19.ToolTipImage = null;
+            label19.ToolTipText = null;
+            label19.ToolTipTitle = null;
             // 
-            // numericUpDown1
+            // label18
             // 
-            numericUpDown1.ArrowColor = Color.FromArgb(230, 230, 230);
-            numericUpDown1.BackColor = Color.FromArgb(30, 30, 30);
-            numericUpDown1.BorderColor = Color.FromArgb(100, 100, 100);
-            numericUpDown1.BorderStyle = BorderStyle.FixedSingle;
-            numericUpDown1.ButtonColor = Color.FromArgb(60, 60, 60);
-            numericUpDown1.ButtonHighlightColor = Color.FromArgb(0, 102, 215);
-            numericUpDown1.ForeColor = Color.FromArgb(220, 220, 220);
-            numericUpDown1.Location = new Point(100, 192);
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.OverrideTheme = false;
-            numericUpDown1.Size = new Size(74, 23);
-            numericUpDown1.TabIndex = 15;
+            label18.AutoSize = true;
+            label18.Font = new Font("Segoe UI", 9F);
+            label18.FontStyle = FontStyle.Regular;
+            label18.ForeColor = Color.FromArgb(220, 220, 220);
+            label18.Location = new Point(40, 325);
+            label18.Name = "label18";
+            label18.ScaleFont = 100;
+            label18.Size = new Size(48, 15);
+            label18.TabIndex = 31;
+            label18.Text = "Images:";
+            label18.ToolTip = MainTT;
+            label18.ToolTipHorizontalAlignment = HorizontalAlignment.Right;
+            label18.ToolTipImage = null;
+            label18.ToolTipText = null;
+            label18.ToolTipTitle = null;
             // 
-            // label12
+            // RemoveIMageBT
             // 
-            label12.AutoSize = true;
-            label12.Font = new Font("Segoe UI", 9F);
-            label12.FontStyle = FontStyle.Regular;
-            label12.ForeColor = Color.FromArgb(220, 220, 220);
-            label12.Location = new Point(13, 144);
-            label12.Name = "label12";
-            label12.ScaleFont = 100;
-            label12.Size = new Size(81, 15);
-            label12.TabIndex = 14;
-            label12.Text = "Custom Cmd:";
-            label12.ToolTip = MainTT;
-            label12.ToolTipHorizontalAlignment = HorizontalAlignment.Right;
-            label12.ToolTipImage = null;
-            label12.ToolTipText = null;
-            label12.ToolTipTitle = null;
+            RemoveIMageBT.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            RemoveIMageBT.BackColor = Color.FromArgb(55, 55, 55);
+            RemoveIMageBT.DefocusOnClick = true;
+            RemoveIMageBT.DisabledBackColor = Color.FromArgb(30, 30, 30);
+            RemoveIMageBT.DisabledBorderColor = Color.FromArgb(60, 60, 60);
+            RemoveIMageBT.DisabledForeColor = Color.FromArgb(125, 125, 125);
+            RemoveIMageBT.FlatAppearance.BorderColor = Color.FromArgb(100, 100, 100);
+            RemoveIMageBT.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 102, 215);
+            RemoveIMageBT.FlatStyle = FlatStyle.Flat;
+            RemoveIMageBT.ForeColor = Color.FromArgb(240, 240, 240);
+            RemoveIMageBT.Image = Properties.Resources.eraser;
+            RemoveIMageBT.Location = new Point(483, 321);
+            RemoveIMageBT.Name = "RemoveIMageBT";
+            RemoveIMageBT.Size = new Size(36, 23);
+            RemoveIMageBT.TabIndex = 12;
+            RemoveIMageBT.ToolTip = MainTT;
+            RemoveIMageBT.ToolTipImage = null;
+            RemoveIMageBT.ToolTipText = "Removes the image associated with this image file type";
+            RemoveIMageBT.ToolTipTitle = "Clear Image File";
+            RemoveIMageBT.UseVisualStyleBackColor = false;
+            RemoveIMageBT.Click += RemoveIMageBT_Click;
             // 
-            // textBox2
+            // ImagePathFB
             // 
-            textBox2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            textBox2.BackColor = Color.FromArgb(30, 30, 30);
-            textBox2.BorderStyle = BorderStyle.FixedSingle;
-            textBox2.Cue = null;
-            textBox2.Font = new Font("Segoe UI", 9F);
-            textBox2.FontStyle = FontStyle.Regular;
-            textBox2.ForeColor = Color.FromArgb(220, 220, 220);
-            textBox2.Location = new Point(100, 140);
-            textBox2.Name = "textBox2";
-            textBox2.ScaleFont = 100;
-            textBox2.Size = new Size(428, 23);
-            textBox2.TabIndex = 13;
+            ImagePathFB.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            ImagePathFB.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            ImagePathFB.BackColor = Color.Transparent;
+            ImagePathFB.BrowserPrompt = null;
+            ImagePathFB.DarkMode = false;
+            ImagePathFB.EllipsisPosition = stigzler.Winforms.Base.UserControls.FileObjectTextBox.EllipsisPositions.End;
+            ImagePathFB.FileSystemObjectMode = stigzler.Winforms.Base.UserControls.FileObjectTextBox.FileSystemObjectType.File;
+            ImagePathFB.FontStyle = FontStyle.Regular;
+            ImagePathFB.Image = (Image)resources.GetObject("ImagePathFB.Image");
+            ImagePathFB.ImageLayout = ImageLayout.Center;
+            ImagePathFB.Location = new Point(206, 321);
+            ImagePathFB.Margin = new Padding(0);
+            ImagePathFB.MultiSelect = false;
+            ImagePathFB.Name = "ImagePathFB";
+            ImagePathFB.Path = "C:\\Start\\AnExamplePath\\To\\Your\\Stuff\\Middle\\Ellipse\\Test\\Here\\Yeah\\Path\\End.txt";
+            ImagePathFB.ReadOnly = true;
+            ImagePathFB.ScaleFont = 100;
+            ImagePathFB.Size = new Size(274, 23);
+            ImagePathFB.TabIndex = 11;
+            ImagePathFB.TextFont = new Font("Segoe UI", 9F);
+            ImagePathFB.PathChanged += ImagePathFB_PathChanged;
+            // 
+            // GameImagePB
+            // 
+            GameImagePB.BorderStyle = BorderStyle.FixedSingle;
+            GameImagePB.Location = new Point(94, 350);
+            GameImagePB.Name = "GameImagePB";
+            GameImagePB.Size = new Size(242, 118);
+            GameImagePB.SizeMode = PictureBoxSizeMode.Zoom;
+            GameImagePB.TabIndex = 28;
+            GameImagePB.TabStop = false;
+            // 
+            // ImagesCB
+            // 
+            ImagesCB.ArrowColor = Color.FromArgb(230, 230, 230);
+            ImagesCB.BackColor = Color.FromArgb(30, 30, 30);
+            ImagesCB.BorderColor = Color.FromArgb(100, 100, 100);
+            ImagesCB.ButtonColor = Color.FromArgb(60, 60, 60);
+            ImagesCB.DropDownStyle = ComboBoxStyle.DropDownList;
+            ImagesCB.FlatStyle = FlatStyle.Flat;
+            ImagesCB.ForeColor = Color.FromArgb(220, 220, 220);
+            ImagesCB.FormattingEnabled = true;
+            ImagesCB.ImageSize = new Size(0, 0);
+            ImagesCB.Location = new Point(94, 321);
+            ImagesCB.Name = "ImagesCB";
+            ImagesCB.SelectedColor = SystemColors.Highlight;
+            ImagesCB.Size = new Size(109, 23);
+            ImagesCB.TabIndex = 10;
+            ImagesCB.TextEmphasisColor = Color.White;
+            ImagesCB.TextEmphasisFont = new Font("Segoe UI", 9F, FontStyle.Bold);
+            ImagesCB.SelectedIndexChanged += ImagesCB_SelectedIndexChanged;
+            // 
+            // WarnOnOverwriteChB
+            // 
+            WarnOnOverwriteChB.AutoSize = true;
+            WarnOnOverwriteChB.Location = new Point(393, 386);
+            WarnOnOverwriteChB.Name = "WarnOnOverwriteChB";
+            WarnOnOverwriteChB.OverrideTheme = false;
+            WarnOnOverwriteChB.Size = new Size(123, 19);
+            WarnOnOverwriteChB.TabIndex = 14;
+            WarnOnOverwriteChB.Text = "Warn on overwrite";
+            WarnOnOverwriteChB.ToolTip = MainTT;
+            WarnOnOverwriteChB.ToolTipHorizontalAlignment = HorizontalAlignment.Right;
+            WarnOnOverwriteChB.ToolTipImage = null;
+            WarnOnOverwriteChB.ToolTipText = null;
+            WarnOnOverwriteChB.ToolTipTitle = null;
+            WarnOnOverwriteChB.UseVisualStyleBackColor = true;
+            // 
+            // AlsoUpdateLbChB
+            // 
+            AlsoUpdateLbChB.AutoSize = true;
+            AlsoUpdateLbChB.Location = new Point(348, 361);
+            AlsoUpdateLbChB.Name = "AlsoUpdateLbChB";
+            AlsoUpdateLbChB.OverrideTheme = false;
+            AlsoUpdateLbChB.Size = new Size(168, 19);
+            AlsoUpdateLbChB.TabIndex = 13;
+            AlsoUpdateLbChB.Text = "Also update Launchbox DB";
+            AlsoUpdateLbChB.ToolTip = MainTT;
+            AlsoUpdateLbChB.ToolTipHorizontalAlignment = HorizontalAlignment.Right;
+            AlsoUpdateLbChB.ToolTipImage = null;
+            AlsoUpdateLbChB.ToolTipText = null;
+            AlsoUpdateLbChB.ToolTipTitle = null;
+            AlsoUpdateLbChB.UseVisualStyleBackColor = true;
+            // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            label17.Font = new Font("Segoe UI", 9F);
+            label17.FontStyle = FontStyle.Regular;
+            label17.ForeColor = Color.FromArgb(220, 220, 220);
+            label17.Location = new Point(47, 248);
+            label17.Name = "label17";
+            label17.ScaleFont = 100;
+            label17.Size = new Size(41, 15);
+            label17.TabIndex = 24;
+            label17.Text = "Notes:";
+            label17.ToolTip = MainTT;
+            label17.ToolTipHorizontalAlignment = HorizontalAlignment.Right;
+            label17.ToolTipImage = null;
+            label17.ToolTipText = null;
+            label17.ToolTipTitle = null;
+            // 
+            // NotesTB
+            // 
+            NotesTB.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            NotesTB.BackColor = Color.FromArgb(30, 30, 30);
+            NotesTB.BorderStyle = BorderStyle.FixedSingle;
+            NotesTB.Cue = null;
+            NotesTB.Font = new Font("Segoe UI", 9F);
+            NotesTB.FontStyle = FontStyle.Regular;
+            NotesTB.ForeColor = Color.FromArgb(220, 220, 220);
+            NotesTB.Location = new Point(94, 246);
+            NotesTB.Multiline = true;
+            NotesTB.Name = "NotesTB";
+            NotesTB.ScaleFont = 100;
+            NotesTB.Size = new Size(425, 69);
+            NotesTB.TabIndex = 9;
+            // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.Font = new Font("Segoe UI", 9F);
+            label16.FontStyle = FontStyle.Regular;
+            label16.ForeColor = Color.FromArgb(220, 220, 220);
+            label16.Location = new Point(29, 221);
+            label16.Name = "label16";
+            label16.ScaleFont = 100;
+            label16.Size = new Size(59, 15);
+            label16.TabIndex = 22;
+            label16.Text = "Publisher:";
+            label16.ToolTip = MainTT;
+            label16.ToolTipHorizontalAlignment = HorizontalAlignment.Right;
+            label16.ToolTipImage = null;
+            label16.ToolTipText = null;
+            label16.ToolTipTitle = null;
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Font = new Font("Segoe UI", 9F);
+            label15.FontStyle = FontStyle.Regular;
+            label15.ForeColor = Color.FromArgb(220, 220, 220);
+            label15.Location = new Point(25, 192);
+            label15.Name = "label15";
+            label15.ScaleFont = 100;
+            label15.Size = new Size(63, 15);
+            label15.TabIndex = 21;
+            label15.Text = "Developer:";
+            label15.ToolTip = MainTT;
+            label15.ToolTipHorizontalAlignment = HorizontalAlignment.Right;
+            label15.ToolTipImage = null;
+            label15.ToolTipText = null;
+            label15.ToolTipTitle = null;
+            // 
+            // PublisherTB
+            // 
+            PublisherTB.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            PublisherTB.BackColor = Color.FromArgb(30, 30, 30);
+            PublisherTB.BorderStyle = BorderStyle.FixedSingle;
+            PublisherTB.Cue = null;
+            PublisherTB.Font = new Font("Segoe UI", 9F);
+            PublisherTB.FontStyle = FontStyle.Regular;
+            PublisherTB.ForeColor = Color.FromArgb(220, 220, 220);
+            PublisherTB.Location = new Point(94, 217);
+            PublisherTB.Name = "PublisherTB";
+            PublisherTB.ScaleFont = 100;
+            PublisherTB.Size = new Size(425, 23);
+            PublisherTB.TabIndex = 8;
+            // 
+            // DeveloperTB
+            // 
+            DeveloperTB.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            DeveloperTB.BackColor = Color.FromArgb(30, 30, 30);
+            DeveloperTB.BorderStyle = BorderStyle.FixedSingle;
+            DeveloperTB.Cue = null;
+            DeveloperTB.Font = new Font("Segoe UI", 9F);
+            DeveloperTB.FontStyle = FontStyle.Regular;
+            DeveloperTB.ForeColor = Color.FromArgb(220, 220, 220);
+            DeveloperTB.Location = new Point(94, 188);
+            DeveloperTB.Name = "DeveloperTB";
+            DeveloperTB.ScaleFont = 100;
+            DeveloperTB.Size = new Size(425, 23);
+            DeveloperTB.TabIndex = 7;
+            // 
+            // GameNameTB
+            // 
+            GameNameTB.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            GameNameTB.BackColor = Color.FromArgb(30, 30, 30);
+            GameNameTB.BorderStyle = BorderStyle.FixedSingle;
+            GameNameTB.Cue = null;
+            GameNameTB.Font = new Font("Segoe UI", 9F);
+            GameNameTB.FontStyle = FontStyle.Regular;
+            GameNameTB.ForeColor = Color.FromArgb(220, 220, 220);
+            GameNameTB.Location = new Point(94, 3);
+            GameNameTB.Name = "GameNameTB";
+            GameNameTB.ScaleFont = 100;
+            GameNameTB.Size = new Size(425, 23);
+            GameNameTB.TabIndex = 0;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 9F);
+            label8.FontStyle = FontStyle.Regular;
+            label8.ForeColor = Color.FromArgb(220, 220, 220);
+            label8.Location = new Point(7, 7);
+            label8.Name = "label8";
+            label8.ScaleFont = 100;
+            label8.Size = new Size(81, 15);
+            label8.TabIndex = 6;
+            label8.Text = "*Game Name:";
+            label8.ToolTip = MainTT;
+            label8.ToolTipHorizontalAlignment = HorizontalAlignment.Right;
+            label8.ToolTipImage = null;
+            label8.ToolTipText = null;
+            label8.ToolTipTitle = null;
             // 
             // label11
             // 
@@ -774,81 +1096,81 @@
             label11.Font = new Font("Segoe UI", 9F);
             label11.FontStyle = FontStyle.Regular;
             label11.ForeColor = Color.FromArgb(220, 220, 220);
-            label11.Location = new Point(6, 170);
+            label11.Location = new Point(12, 137);
             label11.Name = "label11";
             label11.ScaleFont = 100;
-            label11.Size = new Size(88, 15);
+            label11.Size = new Size(74, 15);
             label11.TabIndex = 12;
-            label11.Text = "Magainze Path:";
+            label11.Text = "Review Path:";
             label11.ToolTip = MainTT;
             label11.ToolTipHorizontalAlignment = HorizontalAlignment.Right;
             label11.ToolTipImage = null;
             label11.ToolTipText = null;
             label11.ToolTipTitle = null;
             // 
-            // fileObjectTextBox3
+            // MagazineFB
             // 
-            fileObjectTextBox3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            fileObjectTextBox3.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            fileObjectTextBox3.BackColor = Color.Transparent;
-            fileObjectTextBox3.BrowserPrompt = null;
-            fileObjectTextBox3.DarkMode = false;
-            fileObjectTextBox3.EllipsisPosition = stigzler.Winforms.Base.UserControls.FileObjectTextBox.EllipsisPositions.End;
-            fileObjectTextBox3.FileSystemObjectMode = stigzler.Winforms.Base.UserControls.FileObjectTextBox.FileSystemObjectType.File;
-            fileObjectTextBox3.FontStyle = FontStyle.Regular;
-            fileObjectTextBox3.Image = (Image)resources.GetObject("fileObjectTextBox3.Image");
-            fileObjectTextBox3.ImageLayout = ImageLayout.Center;
-            fileObjectTextBox3.Location = new Point(100, 166);
-            fileObjectTextBox3.Margin = new Padding(0);
-            fileObjectTextBox3.MultiSelect = false;
-            fileObjectTextBox3.Name = "fileObjectTextBox3";
-            fileObjectTextBox3.Path = "";
-            fileObjectTextBox3.ReadOnly = true;
-            fileObjectTextBox3.ScaleFont = 100;
-            fileObjectTextBox3.Size = new Size(428, 23);
-            fileObjectTextBox3.TabIndex = 11;
-            fileObjectTextBox3.TextFont = new Font("Segoe UI", 9F);
+            MagazineFB.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            MagazineFB.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            MagazineFB.BackColor = Color.Transparent;
+            MagazineFB.BrowserPrompt = null;
+            MagazineFB.DarkMode = false;
+            MagazineFB.EllipsisPosition = stigzler.Winforms.Base.UserControls.FileObjectTextBox.EllipsisPositions.End;
+            MagazineFB.FileSystemObjectMode = stigzler.Winforms.Base.UserControls.FileObjectTextBox.FileSystemObjectType.File;
+            MagazineFB.FontStyle = FontStyle.Regular;
+            MagazineFB.Image = (Image)resources.GetObject("MagazineFB.Image");
+            MagazineFB.ImageLayout = ImageLayout.Center;
+            MagazineFB.Location = new Point(94, 133);
+            MagazineFB.Margin = new Padding(0);
+            MagazineFB.MultiSelect = false;
+            MagazineFB.Name = "MagazineFB";
+            MagazineFB.Path = "";
+            MagazineFB.ReadOnly = false;
+            MagazineFB.ScaleFont = 100;
+            MagazineFB.Size = new Size(425, 23);
+            MagazineFB.TabIndex = 5;
+            MagazineFB.TextFont = new Font("Segoe UI", 9F);
             // 
-            // label10
+            // SidFB
             // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Segoe UI", 9F);
-            label10.FontStyle = FontStyle.Regular;
-            label10.ForeColor = Color.FromArgb(220, 220, 220);
-            label10.Location = new Point(23, 118);
-            label10.Name = "label10";
-            label10.ScaleFont = 100;
-            label10.Size = new Size(71, 15);
-            label10.TabIndex = 10;
-            label10.Text = "Manual File:";
-            label10.ToolTip = MainTT;
-            label10.ToolTipHorizontalAlignment = HorizontalAlignment.Right;
-            label10.ToolTipImage = null;
-            label10.ToolTipText = null;
-            label10.ToolTipTitle = null;
+            SidFB.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            SidFB.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            SidFB.BackColor = Color.Transparent;
+            SidFB.BrowserPrompt = null;
+            SidFB.DarkMode = false;
+            SidFB.EllipsisPosition = stigzler.Winforms.Base.UserControls.FileObjectTextBox.EllipsisPositions.End;
+            SidFB.FileSystemObjectMode = stigzler.Winforms.Base.UserControls.FileObjectTextBox.FileSystemObjectType.File;
+            SidFB.FontStyle = FontStyle.Regular;
+            SidFB.Image = (Image)resources.GetObject("SidFB.Image");
+            SidFB.ImageLayout = ImageLayout.Center;
+            SidFB.Location = new Point(94, 55);
+            SidFB.Margin = new Padding(0);
+            SidFB.MultiSelect = false;
+            SidFB.Name = "SidFB";
+            SidFB.Path = "";
+            SidFB.ReadOnly = false;
+            SidFB.ScaleFont = 100;
+            SidFB.Size = new Size(425, 23);
+            SidFB.TabIndex = 2;
+            SidFB.TextFont = new Font("Segoe UI", 9F);
             // 
-            // fileObjectTextBox2
+            // label14
             // 
-            fileObjectTextBox2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            fileObjectTextBox2.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            fileObjectTextBox2.BackColor = Color.Transparent;
-            fileObjectTextBox2.BrowserPrompt = null;
-            fileObjectTextBox2.DarkMode = false;
-            fileObjectTextBox2.EllipsisPosition = stigzler.Winforms.Base.UserControls.FileObjectTextBox.EllipsisPositions.End;
-            fileObjectTextBox2.FileSystemObjectMode = stigzler.Winforms.Base.UserControls.FileObjectTextBox.FileSystemObjectType.File;
-            fileObjectTextBox2.FontStyle = FontStyle.Regular;
-            fileObjectTextBox2.Image = (Image)resources.GetObject("fileObjectTextBox2.Image");
-            fileObjectTextBox2.ImageLayout = ImageLayout.Center;
-            fileObjectTextBox2.Location = new Point(100, 114);
-            fileObjectTextBox2.Margin = new Padding(0);
-            fileObjectTextBox2.MultiSelect = false;
-            fileObjectTextBox2.Name = "fileObjectTextBox2";
-            fileObjectTextBox2.Path = "";
-            fileObjectTextBox2.ReadOnly = true;
-            fileObjectTextBox2.ScaleFont = 100;
-            fileObjectTextBox2.Size = new Size(428, 23);
-            fileObjectTextBox2.TabIndex = 9;
-            fileObjectTextBox2.TextFont = new Font("Segoe UI", 9F);
+            label14.AutoSize = true;
+            label14.Font = new Font("Segoe UI", 9F);
+            label14.FontStyle = FontStyle.Regular;
+            label14.ForeColor = Color.FromArgb(220, 220, 220);
+            label14.Location = new Point(21, 33);
+            label14.Name = "label14";
+            label14.ScaleFont = 100;
+            label14.Size = new Size(67, 15);
+            label14.TabIndex = 18;
+            label14.Text = "*Game File:";
+            label14.ToolTip = MainTT;
+            label14.ToolTipHorizontalAlignment = HorizontalAlignment.Right;
+            label14.ToolTipImage = null;
+            label14.ToolTipText = null;
+            label14.ToolTipTitle = null;
             // 
             // label9
             // 
@@ -856,7 +1178,7 @@
             label9.Font = new Font("Segoe UI", 9F);
             label9.FontStyle = FontStyle.Regular;
             label9.ForeColor = Color.FromArgb(220, 220, 220);
-            label9.Location = new Point(47, 92);
+            label9.Location = new Point(41, 59);
             label9.Name = "label9";
             label9.ScaleFont = 100;
             label9.Size = new Size(47, 15);
@@ -868,61 +1190,135 @@
             label9.ToolTipText = null;
             label9.ToolTipTitle = null;
             // 
-            // fileObjectTextBox1
+            // GameFIleFB
             // 
-            fileObjectTextBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            fileObjectTextBox1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            fileObjectTextBox1.BackColor = Color.Transparent;
-            fileObjectTextBox1.BrowserPrompt = null;
-            fileObjectTextBox1.DarkMode = false;
-            fileObjectTextBox1.EllipsisPosition = stigzler.Winforms.Base.UserControls.FileObjectTextBox.EllipsisPositions.End;
-            fileObjectTextBox1.FileSystemObjectMode = stigzler.Winforms.Base.UserControls.FileObjectTextBox.FileSystemObjectType.File;
-            fileObjectTextBox1.FontStyle = FontStyle.Regular;
-            fileObjectTextBox1.Image = (Image)resources.GetObject("fileObjectTextBox1.Image");
-            fileObjectTextBox1.ImageLayout = ImageLayout.Center;
-            fileObjectTextBox1.Location = new Point(100, 88);
-            fileObjectTextBox1.Margin = new Padding(0);
-            fileObjectTextBox1.MultiSelect = false;
-            fileObjectTextBox1.Name = "fileObjectTextBox1";
-            fileObjectTextBox1.Path = "";
-            fileObjectTextBox1.ReadOnly = true;
-            fileObjectTextBox1.ScaleFont = 100;
-            fileObjectTextBox1.Size = new Size(428, 23);
-            fileObjectTextBox1.TabIndex = 7;
-            fileObjectTextBox1.TextFont = new Font("Segoe UI", 9F);
+            GameFIleFB.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            GameFIleFB.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            GameFIleFB.BackColor = Color.Transparent;
+            GameFIleFB.BrowserPrompt = null;
+            GameFIleFB.DarkMode = false;
+            GameFIleFB.EllipsisPosition = stigzler.Winforms.Base.UserControls.FileObjectTextBox.EllipsisPositions.End;
+            GameFIleFB.FileSystemObjectMode = stigzler.Winforms.Base.UserControls.FileObjectTextBox.FileSystemObjectType.File;
+            GameFIleFB.FontStyle = FontStyle.Regular;
+            GameFIleFB.Image = (Image)resources.GetObject("GameFIleFB.Image");
+            GameFIleFB.ImageLayout = ImageLayout.Center;
+            GameFIleFB.Location = new Point(94, 29);
+            GameFIleFB.Margin = new Padding(0);
+            GameFIleFB.MultiSelect = false;
+            GameFIleFB.Name = "GameFIleFB";
+            GameFIleFB.Path = "";
+            GameFIleFB.ReadOnly = false;
+            GameFIleFB.ScaleFont = 100;
+            GameFIleFB.Size = new Size(425, 23);
+            GameFIleFB.TabIndex = 1;
+            GameFIleFB.TextFont = new Font("Segoe UI", 9F);
             // 
-            // label8
+            // ManualFB
             // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 9F);
-            label8.FontStyle = FontStyle.Regular;
-            label8.ForeColor = Color.FromArgb(220, 220, 220);
-            label8.Location = new Point(18, 40);
-            label8.Name = "label8";
-            label8.ScaleFont = 100;
-            label8.Size = new Size(76, 15);
-            label8.TabIndex = 6;
-            label8.Text = "Game Name:";
-            label8.ToolTip = MainTT;
-            label8.ToolTipHorizontalAlignment = HorizontalAlignment.Right;
-            label8.ToolTipImage = null;
-            label8.ToolTipText = null;
-            label8.ToolTipTitle = null;
+            ManualFB.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            ManualFB.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            ManualFB.BackColor = Color.Transparent;
+            ManualFB.BrowserPrompt = null;
+            ManualFB.DarkMode = false;
+            ManualFB.EllipsisPosition = stigzler.Winforms.Base.UserControls.FileObjectTextBox.EllipsisPositions.End;
+            ManualFB.FileSystemObjectMode = stigzler.Winforms.Base.UserControls.FileObjectTextBox.FileSystemObjectType.File;
+            ManualFB.FontStyle = FontStyle.Regular;
+            ManualFB.Image = (Image)resources.GetObject("ManualFB.Image");
+            ManualFB.ImageLayout = ImageLayout.Center;
+            ManualFB.Location = new Point(94, 81);
+            ManualFB.Margin = new Padding(0);
+            ManualFB.MultiSelect = false;
+            ManualFB.Name = "ManualFB";
+            ManualFB.Path = "";
+            ManualFB.ReadOnly = false;
+            ManualFB.ScaleFont = 100;
+            ManualFB.Size = new Size(425, 23);
+            ManualFB.TabIndex = 3;
+            ManualFB.TextFont = new Font("Segoe UI", 9F);
             // 
-            // textBox1
+            // label13
             // 
-            textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            textBox1.BackColor = Color.FromArgb(30, 30, 30);
-            textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.Cue = null;
-            textBox1.Font = new Font("Segoe UI", 9F);
-            textBox1.FontStyle = FontStyle.Regular;
-            textBox1.ForeColor = Color.FromArgb(220, 220, 220);
-            textBox1.Location = new Point(100, 36);
-            textBox1.Name = "textBox1";
-            textBox1.ScaleFont = 100;
-            textBox1.Size = new Size(428, 23);
-            textBox1.TabIndex = 5;
+            label13.AutoSize = true;
+            label13.Font = new Font("Segoe UI", 9F);
+            label13.FontStyle = FontStyle.Regular;
+            label13.ForeColor = Color.FromArgb(220, 220, 220);
+            label13.Location = new Point(7, 163);
+            label13.Name = "label13";
+            label13.ScaleFont = 100;
+            label13.Size = new Size(81, 15);
+            label13.TabIndex = 16;
+            label13.Text = "Page number:";
+            label13.ToolTip = MainTT;
+            label13.ToolTipHorizontalAlignment = HorizontalAlignment.Right;
+            label13.ToolTipImage = null;
+            label13.ToolTipText = null;
+            label13.ToolTipTitle = null;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI", 9F);
+            label10.FontStyle = FontStyle.Regular;
+            label10.ForeColor = Color.FromArgb(220, 220, 220);
+            label10.Location = new Point(17, 85);
+            label10.Name = "label10";
+            label10.ScaleFont = 100;
+            label10.Size = new Size(71, 15);
+            label10.TabIndex = 10;
+            label10.Text = "Manual File:";
+            label10.ToolTip = MainTT;
+            label10.ToolTipHorizontalAlignment = HorizontalAlignment.Right;
+            label10.ToolTipImage = null;
+            label10.ToolTipText = null;
+            label10.ToolTipTitle = null;
+            // 
+            // PageNumberNUM
+            // 
+            PageNumberNUM.ArrowColor = Color.FromArgb(230, 230, 230);
+            PageNumberNUM.BackColor = Color.FromArgb(30, 30, 30);
+            PageNumberNUM.BorderColor = Color.FromArgb(100, 100, 100);
+            PageNumberNUM.BorderStyle = BorderStyle.FixedSingle;
+            PageNumberNUM.ButtonColor = Color.FromArgb(60, 60, 60);
+            PageNumberNUM.ButtonHighlightColor = Color.FromArgb(0, 102, 215);
+            PageNumberNUM.ForeColor = Color.FromArgb(220, 220, 220);
+            PageNumberNUM.Location = new Point(94, 159);
+            PageNumberNUM.Name = "PageNumberNUM";
+            PageNumberNUM.OverrideTheme = false;
+            PageNumberNUM.Size = new Size(74, 23);
+            PageNumberNUM.TabIndex = 6;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Segoe UI", 9F);
+            label12.FontStyle = FontStyle.Regular;
+            label12.ForeColor = Color.FromArgb(220, 220, 220);
+            label12.Location = new Point(7, 111);
+            label12.Name = "label12";
+            label12.ScaleFont = 100;
+            label12.Size = new Size(81, 15);
+            label12.TabIndex = 14;
+            label12.Text = "Custom Cmd:";
+            label12.ToolTip = MainTT;
+            label12.ToolTipHorizontalAlignment = HorizontalAlignment.Right;
+            label12.ToolTipImage = null;
+            label12.ToolTipText = null;
+            label12.ToolTipTitle = null;
+            // 
+            // CustomCmdTB
+            // 
+            CustomCmdTB.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            CustomCmdTB.BackColor = Color.FromArgb(30, 30, 30);
+            CustomCmdTB.BorderStyle = BorderStyle.FixedSingle;
+            CustomCmdTB.Cue = null;
+            CustomCmdTB.Font = new Font("Segoe UI", 9F);
+            CustomCmdTB.FontStyle = FontStyle.Regular;
+            CustomCmdTB.ForeColor = Color.FromArgb(220, 220, 220);
+            CustomCmdTB.Location = new Point(94, 107);
+            CustomCmdTB.Name = "CustomCmdTB";
+            CustomCmdTB.ScaleFont = 100;
+            CustomCmdTB.Size = new Size(425, 23);
+            CustomCmdTB.TabIndex = 4;
             // 
             // label2
             // 
@@ -954,7 +1350,7 @@
             SettingsTP.Location = new Point(4, 22);
             SettingsTP.Name = "SettingsTP";
             SettingsTP.Padding = new Padding(3);
-            SettingsTP.Size = new Size(536, 341);
+            SettingsTP.Size = new Size(536, 535);
             SettingsTP.TabIndex = 1;
             SettingsTP.Text = "Settings";
             // 
@@ -968,7 +1364,7 @@
             groupBox2.Controls.Add(SettsOpenUtilsBT);
             groupBox2.Controls.Add(SettsOPenConfigBT);
             groupBox2.ForeColor = Color.FromArgb(220, 220, 220);
-            groupBox2.Location = new Point(17, 127);
+            groupBox2.Location = new Point(17, 149);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(511, 83);
             groupBox2.TabIndex = 8;
@@ -1063,6 +1459,8 @@
             groupBox1.BorderColor = Color.FromArgb(100, 100, 100);
             groupBox1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Solid;
             groupBox1.BorderThickness = 1;
+            groupBox1.Controls.Add(label20);
+            groupBox1.Controls.Add(GameslistNameTB);
             groupBox1.Controls.Add(label5);
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(LaunchboxFBD);
@@ -1070,11 +1468,44 @@
             groupBox1.ForeColor = Color.FromArgb(220, 220, 220);
             groupBox1.Location = new Point(17, 40);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(511, 81);
+            groupBox1.Size = new Size(511, 103);
             groupBox1.TabIndex = 7;
             groupBox1.TabStop = false;
             groupBox1.Text = "Required";
             groupBox1.TitleColor = Color.FromArgb(220, 220, 220);
+            // 
+            // label20
+            // 
+            label20.AutoSize = true;
+            label20.Font = new Font("Segoe UI", 9F);
+            label20.FontStyle = FontStyle.Regular;
+            label20.ForeColor = Color.FromArgb(220, 220, 220);
+            label20.Location = new Point(10, 76);
+            label20.Name = "label20";
+            label20.ScaleFont = 100;
+            label20.Size = new Size(102, 15);
+            label20.TabIndex = 10;
+            label20.Text = "Games List Name:";
+            label20.ToolTip = MainTT;
+            label20.ToolTipHorizontalAlignment = HorizontalAlignment.Right;
+            label20.ToolTipImage = null;
+            label20.ToolTipText = resources.GetString("label20.ToolTipText");
+            label20.ToolTipTitle = "Gameslist Name";
+            // 
+            // GameslistNameTB
+            // 
+            GameslistNameTB.BackColor = Color.FromArgb(30, 30, 30);
+            GameslistNameTB.BorderStyle = BorderStyle.FixedSingle;
+            GameslistNameTB.Cue = null;
+            GameslistNameTB.Font = new Font("Segoe UI", 9F);
+            GameslistNameTB.FontStyle = FontStyle.Regular;
+            GameslistNameTB.ForeColor = Color.FromArgb(220, 220, 220);
+            GameslistNameTB.Location = new Point(115, 72);
+            GameslistNameTB.Name = "GameslistNameTB";
+            GameslistNameTB.ScaleFont = 100;
+            GameslistNameTB.Size = new Size(379, 23);
+            GameslistNameTB.TabIndex = 9;
+            GameslistNameTB.TextChanged += GameslistNameTB_TextChanged;
             // 
             // label5
             // 
@@ -1165,7 +1596,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(704, 438);
+            ClientSize = new Size(704, 632);
             Controls.Add(MainTC);
             Controls.Add(NavBarPN);
             Controls.Add(statusStrip1);
@@ -1174,8 +1605,9 @@
             DoubleBuffered = true;
             ForeColor = Color.FromArgb(220, 220, 220);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            MinimumSize = new Size(720, 477);
+            MinimumSize = new Size(720, 671);
             Name = "Main";
+            RememberFormState = true;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "C64Dreams Tool";
             ToolTip = MainTT;
@@ -1198,7 +1630,10 @@
             InstallButtonsFLP.ResumeLayout(false);
             GamesTP.ResumeLayout(false);
             GamesTP.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            AddGamePN.ResumeLayout(false);
+            AddGamePN.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)GameImagePB).EndInit();
+            ((System.ComponentModel.ISupportInitialize)PageNumberNUM).EndInit();
             SettingsTP.ResumeLayout(false);
             SettingsTP.PerformLayout();
             groupBox2.ResumeLayout(false);
@@ -1253,19 +1688,40 @@
         private stigzler.Winforms.Base.UIElements.Button SettsOpenUtilsBT;
         private stigzler.Winforms.Base.UIElements.Button SettsRetroarchBT;
         private stigzler.Winforms.Base.UIElements.Label label8;
-        private stigzler.Winforms.Base.UIElements.TextBox textBox1;
+        private stigzler.Winforms.Base.UIElements.TextBox GameNameTB;
         private stigzler.Winforms.Base.UIElements.Label label9;
-        private stigzler.Winforms.Base.UserControls.FileObjectTextBox fileObjectTextBox1;
+        private stigzler.Winforms.Base.UserControls.FileObjectTextBox SidFB;
         private stigzler.Winforms.Base.UIElements.Label label11;
-        private stigzler.Winforms.Base.UserControls.FileObjectTextBox fileObjectTextBox3;
+        private stigzler.Winforms.Base.UserControls.FileObjectTextBox MagazineFB;
         private stigzler.Winforms.Base.UIElements.Label label10;
-        private stigzler.Winforms.Base.UserControls.FileObjectTextBox fileObjectTextBox2;
+        private stigzler.Winforms.Base.UserControls.FileObjectTextBox ManualFB;
         private stigzler.Winforms.Base.UIElements.Label label13;
-        private stigzler.Winforms.Base.UIElements.NumericUpDown numericUpDown1;
+        private stigzler.Winforms.Base.UIElements.NumericUpDown PageNumberNUM;
         private stigzler.Winforms.Base.UIElements.Label label12;
-        private stigzler.Winforms.Base.UIElements.TextBox textBox2;
-        private stigzler.Winforms.Base.UIElements.Button button1;
+        private stigzler.Winforms.Base.UIElements.TextBox CustomCmdTB;
+        private stigzler.Winforms.Base.UIElements.Button AddGameBT;
         private stigzler.Winforms.Base.UIElements.Label label14;
-        private stigzler.Winforms.Base.UserControls.FileObjectTextBox fileObjectTextBox4;
+        private stigzler.Winforms.Base.UserControls.FileObjectTextBox GameFIleFB;
+        private stigzler.Winforms.Base.UIElements.Panel AddGamePN;
+        private stigzler.Winforms.Base.UIElements.Label AddGameWarningLB;
+        private stigzler.Winforms.Base.UIElements.Label label16;
+        private stigzler.Winforms.Base.UIElements.Label label15;
+        private stigzler.Winforms.Base.UIElements.TextBox PublisherTB;
+        private stigzler.Winforms.Base.UIElements.TextBox DeveloperTB;
+        private stigzler.Winforms.Base.UIElements.Label label17;
+        private stigzler.Winforms.Base.UIElements.TextBox NotesTB;
+        private stigzler.Winforms.Base.UIElements.CheckBox WarnOnOverwriteChB;
+        private stigzler.Winforms.Base.UIElements.CheckBox AlsoUpdateLbChB;
+        private stigzler.Winforms.Base.UIElements.ComboBox ImagesCB;
+        private stigzler.Winforms.Base.UIElements.Button RemoveIMageBT;
+        private stigzler.Winforms.Base.UserControls.FileObjectTextBox ImagePathFB;
+        private stigzler.Winforms.Base.UIElements.PictureBox GameImagePB;
+        private stigzler.Winforms.Base.UIElements.Label label18;
+        private stigzler.Winforms.Base.UIElements.Label label19;
+        private stigzler.Winforms.Base.UIElements.ImageLabel HotfixInstalledIL;
+        private stigzler.Winforms.Base.UIElements.ImageLabel C64DInstalledIL;
+        private stigzler.Winforms.Base.UIElements.ImageLabel MagPackInstallIL;
+        private stigzler.Winforms.Base.UIElements.Label label20;
+        private stigzler.Winforms.Base.UIElements.TextBox GameslistNameTB;
     }
 }

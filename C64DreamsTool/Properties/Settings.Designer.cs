@@ -118,5 +118,204 @@ namespace C64DreamsTool.Properties {
                 this["NavBarCollapsedOnClose"] = value;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute(@"<?xml version=""1.0"" encoding=""utf-16""?>
+<ArrayOfString xmlns:xsd=""http://www.w3.org/2001/XMLSchema"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"">
+  <string>.d64</string>
+  <string>.t64</string>
+  <string>.crt</string>
+  <string>.d81</string>
+</ArrayOfString>")]
+        public global::System.Collections.Specialized.StringCollection PermissableGameExts {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["PermissableGameExts"]));
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("{Please set}")]
+        public string AddGameName {
+            get {
+                return ((string)(this["AddGameName"]));
+            }
+            set {
+                this["AddGameName"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("{Please set}")]
+        public string AddGameFile {
+            get {
+                return ((string)(this["AddGameFile"]));
+            }
+            set {
+                this["AddGameFile"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string AddGameSid {
+            get {
+                return ((string)(this["AddGameSid"]));
+            }
+            set {
+                this["AddGameSid"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string AddGameManual {
+            get {
+                return ((string)(this["AddGameManual"]));
+            }
+            set {
+                this["AddGameManual"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string AddGameCustomCmd {
+            get {
+                return ((string)(this["AddGameCustomCmd"]));
+            }
+            set {
+                this["AddGameCustomCmd"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string AddGameReview {
+            get {
+                return ((string)(this["AddGameReview"]));
+            }
+            set {
+                this["AddGameReview"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        public int AddGamePageNumber {
+            get {
+                return ((int)(this["AddGamePageNumber"]));
+            }
+            set {
+                this["AddGamePageNumber"] = value;
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute(@"<?xml version=""1.0"" encoding=""utf-16""?>
+<ArrayOfString xmlns:xsd=""http://www.w3.org/2001/XMLSchema"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"">
+  <string>.png</string>
+  <string>.jpg</string>
+  <string>.jpeg</string>
+  <string>.gif</string>
+  <string>.bmp</string>
+</ArrayOfString>")]
+        public global::System.Collections.Specialized.StringCollection AllowedImageExtensions {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["AllowedImageExtensions"]));
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool C64DInstalled {
+            get {
+                return ((bool)(this["C64DInstalled"]));
+            }
+            set {
+                this["C64DInstalled"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool HotfixInstalled {
+            get {
+                return ((bool)(this["HotfixInstalled"]));
+            }
+            set {
+                this["HotfixInstalled"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool MagsInstalled {
+            get {
+                return ((bool)(this["MagsInstalled"]));
+            }
+            set {
+                this["MagsInstalled"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Games")]
+        public string GameslistName {
+            get {
+                return ((string)(this["GameslistName"]));
+            }
+            set {
+                this["GameslistName"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string AddGameDev {
+            get {
+                return ((string)(this["AddGameDev"]));
+            }
+            set {
+                this["AddGameDev"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string AddGamePub {
+            get {
+                return ((string)(this["AddGamePub"]));
+            }
+            set {
+                this["AddGamePub"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string AddGameNotes {
+            get {
+                return ((string)(this["AddGameNotes"]));
+            }
+            set {
+                this["AddGameNotes"] = value;
+            }
+        }
     }
 }

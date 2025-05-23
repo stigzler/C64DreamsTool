@@ -10,6 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="C:\Users\stigz\.nuget\packages\stigzler.winforms.base\1.1.10\contentFiles\any\net9.0-windows7.0\HelloWorld.txt" />
     <Content Remove="C:\Users\stigz\.nuget\packages\stigzler.winforms.base\1.1.2\contentFiles\any\net9.0-windows7.0\HelloWorld.txt" />
   </ItemGroup>
 
