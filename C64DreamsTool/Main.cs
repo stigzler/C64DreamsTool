@@ -7,7 +7,9 @@ using stigzler.Winforms.Base.Forms.BaseForm;
 using System;
 using System.Diagnostics;
 using System.Diagnostics.Eventing.Reader;
+using System.Reflection;
 using System.Reflection.Metadata.Ecma335;
+using System.Xml.Linq;
 
 namespace C64DreamsTool
 {
@@ -16,6 +18,9 @@ namespace C64DreamsTool
 
         Game addGame = new Game();
 
+        int currentSearchResultIndex = 0;
+        private XDocument gamesList;
+        BindingSource gameslistBS = new BindingSource();
         private int navBarMaxWidth = 168;
         private int navBarMinWidth = 52;
         private int navBarTransitionPixelChange = -4;
@@ -23,9 +28,84 @@ namespace C64DreamsTool
         // must have a factor of 4
 
         private bool operationRunning = false;
+        List<string> searchResults = new List<string>();
+
         public Main()
         {
             InitializeComponent();
+        }
+
+        private void AddGame()
+        {
+
+
+            if (AlsoUpdateLbChB.Checked && LaunchboxOps.LaunchboxExecutablesRunning())
+            {
+                stigzler.Winforms.Base.Forms.MessageBox messageBox = new stigzler.Winforms.Base.Forms.MessageBox(
+                        "You cannot update the Launchbox database whilst either Launchbox or Bigbox are running. Please close these apps and try again. Game not added", "Lanchbox executables running",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error, "Add Game Error", DarkMode,
+                        stigzler.Winforms.Base.Forms.MessageBox.MessageBoxSize.Small);
+
+                messageBox.ShowDialog(this);
+                return;
+            }
+
+            StatusPB.Style = ProgressBarStyle.Marquee;
+            StatusPrimaryOpLB.Text = "Adding Game to Launchbox...";
+            StatusSecondaryOpLB.Text = "";
+            NavBarPN.Enabled = false;
+            AddGameBT.Enabled = false;
+
+            Game gameDetails = new Game()
+            {
+                CustomCmdText = CustomCmdTB.Text,
+                GameFile = GameFIleFB.Path,
+                MagazinePageNumber = (int)PageNumberNUM.Value,
+                ManualPath = ManualFB.Path,
+                SidPath = SidFB.Path,
+                MagazinePath = MagazineFB.Path,
+                Name = GameNameTB.Text,
+                Developer = DeveloperTB.Text,
+                Publisher = PublisherTB.Text,
+                Notes = NotesTB.Text,
+                AlsoUpdateLaunchbox = AlsoUpdateLbChB.Checked,
+                WarnOnOverwrite = WarnOnOverwriteChB.Checked,
+                GameImages = addGame.GameImages,
+                DarkMode = DarkMode,
+                MainForm = this
+            };
+
+            string result = GameOps.AddGame(gameDetails, DarkMode, this);
+
+            if (result != null)
+            {
+                stigzler.Winforms.Base.Forms.MessageBox messageBox = new stigzler.Winforms.Base.Forms.MessageBox(
+                    result, "Could not add game",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error, "Add Game Error", DarkMode,
+                    stigzler.Winforms.Base.Forms.MessageBox.MessageBoxSize.Small);
+                messageBox.Size = new Size(800, 275);
+                messageBox.ShowDialog(this);
+            }
+            else
+            {
+                stigzler.Winforms.Base.Forms.MessageBox messageBox = new stigzler.Winforms.Base.Forms.MessageBox(
+                    "Rejoice. Said game hast been added to Launchbox!", "Game added successfully",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information, "Game Added", DarkMode,
+                    stigzler.Winforms.Base.Forms.MessageBox.MessageBoxSize.Small);
+                messageBox.ShowDialog(this);
+            }
+
+            StatusPB.Style = ProgressBarStyle.Continuous;
+            StatusPrimaryOpLB.Text = "No operation running.";
+            StatusSecondaryOpLB.Text = "";
+            NavBarPN.Enabled = true;
+            AddGameBT.Enabled = true;
+
+        }
+
+        private void AddGameBT_Click(object sender, EventArgs e)
+        {
+            AddGame();
         }
 
         private void ApplyHotfix(string version)
@@ -79,9 +159,41 @@ namespace C64DreamsTool
             }
         }
 
-        private void C64DreamsFBD_PathChanged(stigzler.Winforms.Base.Events.FileSystemObjectChangedEventArgs e)
+  
+
+        private void C64DreamsFBD_PathChanged_1(stigzler.Winforms.Base.Events.FileSystemObjectChangedEventArgs e)
         {
-            TestC64DreamsPath(e.OldPath);
+                TestC64DreamsPath(e.OldPath);
+        }
+
+        private void ChangeGameImage(string path)
+        {
+            GameImagePB.Image = Image.FromFile(path);
+        }
+
+        private void ClearAddGame()
+        {
+            // Clear the form
+            GameNameTB.Text = string.Empty;
+            GameFIleFB.Path = string.Empty;
+            SidFB.Path = string.Empty;
+            ManualFB.Path = string.Empty;
+            CustomCmdTB.Text = string.Empty;
+            MagazineFB.Path = string.Empty;
+            PageNumberNUM.Value = 0;
+            DeveloperTB.Text = string.Empty;
+            PublisherTB.Text = string.Empty;
+            NotesTB.Text = string.Empty;
+            // Clear images
+            addGame.GameImages.Clear();
+            ImagesCB.SelectedIndex = 0;
+            ImagePathFB.Path = string.Empty;
+            GameImagePB.Image = null;
+        }
+
+        private void ClearFormBT_Click(object sender, EventArgs e)
+        {
+            ClearAddGame();
         }
 
         private void ClearProgress()
@@ -93,11 +205,32 @@ namespace C64DreamsTool
             StatusPrimaryOpLB.Image = Resources.info;
         }
 
+        private void ClearSearchBT_Click(object sender, EventArgs e)
+        {
+            SHowFullGameResults();
+        }
+
         private void DarkLightModeBT_Click(object sender, EventArgs e)
         {
             if (DarkMode) DarkLightModeBT.BackgroundImage = Properties.Resources.DarkMode;
             else DarkLightModeBT.BackgroundImage = Properties.Resources.LightMode;
             DarkMode = !DarkMode;
+        }
+
+        private void DisablePages()
+        {
+            foreach (TabPage tabPage in MainTC.TabPages)
+            {
+                tabPage.SuspendLayout();
+            }
+        }
+
+        private void EnablePages()
+        {
+            foreach (TabPage tabPage in MainTC.TabPages)
+            {
+                tabPage.ResumeLayout();
+            }
         }
 
         private void FocusNavButton(NavButton clickedNavButton)
@@ -108,6 +241,74 @@ namespace C64DreamsTool
                 {
                     navButton.SetDefaultButtonStyle();
                 }
+            }
+        }
+
+        private void GameSearchBT_Click(object sender, EventArgs e)
+        {
+            SearchGames();
+        }
+
+        private void GameSearchTB_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true; // Prevents the ding sound on Enter key press
+                SearchGames();
+            }
+        }
+
+        private void GamesListLB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (GamesListLB.SelectedItem == null) return;
+
+            var dave = gamesList.Descendants("Game")
+                .FirstOrDefault(x => x.Element("Title")?.Value == GamesListLB.SelectedItem.ToString());
+
+            GameDetailsTB.Text = dave.ToString();
+        }
+
+        private void GameslistNameTB_TextChanged(object sender, EventArgs e)
+        {
+            Settings.Default.GameslistName = GameslistNameTB.Text;
+        }
+
+        private void ImagePathFB_PathChanged(stigzler.Winforms.Base.Events.FileSystemObjectChangedEventArgs e)
+        {
+            // First check is an image:
+            if (!Settings.Default.AllowedImageExtensions.Contains(Path.GetExtension(ImagePathFB.Path)))
+            {
+                stigzler.Winforms.Base.Forms.MessageBox messageBox = new stigzler.Winforms.Base.Forms.MessageBox(
+                    "The selected file is not a permitted image file", "Invalid Image file",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error, "Invalid Image", DarkMode,
+                    stigzler.Winforms.Base.Forms.MessageBox.MessageBoxSize.VerySmall);
+                return;
+            }
+
+            if (addGame.GameImages.ContainsKey((GameImageType)ImagesCB.SelectedValue))
+            {
+                addGame.GameImages[(GameImageType)ImagesCB.SelectedValue] = ImagePathFB.Path;
+            }
+            else
+            {
+                addGame.GameImages.Add((GameImageType)ImagesCB.SelectedValue, ImagePathFB.Path);
+            }
+
+            ChangeGameImage(addGame.GameImages[(GameImageType)ImagesCB.SelectedValue]);
+
+        }
+
+        private void ImagesCB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (addGame.GameImages.ContainsKey((GameImageType)ImagesCB.SelectedValue))
+            {
+                ImagePathFB.Path = addGame.GameImages[(GameImageType)ImagesCB.SelectedValue];
+                ChangeGameImage(addGame.GameImages[(GameImageType)ImagesCB.SelectedValue]);
+            }
+            else
+            {
+                ImagePathFB.Path = string.Empty;
+                GameImagePB.Image = null;
             }
         }
 
@@ -220,9 +421,57 @@ namespace C64DreamsTool
             ImportMagazineModule();
         }
 
-        private void LaunchboxRootFB_PathChanged(stigzler.Winforms.Base.Events.FileSystemObjectChangedEventArgs e)
+        private void InstallImages()
+        {
+            this.Cursor = Cursors.WaitCursor;
+            LaunchboxOps.UpdatePlatformImages(IconMediaPackCB.Text, PlatformMediaPackCB.Text, BackupExistingChB.Checked);
+            stigzler.Winforms.Base.Forms.MessageBox messageBox = new stigzler.Winforms.Base.Forms.MessageBox(
+                $"Image install routine completed.",
+                "Images installed", MessageBoxButtons.OK, MessageBoxIcon.Information, "Images installed", DarkMode,
+                stigzler.Winforms.Base.Forms.MessageBox.MessageBoxSize.VerySmall);
+            this.Cursor = Cursors.Default;
+            messageBox.ShowDialog(this);
+        }
+
+        private void InstallImagesBT_Click(object sender, EventArgs e)
+        {
+            if (IconMediaPackCB.Text == string.Empty || PlatformMediaPackCB.Text == string.Empty)
+            {
+                stigzler.Winforms.Base.Forms.MessageBox messageBox = new stigzler.Winforms.Base.Forms.MessageBox(
+                    "Please select a Platform Icon and Clear Logo Media Pack before installing images. These will not be auto-detected until the Launchbox path is set in Settings", "Media Packs not selected",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning, "Media Packs not selected", DarkMode,
+                    stigzler.Winforms.Base.Forms.MessageBox.MessageBoxSize.Small);
+                messageBox.ShowDialog(this);
+                return;
+            }
+
+            InstallImages();
+        }
+
+        private void LaunchboxFBD_PathChanged(stigzler.Winforms.Base.Events.FileSystemObjectChangedEventArgs e)
         {
             TestLbPath(e.OldPath);
+        }
+        private void LoadImagesDropDowns()
+        {
+            PlatformMediaPackCB.Items.Clear();
+            IconMediaPackCB.Items.Clear();
+
+            string mediaPackRoot = Path.Combine(Settings.Default.LaunchboxRootPath, "Images\\Media Packs");
+            foreach (var dir in Directory.GetDirectories(Path.Combine(mediaPackRoot, "Platform Icons")))
+            {
+                string dirName = Path.GetFileName(dir);
+                IconMediaPackCB.Items.Add(dirName);
+            }
+
+            foreach (var dir in Directory.GetDirectories(Path.Combine(mediaPackRoot, "Platform Clear Logos")))
+            {
+                string dirName = Path.GetFileName(dir);
+                PlatformMediaPackCB.Items.Add(dirName);
+            }
+
+            if (PlatformMediaPackCB.Items.Count > 0) PlatformMediaPackCB.SelectedIndex = 0;
+            if (IconMediaPackCB.Items.Count > 0) IconMediaPackCB.SelectedIndex = 0;
         }
 
         private void Log(string text, Color? color = null)
@@ -269,6 +518,8 @@ namespace C64DreamsTool
             MainTC.HideTabs = true;
             NavBarPN.Width = navBarMaxWidth;
 
+            GamesListLB.DataSource = gameslistBS;
+
             // forget for now - annoyingly sticky
             //if (Properties.Settings.Default.NavBarCollapsedOnClose == true)
             //{
@@ -303,26 +554,13 @@ namespace C64DreamsTool
             ImagesCB.DataSource = Enum.GetValues(typeof(GameImageType));
             ImagesCB.SelectedIndex = 0;
 
+            VersionLB.Text = $"Version: {Assembly.GetExecutingAssembly().GetName().Version}";
+
+            if (Directory.Exists(Settings.Default.LaunchboxRootPath)) LoadImagesDropDowns();
+
             RefereshInstallationStatus();
 
-            //LaunchboxOps.AddNewGame("Test", "C:\\temp\\project tests\\C64DreamsImporter\\TestLauncboxInstall\\LaunchBox\\C64 Dreams\\Games\\3-D Skramble\\3-D Skramble.vbs");
         }
-
-        private void DisablePages()
-        {
-            foreach (TabPage tabPage in MainTC.TabPages)
-            {
-                tabPage.SuspendLayout();
-            }
-        }
-        private void EnablePages()
-        {
-            foreach (TabPage tabPage in MainTC.TabPages)
-            {
-                tabPage.ResumeLayout();
-            }
-        }
-
         private void NavBarBT_Click(object sender, EventArgs e)
         {
             DisablePages();
@@ -348,6 +586,11 @@ namespace C64DreamsTool
         private void NavGamesBT_Click(object sender, EventArgs e)
         {
             ReviewUILocks();
+            MainTC.SelectedTab = AddGamesTP;
+        }
+
+        private void NavGameslistBT_Click(object sender, EventArgs e)
+        {
             MainTC.SelectedTab = GamesTP;
         }
 
@@ -362,6 +605,11 @@ namespace C64DreamsTool
             MainTC.SelectedTab = SettingsTP;
             FocusNavButton(sender as NavButton);
         }
+        private void NavUtilitiesBT_Click(object sender, EventArgs e)
+        {
+            MainTC.SelectedTab = UtilitiesTP;
+        }
+
         private bool OperationCanBeRun()
         {
             if (operationRunning)
@@ -408,6 +656,65 @@ namespace C64DreamsTool
             StatusPB.Value = e.MainPercentageComplete;
         }
 
+        private void RefereshInstallationStatus()
+        {
+            if (Settings.Default.C64DInstalled)
+            {
+                C64DInstalledIL.Image = Resources.greenCheck;
+                C64DInstalledIL.Text = "Installed";
+            }
+
+            if (Settings.Default.HotfixInstalled)
+            {
+                HotfixInstalledIL.Image = Resources.greenCheck;
+                HotfixInstalledIL.Text = "Installed";
+            }
+
+            if (Settings.Default.MagsInstalled)
+            {
+                MagPackInstallIL.Image = Resources.greenCheck;
+                MagPackInstallIL.Text = "Installed";
+            }
+        }
+
+        private void RefreshGamesList()
+        {
+            gamesList = Services.LaunchboxOps.ReadLaunchboxGamesXml();
+            SHowFullGameResults();
+        }
+
+        private void RefreshGamesListBT_Click(object sender, EventArgs e)
+        {
+            string gamesXml = Path.Combine(Settings.Default.LaunchboxRootPath, $"Data\\Platforms\\{Settings.Default.GameslistName}.xml");
+            if (!File.Exists(gamesXml))
+            {
+                stigzler.Winforms.Base.Forms.MessageBox messageBox = new stigzler.Winforms.Base.Forms.MessageBox(
+                    $"The games list file {gamesXml} does not exist. Please check your Launchbox installation. Have you installed C64 Dreams?",
+                    "Games List File Not Found", MessageBoxButtons.OK, MessageBoxIcon.Error, "File Missing", DarkMode,
+                    stigzler.Winforms.Base.Forms.MessageBox.MessageBoxSize.Small);
+                messageBox.ShowDialog(this);
+                return;
+            }
+            RefreshGamesList();
+            ClearSearchBT.Enabled = true;
+            GameSearchBT.Enabled = true;
+        }
+
+        private void RemoveGameImage()
+        {
+            if (addGame.GameImages.ContainsKey((GameImageType)ImagesCB.SelectedValue))
+            {
+                addGame.GameImages.Remove((GameImageType)ImagesCB.SelectedValue);
+                ImagePathFB.Path = string.Empty;
+                GameImagePB.Image = null;
+            }
+        }
+
+        private void RemoveIMageBT_Click(object sender, EventArgs e)
+        {
+            RemoveGameImage();
+        }
+
         private void ReviewUILocks()
         {
             // C64Dreams Install tab
@@ -437,6 +744,12 @@ namespace C64DreamsTool
             }
         }
 
+        private void SearchGames()
+        {
+            gameslistBS.DataSource = gamesList.Descendants("Game").Where(x => x.Element("Title")?.Value.Contains(GameSearchTB.Text, StringComparison.OrdinalIgnoreCase) == true)
+                .Select(x => x.Element("Title")?.Value).OrderBy(x => x).ToList();
+        }
+
         private void SettsOPenConfigBT_Click(object sender, EventArgs e)
         {
             string candidatePath = Path.Combine(Settings.Default.LaunchboxRootPath, @"C64 Dreams\Utilities\ASuite\ASuite.exe");
@@ -453,6 +766,8 @@ namespace C64DreamsTool
                 messageBox.ShowDialog(this);
             }
         }
+
+
 
         private void SettsOpenUtilsBT_Click(object sender, EventArgs e)
         {
@@ -488,6 +803,12 @@ namespace C64DreamsTool
                 messageBox.ShowDialog(this);
             }
 
+        }
+
+        private void SHowFullGameResults()
+        {
+            gameslistBS.DataSource = gamesList.Descendants("Game")
+                .Select(x => x.Element("Title")?.Value).Order().ToList();
         }
 
         private bool TestC64DreamsPath(string oldpath = null)
@@ -546,190 +867,9 @@ namespace C64DreamsTool
             }
             return true;
         }
-
-
-
-        private void AddGame()
+        private void ToggleWordWrapBT_Click(object sender, EventArgs e)
         {
-
-
-            if (AlsoUpdateLbChB.Checked && LaunchboxOps.LaunchboxExecutablesRunning())
-            {
-                stigzler.Winforms.Base.Forms.MessageBox messageBox = new stigzler.Winforms.Base.Forms.MessageBox(
-                        "You cannot update the Launchbox database whilst either Launchbox or Bigbox are running. Please close these apps and try again. Game not added", "Lanchbox executables running",
-                        MessageBoxButtons.OK, MessageBoxIcon.Error, "Add Game Error", DarkMode,
-                        stigzler.Winforms.Base.Forms.MessageBox.MessageBoxSize.Small);
-
-                messageBox.ShowDialog(this);
-                return;
-            }
-
-            StatusPB.Style = ProgressBarStyle.Marquee;
-            StatusPrimaryOpLB.Text = "Adding Game to Launchbox...";
-            StatusSecondaryOpLB.Text = "";
-            NavBarPN.Enabled = false;
-            AddGameBT.Enabled = false;
-
-            Game gameDetails = new Game()
-            {
-                CustomCmdText = CustomCmdTB.Text,
-                GameFile = GameFIleFB.Path,
-                MagazinePageNumber = (int)PageNumberNUM.Value,
-                ManualPath = ManualFB.Path,
-                SidPath = SidFB.Path,
-                MagazinePath = MagazineFB.Path,
-                Name = GameNameTB.Text,
-                Developer = DeveloperTB.Text,
-                Publisher = PublisherTB.Text,
-                Notes = NotesTB.Text,
-                AlsoUpdateLaunchbox = AlsoUpdateLbChB.Checked,
-                WarnOnOverwrite = WarnOnOverwriteChB.Checked,
-                GameImages = addGame.GameImages,
-                DarkMode = DarkMode,
-                MainForm = this
-            };
-
-            string result = GameOps.AddGame(gameDetails, DarkMode, this);
-
-            if (result != null)
-            {
-                stigzler.Winforms.Base.Forms.MessageBox messageBox = new stigzler.Winforms.Base.Forms.MessageBox(
-                    result, "Could not add game",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error, "Add Game Error", DarkMode,
-                    stigzler.Winforms.Base.Forms.MessageBox.MessageBoxSize.Small);
-                messageBox.Size = new Size(800, 275);
-                messageBox.ShowDialog(this);
-            }
-            else
-            {
-                stigzler.Winforms.Base.Forms.MessageBox messageBox = new stigzler.Winforms.Base.Forms.MessageBox(
-                    "Rejoice. Said game hast been added to Launchbox!", "Game added successfully",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information, "Game Added", DarkMode,
-                    stigzler.Winforms.Base.Forms.MessageBox.MessageBoxSize.Small);
-                messageBox.ShowDialog(this);
-            }
-
-            StatusPB.Style = ProgressBarStyle.Continuous;
-            StatusPrimaryOpLB.Text = "No operation running.";
-            StatusSecondaryOpLB.Text = "";
-            NavBarPN.Enabled = true;
-            AddGameBT.Enabled = true;
-
-        }
-
-        private void ClearAddGame()
-        {
-            // Clear the form
-            GameNameTB.Text = string.Empty;
-            GameFIleFB.Path = string.Empty;
-            SidFB.Path = string.Empty;
-            ManualFB.Path = string.Empty;
-            CustomCmdTB.Text = string.Empty;
-            MagazineFB.Path = string.Empty;
-            PageNumberNUM.Value = 0;
-            DeveloperTB.Text = string.Empty;
-            PublisherTB.Text = string.Empty;
-            NotesTB.Text = string.Empty;
-            // Clear images
-            addGame.GameImages.Clear();
-            ImagesCB.SelectedIndex = 0;
-            ImagePathFB.Path = string.Empty;
-            GameImagePB.Image = null;
-        }
-
-        private void ImagePathFB_PathChanged(stigzler.Winforms.Base.Events.FileSystemObjectChangedEventArgs e)
-        {
-            // First check is an image:
-            if (!Settings.Default.AllowedImageExtensions.Contains(Path.GetExtension(ImagePathFB.Path)))
-            {
-                stigzler.Winforms.Base.Forms.MessageBox messageBox = new stigzler.Winforms.Base.Forms.MessageBox(
-                    "The selected file is not a permitted image file", "Invalid Image file",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error, "Invalid Image", DarkMode,
-                    stigzler.Winforms.Base.Forms.MessageBox.MessageBoxSize.VerySmall);
-                return;
-            }
-
-            if (addGame.GameImages.ContainsKey((GameImageType)ImagesCB.SelectedValue))
-            {
-                addGame.GameImages[(GameImageType)ImagesCB.SelectedValue] = ImagePathFB.Path;
-            }
-            else
-            {
-                addGame.GameImages.Add((GameImageType)ImagesCB.SelectedValue, ImagePathFB.Path);
-            }
-
-            ChangeGameImage(addGame.GameImages[(GameImageType)ImagesCB.SelectedValue]);
-
-        }
-
-        private void RefereshInstallationStatus()
-        {
-            if (Settings.Default.C64DInstalled)
-            {
-                C64DInstalledIL.Image = Resources.greenCheck;
-                C64DInstalledIL.Text = "Installed";
-            }
-
-            if (Settings.Default.HotfixInstalled)
-            {
-                HotfixInstalledIL.Image = Resources.greenCheck;
-                HotfixInstalledIL.Text = "Installed";
-            }
-
-            if (Settings.Default.MagsInstalled)
-            {
-                MagPackInstallIL.Image = Resources.greenCheck;
-                MagPackInstallIL.Text = "Installed";
-            }
-        }
-
-        private void ImagesCB_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (addGame.GameImages.ContainsKey((GameImageType)ImagesCB.SelectedValue))
-            {
-                ImagePathFB.Path = addGame.GameImages[(GameImageType)ImagesCB.SelectedValue];
-                ChangeGameImage(addGame.GameImages[(GameImageType)ImagesCB.SelectedValue]);
-            }
-            else
-            {
-                ImagePathFB.Path = string.Empty;
-                GameImagePB.Image = null;
-            }
-        }
-
-        private void ChangeGameImage(string path)
-        {
-            GameImagePB.Image = Image.FromFile(path);
-        }
-
-        private void RemoveIMageBT_Click(object sender, EventArgs e)
-        {
-            RemoveGameImage();
-        }
-
-        private void RemoveGameImage()
-        {
-            if (addGame.GameImages.ContainsKey((GameImageType)ImagesCB.SelectedValue))
-            {
-                addGame.GameImages.Remove((GameImageType)ImagesCB.SelectedValue);
-                ImagePathFB.Path = string.Empty;
-                GameImagePB.Image = null;
-            }
-        }
-
-        private void GameslistNameTB_TextChanged(object sender, EventArgs e)
-        {
-            Settings.Default.GameslistName = GameslistNameTB.Text;
-        }
-
-        private void AddGameBT_Click(object sender, EventArgs e)
-        {
-            AddGame();
-        }
-
-        private void ClearFormBT_Click(object sender, EventArgs e)
-        {
-            ClearAddGame();
+            GameDetailsTB.WordWrap = ((ToolStripButton)sender).Checked;
         }
     }
 }

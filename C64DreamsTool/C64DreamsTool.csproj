@@ -7,11 +7,71 @@
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
     <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>CommodoreLogo36WhiteOutline.ico</ApplicationIcon>
+    <PackageIcon>CommodoreLogo36WhiteOutline.png</PackageIcon>
+    <AssemblyVersion>0.8.0.0</AssemblyVersion>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Files\ClearLogos\**" />
+    <Compile Remove="Files\Platform Category\**" />
+    <Compile Remove="Files\Platforms\**" />
+    <Compile Remove="Files\Playlists\**" />
+    <EmbeddedResource Remove="Files\ClearLogos\**" />
+    <EmbeddedResource Remove="Files\Platform Category\**" />
+    <EmbeddedResource Remove="Files\Platforms\**" />
+    <EmbeddedResource Remove="Files\Playlists\**" />
+    <None Remove="Files\ClearLogos\**" />
+    <None Remove="Files\Platform Category\**" />
+    <None Remove="Files\Platforms\**" />
+    <None Remove="Files\Playlists\**" />
+  </ItemGroup>
 
   <ItemGroup>
     <Content Remove="C:\Users\stigz\.nuget\packages\stigzler.winforms.base\1.1.10\contentFiles\any\net9.0-windows7.0\HelloWorld.txt" />
     <Content Remove="C:\Users\stigz\.nuget\packages\stigzler.winforms.base\1.1.2\contentFiles\any\net9.0-windows7.0\HelloWorld.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Files\Clear Logos\Platform Categories\C64 Dreams.png" />
+    <None Remove="Files\Clear Logos\Platforms\Demoscene.png" />
+    <None Remove="Files\Clear Logos\Platforms\Diskmags.png" />
+    <None Remove="Files\Clear Logos\Platforms\Games.png" />
+    <None Remove="Files\Clear Logos\Platforms\Magazines.png" />
+    <None Remove="Files\Clear Logos\Platforms\SID.png" />
+    <None Remove="Files\Clear Logos\Playlists\C64 Dreams - Zzap Reviewed.png" />
+    <None Remove="Files\Clear Logos\Playlists\C64 Dreams Best Of - Vol 1.png" />
+    <None Remove="Files\Clear Logos\Playlists\C64 Dreams Best Of - Vol 2.png" />
+    <None Remove="Files\Clear Logos\Playlists\C64 Dreams Best Of - Vol 3.png" />
+    <None Remove="Files\Clear Logos\Playlists\C64 Dreams Best Of - Vol 4.png" />
+    <None Remove="Files\Clear Logos\Playlists\C64 Dreams Best Of - Vol 5.png" />
+    <None Remove="Files\Clear Logos\Playlists\C64 Dreams Best Of - Vol 6.png" />
+    <None Remove="Files\Clear Logos\Playlists\C64 Dreams Best Of - Vol 7.png" />
+    <None Remove="Files\Clear Logos\Playlists\C64 Dreams Best Of - Vol 8.png" />
+    <None Remove="Files\Clear Logos\Playlists\C64 Dreams Magazines - Commodore Force.png" />
+    <None Remove="Files\Clear Logos\Playlists\C64 Dreams Magazines - Commodore Format.png" />
+    <None Remove="Files\Clear Logos\Playlists\C64 Dreams Magazines - Commodore Power-Play.png" />
+    <None Remove="Files\Clear Logos\Playlists\C64 Dreams Magazines - Your 64.png" />
+    <None Remove="Files\Clear Logos\Playlists\C64 Dreams Magazines - Zzap!64.png" />
+    <None Remove="Files\Clear Logos\Playlists\C64 Dreams Magazines All Magazines.png" />
+    <None Remove="Files\Clear Logos\Playlists\C64 Dreams RPGs.png" />
+    <None Remove="Files\Clear Logos\Playlists\C64 Dreams Shmups.png" />
+    <None Remove="Files\Clear Logos\Playlists\C64 Dreams Text Adventures.png" />
+    <None Remove="Files\Clear Logos\Playlists\C64 Dreams Zzap Reviewed.png" />
+    <None Remove="Files\Clear Logos\Playlists\Games All Games.png" />
+    <None Remove="Files\Clear Logos\Playlists\Games Favorites.png" />
+    <None Remove="Files\Icons\C64 Dreams.png" />
+    <None Remove="Files\Icons\Demoscene.png" />
+    <None Remove="Files\Icons\Diskmags.png" />
+    <None Remove="Files\Icons\Games.png" />
+    <None Remove="Files\Icons\Magazines.png" />
+    <None Remove="Files\Icons\Platform Categories\C64 Dreams.png" />
+    <None Remove="Files\Icons\Platforms\Demoscene.png" />
+    <None Remove="Files\Icons\Platforms\Diskmags.png" />
+    <None Remove="Files\Icons\Platforms\Games.png" />
+    <None Remove="Files\Icons\Platforms\Magazines.png" />
+    <None Remove="Files\Icons\Platforms\SID.png" />
+    <None Remove="Files\Icons\SID.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -43,6 +103,116 @@
     <None Update="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="CommodoreLogo36WhiteOutline.ico" />
+    <Content Include="Files\Clear Logos\Platform Categories\C64 Dreams.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Clear Logos\Platforms\Demoscene.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Clear Logos\Platforms\Diskmags.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Clear Logos\Platforms\Games.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Clear Logos\Platforms\Magazines.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Clear Logos\Platforms\SID.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Clear Logos\Playlists\C64 Dreams - Zzap Reviewed.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Clear Logos\Playlists\C64 Dreams Best Of - Vol 1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Clear Logos\Playlists\C64 Dreams Best Of - Vol 2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Clear Logos\Playlists\C64 Dreams Best Of - Vol 3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Clear Logos\Playlists\C64 Dreams Best Of - Vol 4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Clear Logos\Playlists\C64 Dreams Best Of - Vol 5.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Clear Logos\Playlists\C64 Dreams Best Of - Vol 6.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Clear Logos\Playlists\C64 Dreams Best Of - Vol 7.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Clear Logos\Playlists\C64 Dreams Best Of - Vol 8.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Clear Logos\Playlists\C64 Dreams Magazines - Commodore Force.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Clear Logos\Playlists\C64 Dreams Magazines - Commodore Format.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Clear Logos\Playlists\C64 Dreams Magazines - Commodore Power-Play.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Clear Logos\Playlists\C64 Dreams Magazines - Your 64.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Clear Logos\Playlists\C64 Dreams Magazines - Zzap!64.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Clear Logos\Playlists\C64 Dreams Magazines All Magazines.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Clear Logos\Playlists\C64 Dreams RPGs.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Clear Logos\Playlists\C64 Dreams Shmups.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Clear Logos\Playlists\C64 Dreams Text Adventures.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Clear Logos\Playlists\C64 Dreams Zzap Reviewed.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Clear Logos\Playlists\Games All Games.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Clear Logos\Playlists\Games Favorites.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Icons\Platform Categories\C64 Dreams.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Icons\Platforms\Demoscene.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Icons\Platforms\Diskmags.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Icons\Platforms\Games.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Icons\Platforms\Magazines.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Icons\Platforms\SID.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\..\..\..\..\Pictures\Projects\Atari 2048\BigBox Graphics\Raw\CommodoreLogo36WhiteOutline.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
     </None>
   </ItemGroup>
 
