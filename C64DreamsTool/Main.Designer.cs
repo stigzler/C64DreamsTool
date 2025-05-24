@@ -124,6 +124,7 @@
             SettsOPenConfigBT = new stigzler.Winforms.Base.UIElements.Button();
             label23 = new stigzler.Winforms.Base.UIElements.Label();
             SettingsTP = new TabPage();
+            VersionLB = new stigzler.Winforms.Base.UIElements.Label();
             label26 = new stigzler.Winforms.Base.UIElements.Label();
             groupBox4 = new stigzler.Winforms.Base.UIElements.GroupBox();
             label29 = new stigzler.Winforms.Base.UIElements.Label();
@@ -139,7 +140,6 @@
             label5 = new stigzler.Winforms.Base.UIElements.Label();
             label20 = new stigzler.Winforms.Base.UIElements.Label();
             label21 = new stigzler.Winforms.Base.UIElements.Label();
-            VersionLB = new stigzler.Winforms.Base.UIElements.Label();
             imageLabel1 = new stigzler.Winforms.Base.UIElements.ImageLabel();
             TopLeftFLP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -1866,6 +1866,7 @@
             // SettingsTP
             // 
             SettingsTP.BackColor = Color.FromArgb(35, 35, 35);
+            SettingsTP.Controls.Add(VersionLB);
             SettingsTP.Controls.Add(label26);
             SettingsTP.Controls.Add(groupBox4);
             SettingsTP.ForeColor = Color.FromArgb(220, 220, 220);
@@ -1875,6 +1876,25 @@
             SettingsTP.Size = new Size(536, 535);
             SettingsTP.TabIndex = 5;
             SettingsTP.Text = "Settings";
+            // 
+            // VersionLB
+            // 
+            VersionLB.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            VersionLB.Font = new Font("Segoe UI", 9F);
+            VersionLB.FontStyle = FontStyle.Regular;
+            VersionLB.ForeColor = Color.FromArgb(220, 220, 220);
+            VersionLB.Location = new Point(399, 511);
+            VersionLB.Name = "VersionLB";
+            VersionLB.ScaleFont = 100;
+            VersionLB.Size = new Size(134, 21);
+            VersionLB.TabIndex = 6;
+            VersionLB.Text = "Version: 0.0.0.0";
+            VersionLB.TextAlign = ContentAlignment.MiddleRight;
+            VersionLB.ToolTip = MainTT;
+            VersionLB.ToolTipHorizontalAlignment = HorizontalAlignment.Right;
+            VersionLB.ToolTipImage = null;
+            VersionLB.ToolTipText = null;
+            VersionLB.ToolTipTitle = null;
             // 
             // label26
             // 
@@ -1898,6 +1918,7 @@
             // 
             // groupBox4
             // 
+            groupBox4.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             groupBox4.BorderColor = Color.FromArgb(100, 100, 100);
             groupBox4.BorderStyle = System.Drawing.Drawing2D.DashStyle.Solid;
             groupBox4.BorderThickness = 1;
@@ -2142,24 +2163,6 @@
             label21.ToolTipText = null;
             label21.ToolTipTitle = null;
             // 
-            // VersionLB
-            // 
-            VersionLB.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            VersionLB.Font = new Font("Segoe UI", 9F);
-            VersionLB.FontStyle = FontStyle.Regular;
-            VersionLB.ForeColor = Color.FromArgb(220, 220, 220);
-            VersionLB.Location = new Point(408, 513);
-            VersionLB.Name = "VersionLB";
-            VersionLB.ScaleFont = 100;
-            VersionLB.Size = new Size(125, 19);
-            VersionLB.TabIndex = 8;
-            VersionLB.TextAlign = ContentAlignment.MiddleRight;
-            VersionLB.ToolTip = MainTT;
-            VersionLB.ToolTipHorizontalAlignment = HorizontalAlignment.Right;
-            VersionLB.ToolTipImage = null;
-            VersionLB.ToolTipText = null;
-            VersionLB.ToolTipTitle = null;
-            // 
             // imageLabel1
             // 
             imageLabel1.Font = new Font("Segoe UI", 9F);
@@ -2355,7 +2358,6 @@
         private stigzler.Winforms.Base.UIElements.TextBox GameslistNameTB;
         private stigzler.Winforms.Base.UIElements.Label label20;
         private stigzler.Winforms.Base.UIElements.Label label21;
-        private stigzler.Winforms.Base.UIElements.Label VersionLB;
         private stigzler.Winforms.Base.UIElements.ImageLabel imageLabel1;
         private TabPage SettingsTP;
         private stigzler.Winforms.Base.UIElements.Label label26;
@@ -2363,5 +2365,6 @@
         private stigzler.Winforms.Base.UIElements.Label label29;
         private stigzler.Winforms.Base.UIElements.Label label28;
         private stigzler.Winforms.Base.UIElements.Label label27;
+        private stigzler.Winforms.Base.UIElements.Label VersionLB;
     }
 }
