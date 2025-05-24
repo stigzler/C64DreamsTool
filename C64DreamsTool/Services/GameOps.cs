@@ -1,5 +1,7 @@
-﻿using C64DreamsTool.Data.Entities;
+﻿using C64DreamsTool.Data;
+using C64DreamsTool.Data.Entities;
 using C64DreamsTool.Properties;
+using stigzler.Utilities.Base.Extensions;
 using stigzler.Winforms.Base.Forms.BaseForm;
 using System;
 using System.Collections.Generic;
@@ -153,8 +155,17 @@ namespace C64DreamsTool.Services
                 LaunchboxOps.AddNewGame(game);
             }
 
+            // PROCESS ANY IMAGES ==============================================================================================    
+            foreach (var gameImage in game.GameImages)
+            {
+                if (gameImage.Value == string.Empty) continue;
 
+                string description = ((GameImageType)gameImage.Key).Description();
+                string imagePath = Path.Combine(Settings.Default.LaunchboxRootPath, $"Images\\C64 Dreams\\{description}",
+                   $"{game.Name}-00{Path.GetExtension(   gameImage.Value)}");    
 
+                File.Copy(gameImage.Value, imagePath, true);
+            }
             return null;
         }
 

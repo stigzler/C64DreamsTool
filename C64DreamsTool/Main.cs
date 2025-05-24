@@ -547,7 +547,7 @@ namespace C64DreamsTool
             return true;
         }
 
- 
+
 
         private void AddGame()
         {
@@ -563,6 +563,12 @@ namespace C64DreamsTool
                 messageBox.ShowDialog(this);
                 return;
             }
+
+            StatusPB.Style = ProgressBarStyle.Marquee;
+            StatusPrimaryOpLB.Text = "Adding Game to Launchbox...";
+            StatusSecondaryOpLB.Text = "";
+            NavBarPN.Enabled = false;
+            AddGameBT.Enabled = false;
 
             Game gameDetails = new Game()
             {
@@ -594,6 +600,41 @@ namespace C64DreamsTool
                 messageBox.Size = new Size(800, 275);
                 messageBox.ShowDialog(this);
             }
+            else
+            {
+                stigzler.Winforms.Base.Forms.MessageBox messageBox = new stigzler.Winforms.Base.Forms.MessageBox(
+                    "Rejoice. Said game hast been added to Launchbox!", "Game added successfully",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information, "Game Added", DarkMode,
+                    stigzler.Winforms.Base.Forms.MessageBox.MessageBoxSize.Small);
+                messageBox.ShowDialog(this);
+            }
+
+            StatusPB.Style = ProgressBarStyle.Continuous;
+            StatusPrimaryOpLB.Text = "No operation running.";
+            StatusSecondaryOpLB.Text = "";
+            NavBarPN.Enabled = true;
+            AddGameBT.Enabled = true;
+
+        }
+
+        private void ClearAddGame()
+        {
+            // Clear the form
+            GameNameTB.Text = string.Empty;
+            GameFIleFB.Path = string.Empty;
+            SidFB.Path = string.Empty;
+            ManualFB.Path = string.Empty;
+            CustomCmdTB.Text = string.Empty;
+            MagazineFB.Path = string.Empty;
+            PageNumberNUM.Value = 0;
+            DeveloperTB.Text = string.Empty;
+            PublisherTB.Text = string.Empty;
+            NotesTB.Text = string.Empty;
+            // Clear images
+            addGame.GameImages.Clear();
+            ImagesCB.SelectedIndex = 0;
+            ImagePathFB.Path = string.Empty;
+            GameImagePB.Image = null;
         }
 
         private void ImagePathFB_PathChanged(stigzler.Winforms.Base.Events.FileSystemObjectChangedEventArgs e)
@@ -684,6 +725,11 @@ namespace C64DreamsTool
         private void AddGameBT_Click(object sender, EventArgs e)
         {
             AddGame();
+        }
+
+        private void ClearFormBT_Click(object sender, EventArgs e)
+        {
+            ClearAddGame();
         }
     }
 }

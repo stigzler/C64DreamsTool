@@ -153,6 +153,9 @@
         FrkJZFfGUfsLaSPfpSsy0PUFQ/PgVFeVIKEAAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="label18.ToolTipText" xml:space="preserve">
+    <value>If set, adds images for the relevant Image Type to Launchbox. Choose the image type from the drop-down and then set via the file browser. The eraser button clears the image for the image type. Does not persist between sessions, unlike other fields.</value>
+  </data>
   <data name="ImagePathFB.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m

@@ -64,6 +64,7 @@
             ImportMagsBT = new stigzler.Winforms.Base.UIElements.Button();
             PathsWarningLB = new stigzler.Winforms.Base.UIElements.Label();
             GamesTP = new TabPage();
+            ClearFormBT = new stigzler.Winforms.Base.UIElements.Button();
             AddGameWarningLB = new stigzler.Winforms.Base.UIElements.Label();
             AddGamePN = new stigzler.Winforms.Base.UIElements.Panel();
             AddGameBT = new stigzler.Winforms.Base.UIElements.Button();
@@ -109,6 +110,7 @@
             LaunchboxFBD = new stigzler.Winforms.Base.UserControls.FileObjectTextBox();
             label3 = new stigzler.Winforms.Base.UIElements.Label();
             navBarTicker = new System.Windows.Forms.Timer(components);
+            tabPage1 = new TabPage();
             TopLeftFLP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             statusStrip1.SuspendLayout();
@@ -411,6 +413,7 @@
             MainTC.Controls.Add(InstallTP);
             MainTC.Controls.Add(GamesTP);
             MainTC.Controls.Add(SettingsTP);
+            MainTC.Controls.Add(tabPage1);
             MainTC.Dock = DockStyle.Fill;
             MainTC.DrawMode = TabDrawMode.OwnerDrawFixed;
             MainTC.HideBorders = false;
@@ -711,6 +714,7 @@
             // GamesTP
             // 
             GamesTP.BackColor = Color.FromArgb(35, 35, 35);
+            GamesTP.Controls.Add(ClearFormBT);
             GamesTP.Controls.Add(AddGameWarningLB);
             GamesTP.Controls.Add(AddGamePN);
             GamesTP.Controls.Add(label2);
@@ -721,6 +725,32 @@
             GamesTP.Size = new Size(536, 535);
             GamesTP.TabIndex = 2;
             GamesTP.Text = "Games";
+            // 
+            // ClearFormBT
+            // 
+            ClearFormBT.BackColor = Color.FromArgb(55, 55, 55);
+            ClearFormBT.DefocusOnClick = true;
+            ClearFormBT.DisabledBackColor = Color.FromArgb(30, 30, 30);
+            ClearFormBT.DisabledBorderColor = Color.FromArgb(60, 60, 60);
+            ClearFormBT.DisabledForeColor = Color.FromArgb(125, 125, 125);
+            ClearFormBT.FlatAppearance.BorderColor = Color.FromArgb(100, 100, 100);
+            ClearFormBT.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 102, 215);
+            ClearFormBT.FlatStyle = FlatStyle.Flat;
+            ClearFormBT.ForeColor = Color.FromArgb(240, 240, 240);
+            ClearFormBT.Image = Properties.Resources.redCross;
+            ClearFormBT.Location = new Point(450, 6);
+            ClearFormBT.Name = "ClearFormBT";
+            ClearFormBT.Size = new Size(75, 27);
+            ClearFormBT.TabIndex = 22;
+            ClearFormBT.Text = "Clear";
+            ClearFormBT.TextAlign = ContentAlignment.MiddleRight;
+            ClearFormBT.TextImageRelation = TextImageRelation.ImageBeforeText;
+            ClearFormBT.ToolTip = MainTT;
+            ClearFormBT.ToolTipImage = null;
+            ClearFormBT.ToolTipText = "Clears all fields in this form.";
+            ClearFormBT.ToolTipTitle = "Clear Form";
+            ClearFormBT.UseVisualStyleBackColor = false;
+            ClearFormBT.Click += ClearFormBT_Click;
             // 
             // AddGameWarningLB
             // 
@@ -797,10 +827,9 @@
             AddGameBT.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             AddGameBT.ForeColor = Color.FromArgb(240, 240, 240);
             AddGameBT.Image = Properties.Resources.plus_circle;
-            AddGameBT.ImageAlign = ContentAlignment.MiddleRight;
-            AddGameBT.Location = new Point(348, 412);
+            AddGameBT.Location = new Point(348, 398);
             AddGameBT.Name = "AddGameBT";
-            AddGameBT.Size = new Size(171, 56);
+            AddGameBT.Size = new Size(171, 70);
             AddGameBT.TabIndex = 15;
             AddGameBT.Text = "Add Game";
             AddGameBT.TextImageRelation = TextImageRelation.TextBeforeImage;
@@ -844,8 +873,8 @@
             label18.ToolTip = MainTT;
             label18.ToolTipHorizontalAlignment = HorizontalAlignment.Right;
             label18.ToolTipImage = null;
-            label18.ToolTipText = null;
-            label18.ToolTipTitle = null;
+            label18.ToolTipText = resources.GetString("label18.ToolTipText");
+            label18.ToolTipTitle = "Game Images";
             // 
             // RemoveIMageBT
             // 
@@ -921,14 +950,14 @@
             ImagesCB.SelectedColor = SystemColors.Highlight;
             ImagesCB.Size = new Size(109, 23);
             ImagesCB.TabIndex = 10;
-            ImagesCB.TextEmphasisColor = Color.White;
+            ImagesCB.TextEmphasisColor = Color.FromArgb(220, 220, 220);
             ImagesCB.TextEmphasisFont = new Font("Segoe UI", 9F, FontStyle.Bold);
             ImagesCB.SelectedIndexChanged += ImagesCB_SelectedIndexChanged;
             // 
             // WarnOnOverwriteChB
             // 
             WarnOnOverwriteChB.AutoSize = true;
-            WarnOnOverwriteChB.Location = new Point(393, 386);
+            WarnOnOverwriteChB.Location = new Point(348, 373);
             WarnOnOverwriteChB.Name = "WarnOnOverwriteChB";
             WarnOnOverwriteChB.OverrideTheme = false;
             WarnOnOverwriteChB.Size = new Size(123, 19);
@@ -937,14 +966,14 @@
             WarnOnOverwriteChB.ToolTip = MainTT;
             WarnOnOverwriteChB.ToolTipHorizontalAlignment = HorizontalAlignment.Right;
             WarnOnOverwriteChB.ToolTipImage = null;
-            WarnOnOverwriteChB.ToolTipText = null;
-            WarnOnOverwriteChB.ToolTipTitle = null;
+            WarnOnOverwriteChB.ToolTipText = "Warns if there is an existing Launchbox database entry for the game of this name. You can either choose to overwrite the database entry with this new one, or skip the entry creation. ";
+            WarnOnOverwriteChB.ToolTipTitle = "Warn on Overwrite";
             WarnOnOverwriteChB.UseVisualStyleBackColor = true;
             // 
             // AlsoUpdateLbChB
             // 
             AlsoUpdateLbChB.AutoSize = true;
-            AlsoUpdateLbChB.Location = new Point(348, 361);
+            AlsoUpdateLbChB.Location = new Point(348, 350);
             AlsoUpdateLbChB.Name = "AlsoUpdateLbChB";
             AlsoUpdateLbChB.OverrideTheme = false;
             AlsoUpdateLbChB.Size = new Size(168, 19);
@@ -953,8 +982,8 @@
             AlsoUpdateLbChB.ToolTip = MainTT;
             AlsoUpdateLbChB.ToolTipHorizontalAlignment = HorizontalAlignment.Right;
             AlsoUpdateLbChB.ToolTipImage = null;
-            AlsoUpdateLbChB.ToolTipText = null;
-            AlsoUpdateLbChB.ToolTipTitle = null;
+            AlsoUpdateLbChB.ToolTipText = "Updates the launchbox database upon game creation. If you don't choose this option you will have to add the game manually to launchbox via the normal means. ";
+            AlsoUpdateLbChB.ToolTipTitle = "Also Update Launchbox";
             AlsoUpdateLbChB.UseVisualStyleBackColor = true;
             // 
             // label17
@@ -972,8 +1001,8 @@
             label17.ToolTip = MainTT;
             label17.ToolTipHorizontalAlignment = HorizontalAlignment.Right;
             label17.ToolTipImage = null;
-            label17.ToolTipText = null;
-            label17.ToolTipTitle = null;
+            label17.ToolTipText = "Used in any Launchbox database update";
+            label17.ToolTipTitle = "Game Notes/Description";
             // 
             // NotesTB
             // 
@@ -1006,8 +1035,8 @@
             label16.ToolTip = MainTT;
             label16.ToolTipHorizontalAlignment = HorizontalAlignment.Right;
             label16.ToolTipImage = null;
-            label16.ToolTipText = null;
-            label16.ToolTipTitle = null;
+            label16.ToolTipText = "Used in any Launchbox database update";
+            label16.ToolTipTitle = "Game Publisher";
             // 
             // label15
             // 
@@ -1024,8 +1053,8 @@
             label15.ToolTip = MainTT;
             label15.ToolTipHorizontalAlignment = HorizontalAlignment.Right;
             label15.ToolTipImage = null;
-            label15.ToolTipText = null;
-            label15.ToolTipTitle = null;
+            label15.ToolTipText = "Used in any Launchbox database update";
+            label15.ToolTipTitle = "Game Developer";
             // 
             // PublisherTB
             // 
@@ -1087,8 +1116,8 @@
             label8.ToolTip = MainTT;
             label8.ToolTipHorizontalAlignment = HorizontalAlignment.Right;
             label8.ToolTipImage = null;
-            label8.ToolTipText = null;
-            label8.ToolTipTitle = null;
+            label8.ToolTipText = "How the game will be named in launchbox and for any created files.";
+            label8.ToolTipTitle = "Game Name";
             // 
             // label11
             // 
@@ -1105,8 +1134,8 @@
             label11.ToolTip = MainTT;
             label11.ToolTipHorizontalAlignment = HorizontalAlignment.Right;
             label11.ToolTipImage = null;
-            label11.ToolTipText = null;
-            label11.ToolTipTitle = null;
+            label11.ToolTipText = "The path to the magazine file which contains the review. This must be the magazines inside the Launchbox\\C64 Dreams\\Magazines folder. ";
+            label11.ToolTipTitle = "Review Path";
             // 
             // MagazineFB
             // 
@@ -1169,8 +1198,8 @@
             label14.ToolTip = MainTT;
             label14.ToolTipHorizontalAlignment = HorizontalAlignment.Right;
             label14.ToolTipImage = null;
-            label14.ToolTipText = null;
-            label14.ToolTipTitle = null;
+            label14.ToolTipText = "The game's rom. This will be renamed as part of the process and the original left in its place.";
+            label14.ToolTipTitle = "Game File";
             // 
             // label9
             // 
@@ -1187,8 +1216,8 @@
             label9.ToolTip = MainTT;
             label9.ToolTipHorizontalAlignment = HorizontalAlignment.Right;
             label9.ToolTipImage = null;
-            label9.ToolTipText = null;
-            label9.ToolTipTitle = null;
+            label9.ToolTipText = "A sid file for the game. Has to be a .sid extension.";
+            label9.ToolTipTitle = "SID File";
             // 
             // GameFIleFB
             // 
@@ -1251,8 +1280,8 @@
             label13.ToolTip = MainTT;
             label13.ToolTipHorizontalAlignment = HorizontalAlignment.Right;
             label13.ToolTipImage = null;
-            label13.ToolTipText = null;
-            label13.ToolTipTitle = null;
+            label13.ToolTipText = "The page number of the review in the selected magazine.";
+            label13.ToolTipTitle = "Review Page Number";
             // 
             // label10
             // 
@@ -1269,8 +1298,8 @@
             label10.ToolTip = MainTT;
             label10.ToolTipHorizontalAlignment = HorizontalAlignment.Right;
             label10.ToolTipImage = null;
-            label10.ToolTipText = null;
-            label10.ToolTipTitle = null;
+            label10.ToolTipText = "The manual for the game. Has to be a .pdf or .cbz";
+            label10.ToolTipTitle = "Manual file";
             // 
             // PageNumberNUM
             // 
@@ -1302,8 +1331,8 @@
             label12.ToolTip = MainTT;
             label12.ToolTipHorizontalAlignment = HorizontalAlignment.Right;
             label12.ToolTipImage = null;
-            label12.ToolTipText = null;
-            label12.ToolTipTitle = null;
+            label12.ToolTipText = "Custom text for any .cmd file. Leave blank to create the standard .cmd file.";
+            label12.ToolTipTitle = "Custom Cmd";
             // 
             // CustomCmdTB
             // 
@@ -1592,6 +1621,17 @@
             navBarTicker.Interval = 10;
             navBarTicker.Tick += navBarTicker_Tick;
             // 
+            // tabPage1
+            // 
+            tabPage1.BackColor = Color.FromArgb(35, 35, 35);
+            tabPage1.ForeColor = Color.FromArgb(220, 220, 220);
+            tabPage1.Location = new Point(4, 22);
+            tabPage1.Name = "tabPage1";
+            tabPage1.Padding = new Padding(3);
+            tabPage1.Size = new Size(536, 535);
+            tabPage1.TabIndex = 3;
+            tabPage1.Text = "tabPage1";
+            // 
             // Main
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1723,5 +1763,7 @@
         private stigzler.Winforms.Base.UIElements.ImageLabel MagPackInstallIL;
         private stigzler.Winforms.Base.UIElements.Label label20;
         private stigzler.Winforms.Base.UIElements.TextBox GameslistNameTB;
+        private stigzler.Winforms.Base.UIElements.Button ClearFormBT;
+        private TabPage tabPage1;
     }
 }

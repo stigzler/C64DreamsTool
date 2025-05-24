@@ -11,20 +11,39 @@ namespace C64DreamsTool.Data
     {
         [Description("Clear Logo")]
         ClearLogo,
+
         [Description("Box - Front")]
         BoxFront,
+
         [Description("Box - 3D")]
         Box3D,
-        [Description("Box - Rear")]
+
+        [Description("Box - Back")]
         BoxRear,
+
         [Description("Screenshot - Game Title")]
         SnapTitle,
-        [Description("Screenshot - Game Over")]
+
+        [Description("Screenshot - Gameplay")]
         SnapGameplay,
+
+        [Description("Screenshot - Game Over")]
+        SnapGameover,
+
+        [Description("Screenshot - High Scores")]
+        SnapHighScores,
+
         [Description("Disc")]
         Disc,
-        [Description("Cart - Front")]
-        CartFront
-    }
 
+        [Description("Cart - Front")]
+        CartFront,
+
+        [Description("Cart - 3D")]
+        Cart3D,
+
+        [Description("Fanart - Background")]
+        FanartBackground
+
+    }
 }
