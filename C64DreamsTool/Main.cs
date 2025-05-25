@@ -917,6 +917,15 @@ namespace C64DreamsTool
 
         private void RefreshImageInstallBT_Click(object sender, EventArgs e)
         {
+            if (!Directory.Exists(Settings.Default.LaunchboxRootPath))
+            {
+                stigzler.Winforms.Base.Forms.MessageBox messageBox = new stigzler.Winforms.Base.Forms.MessageBox(
+                    $"Launchbox root not found. Please check the Launchbox path is set in Settings and that it exists.",
+                    "Launchbox Not Found", MessageBoxButtons.OK, MessageBoxIcon.Error, "Launchbox Not Found", DarkMode,
+                    stigzler.Winforms.Base.Forms.MessageBox.MessageBoxSize.Small);
+                messageBox.ShowDialog(this);
+                return;
+            }
             LoadImagesDropDowns();
         }
     }
