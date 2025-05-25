@@ -394,6 +394,7 @@
             NavGamesBT.Name = "NavGamesBT";
             NavGamesBT.Size = new Size(156, 44);
             NavGamesBT.TabIndex = 5;
+            NavGamesBT.Click += NavGamesBT_Click;
             // 
             // NavGameslistBT
             // 
@@ -407,6 +408,7 @@
             NavGameslistBT.Name = "NavGameslistBT";
             NavGameslistBT.Size = new Size(156, 44);
             NavGameslistBT.TabIndex = 4;
+            NavGameslistBT.Click += NavGameslistBT_Click;
             // 
             // NavUtilitiesBT
             // 
@@ -420,6 +422,7 @@
             NavUtilitiesBT.Name = "NavUtilitiesBT";
             NavUtilitiesBT.Size = new Size(156, 44);
             NavUtilitiesBT.TabIndex = 3;
+            NavUtilitiesBT.Click += NavUtilitiesBT_Click;
             // 
             // NavSettingsBT
             // 
@@ -433,6 +436,7 @@
             NavSettingsBT.Name = "NavSettingsBT";
             NavSettingsBT.Size = new Size(156, 44);
             NavSettingsBT.TabIndex = 2;
+            NavSettingsBT.Click += NavSettingsBT_Click;
             // 
             // NavInstallBT
             // 
@@ -446,6 +450,7 @@
             NavInstallBT.Name = "NavInstallBT";
             NavInstallBT.Size = new Size(156, 44);
             NavInstallBT.TabIndex = 1;
+            NavInstallBT.Click += NavInstallBT_Click;
             // 
             // MainTC
             // 

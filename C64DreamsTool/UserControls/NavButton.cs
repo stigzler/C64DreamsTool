@@ -52,8 +52,6 @@ namespace C64DreamsTool
             }
         }
 
-
-
         private EventHandler RaiseClick()
         {
             return (sender, e) => OnClick(EventArgs.Empty);

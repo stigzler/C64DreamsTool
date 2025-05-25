@@ -18,8 +18,7 @@ namespace C64DreamsTool
 
         Game addGame = new Game();
 
-        int currentSearchResultIndex = 0;
-        private XDocument gamesList;
+        private XDocument? gamesList;
         BindingSource gameslistBS = new BindingSource();
         private int navBarMaxWidth = 168;
         private int navBarMinWidth = 56;
@@ -159,11 +158,11 @@ namespace C64DreamsTool
             }
         }
 
-  
+
 
         private void C64DreamsFBD_PathChanged_1(stigzler.Winforms.Base.Events.FileSystemObjectChangedEventArgs e)
         {
-                TestC64DreamsPath(e.OldPath);
+            TestC64DreamsPath(e.OldPath);
         }
 
         private void ChangeGameImage(string path)
@@ -250,6 +249,8 @@ namespace C64DreamsTool
                 {
                     navButton.SetDefaultButtonStyle();
                 }
+                else
+                { navButton.FocusNavButton(navButton); }
             }
         }
 
@@ -596,11 +597,13 @@ namespace C64DreamsTool
         {
             ReviewUILocks();
             MainTC.SelectedTab = AddGamesTP;
+            FocusNavButton(sender as NavButton);
         }
 
         private void NavGameslistBT_Click(object sender, EventArgs e)
         {
             MainTC.SelectedTab = GamesTP;
+            FocusNavButton(sender as NavButton);
         }
 
         private void NavInstallBT_Click(object sender, EventArgs e)
@@ -617,6 +620,7 @@ namespace C64DreamsTool
         private void NavUtilitiesBT_Click(object sender, EventArgs e)
         {
             MainTC.SelectedTab = UtilitiesTP;
+            FocusNavButton(sender as NavButton);
         }
 
         private bool OperationCanBeRun()
