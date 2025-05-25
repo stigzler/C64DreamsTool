@@ -136,7 +136,11 @@
             label20 = new stigzler.Winforms.Base.UIElements.Label();
             label21 = new stigzler.Winforms.Base.UIElements.Label();
             imageLabel1 = new stigzler.Winforms.Base.UIElements.ImageLabel();
+            navButton4 = new NavButton();
             navButton1 = new NavButton();
+            navButton2 = new NavButton();
+            navButton3 = new NavButton();
+            navButton5 = new NavButton();
             TopLeftFLP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             statusStrip1.SuspendLayout();
@@ -366,12 +370,16 @@
             // 
             NavBarPN.BackColor = Color.FromArgb(35, 35, 35);
             NavBarPN.BackgroundShadeFactor = 1D;
+            NavBarPN.Controls.Add(navButton5);
+            NavBarPN.Controls.Add(navButton3);
+            NavBarPN.Controls.Add(navButton2);
             NavBarPN.Controls.Add(navButton1);
+            NavBarPN.Controls.Add(navButton4);
             NavBarPN.Dock = DockStyle.Left;
             NavBarPN.ForeColor = Color.FromArgb(220, 220, 220);
             NavBarPN.Location = new Point(0, 48);
             NavBarPN.Name = "NavBarPN";
-            NavBarPN.Size = new Size(160, 561);
+            NavBarPN.Size = new Size(168, 561);
             NavBarPN.TabIndex = 4;
             // 
             // MainTC
@@ -386,11 +394,11 @@
             MainTC.HideBorders = false;
             MainTC.HideTabs = false;
             MainTC.ItemSize = new Size(58, 18);
-            MainTC.Location = new Point(160, 48);
+            MainTC.Location = new Point(168, 48);
             MainTC.Name = "MainTC";
             MainTC.SelectedIndex = 0;
             MainTC.SelectedTabColor = Color.FromArgb(34, 120, 187);
-            MainTC.Size = new Size(544, 561);
+            MainTC.Size = new Size(536, 561);
             MainTC.TabIndex = 5;
             MainTC.TabOutlineColor = Color.FromArgb(125, 125, 125);
             MainTC.UnselectedTabBackColor = Color.FromArgb(20, 20, 20);
@@ -404,7 +412,7 @@
             InstallTP.Location = new Point(4, 22);
             InstallTP.Name = "InstallTP";
             InstallTP.Padding = new Padding(3);
-            InstallTP.Size = new Size(536, 535);
+            InstallTP.Size = new Size(528, 535);
             InstallTP.TabIndex = 0;
             InstallTP.Text = "Install";
             // 
@@ -418,7 +426,7 @@
             InstallPN.ForeColor = Color.FromArgb(220, 220, 220);
             InstallPN.Location = new Point(3, 142);
             InstallPN.Name = "InstallPN";
-            InstallPN.Size = new Size(530, 390);
+            InstallPN.Size = new Size(522, 390);
             InstallPN.TabIndex = 11;
             // 
             // ConsoleRTB
@@ -432,7 +440,7 @@
             ConsoleRTB.Name = "ConsoleRTB";
             ConsoleRTB.OverrideTheme = true;
             ConsoleRTB.ReadOnly = true;
-            ConsoleRTB.Size = new Size(519, 361);
+            ConsoleRTB.Size = new Size(511, 361);
             ConsoleRTB.TabIndex = 9;
             ConsoleRTB.Text = "Greetings Professor Falken.\nShall we play a game?\n[oops sorry - wrong meeting]\n> Awaiting operation...\n";
             // 
@@ -469,7 +477,7 @@
             InstallTopPN.ForeColor = Color.FromArgb(220, 220, 220);
             InstallTopPN.Location = new Point(3, 3);
             InstallTopPN.Name = "InstallTopPN";
-            InstallTopPN.Size = new Size(530, 139);
+            InstallTopPN.Size = new Size(522, 139);
             InstallTopPN.TabIndex = 12;
             // 
             // MagPackInstallIL
@@ -2106,17 +2114,65 @@
             imageLabel1.ToolTipText = null;
             imageLabel1.ToolTipTitle = null;
             // 
+            // navButton4
+            // 
+            navButton4.BackColor = Color.Transparent;
+            navButton4.BorderStyle = BorderStyle.FixedSingle;
+            navButton4.DarkMode = true;
+            navButton4.Image = Properties.Resources.InstallPackage;
+            navButton4.Label = "Install C64Dreams";
+            navButton4.Location = new Point(6, 6);
+            navButton4.Name = "navButton4";
+            navButton4.Size = new Size(156, 44);
+            navButton4.TabIndex = 4;
+            // 
             // navButton1
             // 
             navButton1.BackColor = Color.Transparent;
             navButton1.BorderStyle = BorderStyle.FixedSingle;
             navButton1.DarkMode = true;
-            navButton1.Image = (Image)resources.GetObject("navButton1.Image");
-            navButton1.Label = "Text Here";
-            navButton1.Location = new Point(6, 6);
+            navButton1.Image = Properties.Resources.InstallPackage;
+            navButton1.Label = "Add Game";
+            navButton1.Location = new Point(6, 56);
             navButton1.Name = "navButton1";
-            navButton1.Size = new Size(148, 49);
-            navButton1.TabIndex = 0;
+            navButton1.Size = new Size(156, 44);
+            navButton1.TabIndex = 5;
+            // 
+            // navButton2
+            // 
+            navButton2.BackColor = Color.Transparent;
+            navButton2.BorderStyle = BorderStyle.FixedSingle;
+            navButton2.DarkMode = true;
+            navButton2.Image = Properties.Resources.InstallPackage;
+            navButton2.Label = "Settings";
+            navButton2.Location = new Point(6, 206);
+            navButton2.Name = "navButton2";
+            navButton2.Size = new Size(156, 44);
+            navButton2.TabIndex = 6;
+            // 
+            // navButton3
+            // 
+            navButton3.BackColor = Color.Transparent;
+            navButton3.BorderStyle = BorderStyle.FixedSingle;
+            navButton3.DarkMode = true;
+            navButton3.Image = Properties.Resources.InstallPackage;
+            navButton3.Label = "Utilities";
+            navButton3.Location = new Point(6, 156);
+            navButton3.Name = "navButton3";
+            navButton3.Size = new Size(156, 44);
+            navButton3.TabIndex = 7;
+            // 
+            // navButton5
+            // 
+            navButton5.BackColor = Color.Transparent;
+            navButton5.BorderStyle = BorderStyle.FixedSingle;
+            navButton5.DarkMode = true;
+            navButton5.Image = Properties.Resources.InstallPackage;
+            navButton5.Label = "Games List";
+            navButton5.Location = new Point(6, 106);
+            navButton5.Name = "navButton5";
+            navButton5.Size = new Size(156, 44);
+            navButton5.TabIndex = 8;
             // 
             // Main
             // 
@@ -2191,7 +2247,6 @@
         private stigzler.Winforms.Base.UIElements.Button NavBarBT;
         private stigzler.Winforms.Base.UIElements.Button DarkLightModeBT;
         private stigzler.Winforms.Base.UIElements.Panel NavBarPN;
-        private NavButton NavInstallBT;
         private NavButton NavSettingsBT;
         private stigzler.Winforms.Base.UIElements.TabControl MainTC;
         private TabPage InstallTP;
@@ -2300,6 +2355,11 @@
         private stigzler.Winforms.Base.UIElements.Label label28;
         private stigzler.Winforms.Base.UIElements.Label label27;
         private stigzler.Winforms.Base.UIElements.Label VersionLB;
+        private NavButton NavInstallBT;
+        private NavButton navButton5;
+        private NavButton navButton3;
+        private NavButton navButton2;
         private NavButton navButton1;
+        private NavButton navButton4;
     }
 }

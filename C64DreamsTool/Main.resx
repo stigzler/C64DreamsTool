@@ -142,15 +142,6 @@
         UVFRlujo6Nck8pTR7mj/L54lAE77swRcAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="navButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAN5JREFUWEft
-        lsENgkAQRTl6tARLsRvbmK3AcizFEjxagoYEDPydJe9HOMFL/mX3zR8PROi6gwMhIs4R8dkoJ91XkQyt
-        Gt1XgUUT3ItFE9yLRRPci0UT3ItFE9yLRRPci0UT3ItFE9yLRRPci0UT3IvFhFLKTc9GcC8WhXGuf5np
-        XQ/uXRKHu3ty/pj8gKXZ9G5GS5Qll8n5dbp8yHM+3e6tyMRsifoafR50rkkmavmQV3Km+T0PWW+KihHx
-        /iet3iZYNMG9WDTBvVg0wb2juFV0X0X/6axDKyb9lzzYN1/SS0k/1JjregAAAABJRU5ErkJggg==
-</value>
-  </data>
   <data name="label18.ToolTipText" xml:space="preserve">
     <value>If set, adds images for the relevant Image Type to Launchbox. Choose the image type from the drop-down and then set via the file browser. The eraser button clears the image for the image type. Does not persist between sessions, unlike other fields.</value>
   </data>
@@ -209,6 +200,9 @@
         FrkJZFfGUfsLaSPfpSsy0PUFQ/PgVFeVIKEAAAAASUVORK5CYII=
 </value>
   </data>
+  <metadata name="GamesListControlsTS.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>421, 17</value>
+  </metadata>
   <metadata name="GamesListControlsTS.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>421, 17</value>
   </metadata>
