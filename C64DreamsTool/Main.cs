@@ -22,7 +22,7 @@ namespace C64DreamsTool
         private XDocument gamesList;
         BindingSource gameslistBS = new BindingSource();
         private int navBarMaxWidth = 168;
-        private int navBarMinWidth = 52;
+        private int navBarMinWidth = 56;
         private int navBarTransitionPixelChange = -4;
         // must have a factor of 4
         // must have a factor of 4
@@ -215,6 +215,15 @@ namespace C64DreamsTool
             if (DarkMode) DarkLightModeBT.BackgroundImage = Properties.Resources.DarkMode;
             else DarkLightModeBT.BackgroundImage = Properties.Resources.LightMode;
             DarkMode = !DarkMode;
+            UpdateNavButtonsTheme();
+        }
+
+        private void UpdateNavButtonsTheme()
+        {
+            foreach (NavButton navButton in NavBarPN.Controls.OfType<NavButton>())
+            {
+                navButton.DarkMode = DarkMode;
+            }
         }
 
         private void DisablePages()

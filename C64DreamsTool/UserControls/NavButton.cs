@@ -13,8 +13,17 @@ using System.Windows.Forms;
 namespace C64DreamsTool
 {
     [DefaultEvent("Click")]
-    public partial class NavButton : BaseUserControl
+    public partial class NavButton : UserControl
     {
+        private bool darkMode = false;
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
+        public bool DarkMode
+        {
+            get { return darkMode; }
+            set { darkMode = value; SetDefaultButtonStyle(); }
+        }
+
+
 
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public string Label
@@ -26,7 +35,7 @@ namespace C64DreamsTool
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public Image Image
         {
-            get { return ImagePB.BackgroundImage; }
+            get => ImagePB.BackgroundImage;
             set { ImagePB.BackgroundImage = value; }
         }
 
@@ -37,7 +46,6 @@ namespace C64DreamsTool
 
         private void NavButton_Load(object sender, EventArgs e)
         {
-            this.DarkModeChanged += NavButton_DarkModeChanged;
             for (int i = 0; i < Controls.Count; i++)
             {
                 Controls[i].Click += RaiseClick();
@@ -49,11 +57,6 @@ namespace C64DreamsTool
         private EventHandler RaiseClick()
         {
             return (sender, e) => OnClick(EventArgs.Empty);
-        }
-
-        private void NavButton_DarkModeChanged(object? sender, bool e)
-        {
-            SetDefaultButtonStyle();
         }
 
         internal void SetDefaultButtonStyle()

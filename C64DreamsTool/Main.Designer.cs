@@ -44,6 +44,11 @@
             flowLayoutPanel1 = new stigzler.Winforms.Base.UIElements.FlowLayoutPanel();
             DarkLightModeBT = new stigzler.Winforms.Base.UIElements.Button();
             NavBarPN = new stigzler.Winforms.Base.UIElements.Panel();
+            navButton5 = new NavButton();
+            navButton4 = new NavButton();
+            navButton3 = new NavButton();
+            navButton2 = new NavButton();
+            navButton1 = new NavButton();
             MainTC = new stigzler.Winforms.Base.UIElements.TabControl();
             InstallTP = new TabPage();
             InstallPN = new stigzler.Winforms.Base.UIElements.Panel();
@@ -136,7 +141,6 @@
             label20 = new stigzler.Winforms.Base.UIElements.Label();
             label21 = new stigzler.Winforms.Base.UIElements.Label();
             imageLabel1 = new stigzler.Winforms.Base.UIElements.ImageLabel();
-            navButton1 = new NavButton();
             TopLeftFLP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             statusStrip1.SuspendLayout();
@@ -366,6 +370,10 @@
             // 
             NavBarPN.BackColor = Color.FromArgb(35, 35, 35);
             NavBarPN.BackgroundShadeFactor = 1D;
+            NavBarPN.Controls.Add(navButton5);
+            NavBarPN.Controls.Add(navButton4);
+            NavBarPN.Controls.Add(navButton3);
+            NavBarPN.Controls.Add(navButton2);
             NavBarPN.Controls.Add(navButton1);
             NavBarPN.Dock = DockStyle.Left;
             NavBarPN.ForeColor = Color.FromArgb(220, 220, 220);
@@ -373,6 +381,71 @@
             NavBarPN.Name = "NavBarPN";
             NavBarPN.Size = new Size(168, 561);
             NavBarPN.TabIndex = 4;
+            // 
+            // navButton5
+            // 
+            navButton5.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            navButton5.BackColor = Color.FromArgb(32, 32, 32);
+            navButton5.BorderStyle = BorderStyle.FixedSingle;
+            navButton5.DarkMode = true;
+            navButton5.Image = Properties.Resources.InstallPackage;
+            navButton5.Label = "Add Game";
+            navButton5.Location = new Point(6, 56);
+            navButton5.Name = "navButton5";
+            navButton5.Size = new Size(156, 44);
+            navButton5.TabIndex = 5;
+            // 
+            // navButton4
+            // 
+            navButton4.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            navButton4.BackColor = Color.FromArgb(32, 32, 32);
+            navButton4.BorderStyle = BorderStyle.FixedSingle;
+            navButton4.DarkMode = true;
+            navButton4.Image = Properties.Resources.InstallPackage;
+            navButton4.Label = "Games List";
+            navButton4.Location = new Point(6, 106);
+            navButton4.Name = "navButton4";
+            navButton4.Size = new Size(156, 44);
+            navButton4.TabIndex = 4;
+            // 
+            // navButton3
+            // 
+            navButton3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            navButton3.BackColor = Color.FromArgb(32, 32, 32);
+            navButton3.BorderStyle = BorderStyle.FixedSingle;
+            navButton3.DarkMode = true;
+            navButton3.Image = Properties.Resources.InstallPackage;
+            navButton3.Label = "Utilties";
+            navButton3.Location = new Point(6, 156);
+            navButton3.Name = "navButton3";
+            navButton3.Size = new Size(156, 44);
+            navButton3.TabIndex = 3;
+            // 
+            // navButton2
+            // 
+            navButton2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            navButton2.BackColor = Color.FromArgb(32, 32, 32);
+            navButton2.BorderStyle = BorderStyle.FixedSingle;
+            navButton2.DarkMode = true;
+            navButton2.Image = Properties.Resources.InstallPackage;
+            navButton2.Label = "Settings";
+            navButton2.Location = new Point(6, 206);
+            navButton2.Name = "navButton2";
+            navButton2.Size = new Size(156, 44);
+            navButton2.TabIndex = 2;
+            // 
+            // navButton1
+            // 
+            navButton1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            navButton1.BackColor = Color.FromArgb(32, 32, 32);
+            navButton1.BorderStyle = BorderStyle.FixedSingle;
+            navButton1.DarkMode = true;
+            navButton1.Image = Properties.Resources.InstallPackage;
+            navButton1.Label = "Install C64Dreams";
+            navButton1.Location = new Point(6, 6);
+            navButton1.Name = "navButton1";
+            navButton1.Size = new Size(156, 44);
+            navButton1.TabIndex = 1;
             // 
             // MainTC
             // 
@@ -918,7 +991,7 @@
             ImagesCB.SelectedColor = SystemColors.Highlight;
             ImagesCB.Size = new Size(109, 23);
             ImagesCB.TabIndex = 10;
-            ImagesCB.TextEmphasisColor = Color.White;
+            ImagesCB.TextEmphasisColor = Color.FromArgb(220, 220, 220);
             ImagesCB.TextEmphasisFont = new Font("Segoe UI", 9F, FontStyle.Bold);
             ImagesCB.SelectedIndexChanged += ImagesCB_SelectedIndexChanged;
             // 
@@ -1583,7 +1656,7 @@
             PlatformMediaPackCB.SelectedColor = SystemColors.Highlight;
             PlatformMediaPackCB.Size = new Size(231, 23);
             PlatformMediaPackCB.TabIndex = 7;
-            PlatformMediaPackCB.TextEmphasisColor = Color.White;
+            PlatformMediaPackCB.TextEmphasisColor = Color.FromArgb(220, 220, 220);
             PlatformMediaPackCB.TextEmphasisFont = new Font("Segoe UI", 9F, FontStyle.Bold);
             // 
             // InstallImagesBT
@@ -1665,7 +1738,7 @@
             IconMediaPackCB.SelectedColor = SystemColors.Highlight;
             IconMediaPackCB.Size = new Size(231, 23);
             IconMediaPackCB.TabIndex = 0;
-            IconMediaPackCB.TextEmphasisColor = Color.White;
+            IconMediaPackCB.TextEmphasisColor = Color.FromArgb(220, 220, 220);
             IconMediaPackCB.TextEmphasisFont = new Font("Segoe UI", 9F, FontStyle.Bold);
             // 
             // groupBox2
@@ -2108,18 +2181,6 @@
             imageLabel1.ToolTipText = null;
             imageLabel1.ToolTipTitle = null;
             // 
-            // navButton1
-            // 
-            navButton1.BackColor = Color.Transparent;
-            navButton1.BorderStyle = BorderStyle.FixedSingle;
-            navButton1.DarkMode = true;
-            navButton1.Image = Properties.Resources.InstallPackage;
-            navButton1.Label = "Install C64Dreams";
-            navButton1.Location = new Point(6, 6);
-            navButton1.Name = "navButton1";
-            navButton1.Size = new Size(156, 44);
-            navButton1.TabIndex = 1;
-            // 
             // Main
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -2307,6 +2368,10 @@
         //private NavButton NavSettingsBT;
         private NavButton NavAddGamesBT;
         private NavButton navButton1;
+        private NavButton navButton5;
+        private NavButton navButton4;
+        private NavButton navButton3;
+        private NavButton navButton2;
         //private NavButton NavInstallBT;
     }
 }

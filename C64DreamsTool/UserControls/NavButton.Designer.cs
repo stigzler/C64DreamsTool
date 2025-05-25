@@ -37,6 +37,7 @@
             // 
             ImagePB.BackgroundImage = Properties.Resources.image;
             ImagePB.BackgroundImageLayout = ImageLayout.Center;
+            ImagePB.InitialImage = Properties.Resources.InstallPackage;
             ImagePB.Location = new Point(3, 3);
             ImagePB.Name = "ImagePB";
             ImagePB.Size = new Size(36, 36);
