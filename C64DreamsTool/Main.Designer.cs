@@ -136,11 +136,7 @@
             label20 = new stigzler.Winforms.Base.UIElements.Label();
             label21 = new stigzler.Winforms.Base.UIElements.Label();
             imageLabel1 = new stigzler.Winforms.Base.UIElements.ImageLabel();
-            navButton4 = new NavButton();
             navButton1 = new NavButton();
-            navButton2 = new NavButton();
-            navButton3 = new NavButton();
-            navButton5 = new NavButton();
             TopLeftFLP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             statusStrip1.SuspendLayout();
@@ -370,11 +366,7 @@
             // 
             NavBarPN.BackColor = Color.FromArgb(35, 35, 35);
             NavBarPN.BackgroundShadeFactor = 1D;
-            NavBarPN.Controls.Add(navButton5);
-            NavBarPN.Controls.Add(navButton3);
-            NavBarPN.Controls.Add(navButton2);
             NavBarPN.Controls.Add(navButton1);
-            NavBarPN.Controls.Add(navButton4);
             NavBarPN.Dock = DockStyle.Left;
             NavBarPN.ForeColor = Color.FromArgb(220, 220, 220);
             NavBarPN.Location = new Point(0, 48);
@@ -440,7 +432,7 @@
             ConsoleRTB.Name = "ConsoleRTB";
             ConsoleRTB.OverrideTheme = true;
             ConsoleRTB.ReadOnly = true;
-            ConsoleRTB.Size = new Size(511, 361);
+            ConsoleRTB.Size = new Size(511, 347);
             ConsoleRTB.TabIndex = 9;
             ConsoleRTB.Text = "Greetings Professor Falken.\nShall we play a game?\n[oops sorry - wrong meeting]\n> Awaiting operation...\n";
             // 
@@ -697,7 +689,7 @@
             AddGamesTP.Location = new Point(4, 22);
             AddGamesTP.Name = "AddGamesTP";
             AddGamesTP.Padding = new Padding(3);
-            AddGamesTP.Size = new Size(536, 535);
+            AddGamesTP.Size = new Size(528, 535);
             AddGamesTP.TabIndex = 2;
             AddGamesTP.Text = "Games";
             // 
@@ -714,7 +706,7 @@
             ClearFormBT.FlatStyle = FlatStyle.Flat;
             ClearFormBT.ForeColor = Color.FromArgb(240, 240, 240);
             ClearFormBT.Image = Properties.Resources.redCross;
-            ClearFormBT.Location = new Point(450, 6);
+            ClearFormBT.Location = new Point(442, 6);
             ClearFormBT.Name = "ClearFormBT";
             ClearFormBT.Size = new Size(75, 27);
             ClearFormBT.TabIndex = 22;
@@ -786,7 +778,7 @@
             AddGamePN.ForeColor = Color.FromArgb(220, 220, 220);
             AddGamePN.Location = new Point(6, 51);
             AddGamePN.Name = "AddGamePN";
-            AddGamePN.Size = new Size(522, 478);
+            AddGamePN.Size = new Size(514, 478);
             AddGamePN.TabIndex = 21;
             // 
             // AddGameBT
@@ -803,7 +795,7 @@
             AddGameBT.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             AddGameBT.ForeColor = Color.FromArgb(240, 240, 240);
             AddGameBT.Image = Properties.Resources.plus_circle;
-            AddGameBT.Location = new Point(348, 398);
+            AddGameBT.Location = new Point(340, 398);
             AddGameBT.Name = "AddGameBT";
             AddGameBT.Size = new Size(171, 70);
             AddGameBT.TabIndex = 15;
@@ -865,7 +857,7 @@
             RemoveIMageBT.FlatStyle = FlatStyle.Flat;
             RemoveIMageBT.ForeColor = Color.FromArgb(240, 240, 240);
             RemoveIMageBT.Image = Properties.Resources.eraser;
-            RemoveIMageBT.Location = new Point(483, 321);
+            RemoveIMageBT.Location = new Point(475, 321);
             RemoveIMageBT.Name = "RemoveIMageBT";
             RemoveIMageBT.Size = new Size(36, 23);
             RemoveIMageBT.TabIndex = 12;
@@ -895,7 +887,7 @@
             ImagePathFB.Path = "C:\\Start\\AnExamplePath\\To\\Your\\Stuff\\Middle\\Ellipse\\Test\\Here\\Yeah\\Path\\End.txt";
             ImagePathFB.ReadOnly = true;
             ImagePathFB.ScaleFont = 100;
-            ImagePathFB.Size = new Size(274, 23);
+            ImagePathFB.Size = new Size(266, 23);
             ImagePathFB.TabIndex = 11;
             ImagePathFB.TextFont = new Font("Segoe UI", 9F);
             ImagePathFB.PathChanged += ImagePathFB_PathChanged;
@@ -933,7 +925,7 @@
             // WarnOnOverwriteChB
             // 
             WarnOnOverwriteChB.AutoSize = true;
-            WarnOnOverwriteChB.Location = new Point(348, 373);
+            WarnOnOverwriteChB.Location = new Point(342, 373);
             WarnOnOverwriteChB.Name = "WarnOnOverwriteChB";
             WarnOnOverwriteChB.OverrideTheme = false;
             WarnOnOverwriteChB.Size = new Size(123, 19);
@@ -949,7 +941,7 @@
             // AlsoUpdateLbChB
             // 
             AlsoUpdateLbChB.AutoSize = true;
-            AlsoUpdateLbChB.Location = new Point(348, 350);
+            AlsoUpdateLbChB.Location = new Point(342, 350);
             AlsoUpdateLbChB.Name = "AlsoUpdateLbChB";
             AlsoUpdateLbChB.OverrideTheme = false;
             AlsoUpdateLbChB.Size = new Size(168, 19);
@@ -993,7 +985,7 @@
             NotesTB.Multiline = true;
             NotesTB.Name = "NotesTB";
             NotesTB.ScaleFont = 100;
-            NotesTB.Size = new Size(425, 69);
+            NotesTB.Size = new Size(417, 69);
             NotesTB.TabIndex = 9;
             // 
             // label16
@@ -1044,7 +1036,7 @@
             PublisherTB.Location = new Point(94, 217);
             PublisherTB.Name = "PublisherTB";
             PublisherTB.ScaleFont = 100;
-            PublisherTB.Size = new Size(425, 23);
+            PublisherTB.Size = new Size(417, 23);
             PublisherTB.TabIndex = 8;
             // 
             // DeveloperTB
@@ -1059,7 +1051,7 @@
             DeveloperTB.Location = new Point(94, 188);
             DeveloperTB.Name = "DeveloperTB";
             DeveloperTB.ScaleFont = 100;
-            DeveloperTB.Size = new Size(425, 23);
+            DeveloperTB.Size = new Size(417, 23);
             DeveloperTB.TabIndex = 7;
             // 
             // GameNameTB
@@ -1074,7 +1066,7 @@
             GameNameTB.Location = new Point(94, 3);
             GameNameTB.Name = "GameNameTB";
             GameNameTB.ScaleFont = 100;
-            GameNameTB.Size = new Size(425, 23);
+            GameNameTB.Size = new Size(417, 23);
             GameNameTB.TabIndex = 0;
             // 
             // label8
@@ -1132,7 +1124,7 @@
             MagazineFB.Path = "";
             MagazineFB.ReadOnly = false;
             MagazineFB.ScaleFont = 100;
-            MagazineFB.Size = new Size(425, 23);
+            MagazineFB.Size = new Size(417, 23);
             MagazineFB.TabIndex = 5;
             MagazineFB.TextFont = new Font("Segoe UI", 9F);
             // 
@@ -1155,7 +1147,7 @@
             SidFB.Path = "";
             SidFB.ReadOnly = false;
             SidFB.ScaleFont = 100;
-            SidFB.Size = new Size(425, 23);
+            SidFB.Size = new Size(417, 23);
             SidFB.TabIndex = 2;
             SidFB.TextFont = new Font("Segoe UI", 9F);
             // 
@@ -1214,7 +1206,7 @@
             GameFIleFB.Path = "";
             GameFIleFB.ReadOnly = false;
             GameFIleFB.ScaleFont = 100;
-            GameFIleFB.Size = new Size(425, 23);
+            GameFIleFB.Size = new Size(417, 23);
             GameFIleFB.TabIndex = 1;
             GameFIleFB.TextFont = new Font("Segoe UI", 9F);
             // 
@@ -1237,7 +1229,7 @@
             ManualFB.Path = "";
             ManualFB.ReadOnly = false;
             ManualFB.ScaleFont = 100;
-            ManualFB.Size = new Size(425, 23);
+            ManualFB.Size = new Size(417, 23);
             ManualFB.TabIndex = 3;
             ManualFB.TextFont = new Font("Segoe UI", 9F);
             // 
@@ -1322,7 +1314,7 @@
             CustomCmdTB.Location = new Point(94, 107);
             CustomCmdTB.Name = "CustomCmdTB";
             CustomCmdTB.ScaleFont = 100;
-            CustomCmdTB.Size = new Size(425, 23);
+            CustomCmdTB.Size = new Size(417, 23);
             CustomCmdTB.TabIndex = 4;
             // 
             // label2
@@ -1354,7 +1346,7 @@
             GamesTP.Location = new Point(4, 22);
             GamesTP.Name = "GamesTP";
             GamesTP.Padding = new Padding(3);
-            GamesTP.Size = new Size(536, 535);
+            GamesTP.Size = new Size(528, 535);
             GamesTP.TabIndex = 3;
             GamesTP.Text = "GamesList";
             // 
@@ -1369,7 +1361,7 @@
             GamesPN.Location = new Point(3, 39);
             GamesPN.Name = "GamesPN";
             GamesPN.Padding = new Padding(4);
-            GamesPN.Size = new Size(530, 493);
+            GamesPN.Size = new Size(522, 493);
             GamesPN.TabIndex = 6;
             // 
             // GamesSC
@@ -1389,8 +1381,8 @@
             GamesSC.Panel2.BackColor = Color.FromArgb(35, 35, 35);
             GamesSC.Panel2.Controls.Add(GameDetailsTB);
             GamesSC.Panel2.ForeColor = Color.FromArgb(220, 220, 220);
-            GamesSC.Size = new Size(522, 458);
-            GamesSC.SplitterDistance = 172;
+            GamesSC.Size = new Size(514, 458);
+            GamesSC.SplitterDistance = 169;
             GamesSC.TabIndex = 0;
             // 
             // GamesListLB
@@ -1403,7 +1395,7 @@
             GamesListLB.FormattingEnabled = true;
             GamesListLB.Location = new Point(0, 0);
             GamesListLB.Name = "GamesListLB";
-            GamesListLB.Size = new Size(172, 458);
+            GamesListLB.Size = new Size(169, 458);
             GamesListLB.TabIndex = 1;
             GamesListLB.SelectedIndexChanged += GamesListLB_SelectedIndexChanged;
             // 
@@ -1416,7 +1408,7 @@
             GameDetailsTB.Location = new Point(0, 0);
             GameDetailsTB.Name = "GameDetailsTB";
             GameDetailsTB.ReadOnly = true;
-            GameDetailsTB.Size = new Size(346, 458);
+            GameDetailsTB.Size = new Size(341, 458);
             GameDetailsTB.TabIndex = 2;
             GameDetailsTB.Text = "";
             GameDetailsTB.WordWrap = false;
@@ -1430,7 +1422,7 @@
             GamesListControlsTS.Location = new Point(4, 4);
             GamesListControlsTS.Name = "GamesListControlsTS";
             GamesListControlsTS.Padding = new Padding(0, 2, 1, 2);
-            GamesListControlsTS.Size = new Size(522, 27);
+            GamesListControlsTS.Size = new Size(514, 27);
             GamesListControlsTS.TabIndex = 1;
             GamesListControlsTS.Text = "toolStrip1";
             GamesListControlsTS.ToolTip = MainTT;
@@ -1531,12 +1523,13 @@
             UtilitiesTP.Location = new Point(4, 22);
             UtilitiesTP.Name = "UtilitiesTP";
             UtilitiesTP.Padding = new Padding(3);
-            UtilitiesTP.Size = new Size(536, 535);
+            UtilitiesTP.Size = new Size(528, 535);
             UtilitiesTP.TabIndex = 4;
             UtilitiesTP.Text = "Utilities";
             // 
             // groupBox3
             // 
+            groupBox3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             groupBox3.BorderColor = Color.FromArgb(100, 100, 100);
             groupBox3.BorderStyle = System.Drawing.Drawing2D.DashStyle.Solid;
             groupBox3.BorderThickness = 1;
@@ -1549,7 +1542,7 @@
             groupBox3.ForeColor = Color.FromArgb(220, 220, 220);
             groupBox3.Location = new Point(17, 128);
             groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(511, 107);
+            groupBox3.Size = new Size(503, 107);
             groupBox3.TabIndex = 10;
             groupBox3.TabStop = false;
             groupBox3.Text = "Install C64Dreams Images";
@@ -1588,13 +1581,14 @@
             PlatformMediaPackCB.Location = new Point(142, 54);
             PlatformMediaPackCB.Name = "PlatformMediaPackCB";
             PlatformMediaPackCB.SelectedColor = SystemColors.Highlight;
-            PlatformMediaPackCB.Size = new Size(239, 23);
+            PlatformMediaPackCB.Size = new Size(231, 23);
             PlatformMediaPackCB.TabIndex = 7;
             PlatformMediaPackCB.TextEmphasisColor = Color.White;
             PlatformMediaPackCB.TextEmphasisFont = new Font("Segoe UI", 9F, FontStyle.Bold);
             // 
             // InstallImagesBT
             // 
+            InstallImagesBT.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             InstallImagesBT.BackColor = Color.FromArgb(55, 55, 55);
             InstallImagesBT.DefocusOnClick = true;
             InstallImagesBT.DisabledBackColor = Color.FromArgb(30, 30, 30);
@@ -1669,7 +1663,7 @@
             IconMediaPackCB.Location = new Point(142, 25);
             IconMediaPackCB.Name = "IconMediaPackCB";
             IconMediaPackCB.SelectedColor = SystemColors.Highlight;
-            IconMediaPackCB.Size = new Size(239, 23);
+            IconMediaPackCB.Size = new Size(231, 23);
             IconMediaPackCB.TabIndex = 0;
             IconMediaPackCB.TextEmphasisColor = Color.White;
             IconMediaPackCB.TextEmphasisFont = new Font("Segoe UI", 9F, FontStyle.Bold);
@@ -1686,7 +1680,7 @@
             groupBox2.ForeColor = Color.FromArgb(220, 220, 220);
             groupBox2.Location = new Point(17, 39);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(511, 83);
+            groupBox2.Size = new Size(503, 83);
             groupBox2.TabIndex = 9;
             groupBox2.TabStop = false;
             groupBox2.Text = "C64Dreams Settings";
@@ -1803,7 +1797,7 @@
             SettingsTP.Location = new Point(4, 22);
             SettingsTP.Name = "SettingsTP";
             SettingsTP.Padding = new Padding(3);
-            SettingsTP.Size = new Size(536, 535);
+            SettingsTP.Size = new Size(528, 535);
             SettingsTP.TabIndex = 5;
             SettingsTP.Text = "Settings";
             // 
@@ -1813,7 +1807,7 @@
             VersionLB.Font = new Font("Segoe UI", 9F);
             VersionLB.FontStyle = FontStyle.Regular;
             VersionLB.ForeColor = Color.FromArgb(220, 220, 220);
-            VersionLB.Location = new Point(399, 511);
+            VersionLB.Location = new Point(391, 511);
             VersionLB.Name = "VersionLB";
             VersionLB.ScaleFont = 100;
             VersionLB.Size = new Size(134, 21);
@@ -1861,7 +1855,7 @@
             groupBox4.ForeColor = Color.FromArgb(220, 220, 220);
             groupBox4.Location = new Point(19, 36);
             groupBox4.Name = "groupBox4";
-            groupBox4.Size = new Size(509, 103);
+            groupBox4.Size = new Size(501, 103);
             groupBox4.TabIndex = 0;
             groupBox4.TabStop = false;
             groupBox4.Text = "Required";
@@ -1933,7 +1927,7 @@
             GameslistNameTB.Location = new Point(116, 70);
             GameslistNameTB.Name = "GameslistNameTB";
             GameslistNameTB.ScaleFont = 100;
-            GameslistNameTB.Size = new Size(378, 23);
+            GameslistNameTB.Size = new Size(370, 23);
             GameslistNameTB.TabIndex = 2;
             // 
             // C64DreamsFBD
@@ -1955,7 +1949,7 @@
             C64DreamsFBD.Path = "C:\\Start\\AnExamplePath\\To\\Your\\Stuff\\Middle\\Ellipse\\Test\\Here\\Yeah\\Path\\End.txt";
             C64DreamsFBD.ReadOnly = true;
             C64DreamsFBD.ScaleFont = 100;
-            C64DreamsFBD.Size = new Size(378, 23);
+            C64DreamsFBD.Size = new Size(370, 23);
             C64DreamsFBD.TabIndex = 1;
             C64DreamsFBD.TextFont = new Font("Segoe UI", 9F);
             C64DreamsFBD.PathChanged += C64DreamsFBD_PathChanged_1;
@@ -1979,7 +1973,7 @@
             LaunchboxFBD.Path = "C:\\Start\\AnExamplePath\\To\\Your\\Stuff\\Middle\\Ellipse\\Test\\Here\\Yeah\\Path\\End.txt";
             LaunchboxFBD.ReadOnly = true;
             LaunchboxFBD.ScaleFont = 100;
-            LaunchboxFBD.Size = new Size(378, 23);
+            LaunchboxFBD.Size = new Size(370, 23);
             LaunchboxFBD.TabIndex = 0;
             LaunchboxFBD.TextFont = new Font("Segoe UI", 9F);
             LaunchboxFBD.PathChanged += LaunchboxFBD_PathChanged;
@@ -2114,65 +2108,17 @@
             imageLabel1.ToolTipText = null;
             imageLabel1.ToolTipTitle = null;
             // 
-            // navButton4
-            // 
-            navButton4.BackColor = Color.Transparent;
-            navButton4.BorderStyle = BorderStyle.FixedSingle;
-            navButton4.DarkMode = true;
-            navButton4.Image = Properties.Resources.InstallPackage;
-            navButton4.Label = "Install C64Dreams";
-            navButton4.Location = new Point(6, 6);
-            navButton4.Name = "navButton4";
-            navButton4.Size = new Size(156, 44);
-            navButton4.TabIndex = 4;
-            // 
             // navButton1
             // 
             navButton1.BackColor = Color.Transparent;
             navButton1.BorderStyle = BorderStyle.FixedSingle;
             navButton1.DarkMode = true;
             navButton1.Image = Properties.Resources.InstallPackage;
-            navButton1.Label = "Add Game";
-            navButton1.Location = new Point(6, 56);
+            navButton1.Label = "Install C64Dreams";
+            navButton1.Location = new Point(6, 6);
             navButton1.Name = "navButton1";
             navButton1.Size = new Size(156, 44);
-            navButton1.TabIndex = 5;
-            // 
-            // navButton2
-            // 
-            navButton2.BackColor = Color.Transparent;
-            navButton2.BorderStyle = BorderStyle.FixedSingle;
-            navButton2.DarkMode = true;
-            navButton2.Image = Properties.Resources.InstallPackage;
-            navButton2.Label = "Settings";
-            navButton2.Location = new Point(6, 206);
-            navButton2.Name = "navButton2";
-            navButton2.Size = new Size(156, 44);
-            navButton2.TabIndex = 6;
-            // 
-            // navButton3
-            // 
-            navButton3.BackColor = Color.Transparent;
-            navButton3.BorderStyle = BorderStyle.FixedSingle;
-            navButton3.DarkMode = true;
-            navButton3.Image = Properties.Resources.InstallPackage;
-            navButton3.Label = "Utilities";
-            navButton3.Location = new Point(6, 156);
-            navButton3.Name = "navButton3";
-            navButton3.Size = new Size(156, 44);
-            navButton3.TabIndex = 7;
-            // 
-            // navButton5
-            // 
-            navButton5.BackColor = Color.Transparent;
-            navButton5.BorderStyle = BorderStyle.FixedSingle;
-            navButton5.DarkMode = true;
-            navButton5.Image = Properties.Resources.InstallPackage;
-            navButton5.Label = "Games List";
-            navButton5.Location = new Point(6, 106);
-            navButton5.Name = "navButton5";
-            navButton5.Size = new Size(156, 44);
-            navButton5.TabIndex = 8;
+            navButton1.TabIndex = 1;
             // 
             // Main
             // 
@@ -2356,10 +2302,11 @@
         private stigzler.Winforms.Base.UIElements.Label label27;
         private stigzler.Winforms.Base.UIElements.Label VersionLB;
         private NavButton NavInstallBT;
-        private NavButton navButton5;
-        private NavButton navButton3;
-        private NavButton navButton2;
+        private NavButton NavGamesListBT;
+        private NavButton NavUtiltiesBT;
+        //private NavButton NavSettingsBT;
+        private NavButton NavAddGamesBT;
         private NavButton navButton1;
-        private NavButton navButton4;
+        //private NavButton NavInstallBT;
     }
 }
