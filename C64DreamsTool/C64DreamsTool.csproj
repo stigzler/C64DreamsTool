@@ -9,7 +9,7 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <ApplicationIcon>CommodoreLogo36WhiteOutline.ico</ApplicationIcon>
     <PackageIcon>CommodoreLogo36WhiteOutline.png</PackageIcon>
-    <AssemblyVersion>0.8.0.0</AssemblyVersion>
+    <AssemblyVersion>0.9.0.0</AssemblyVersion>
   </PropertyGroup>
 
   <ItemGroup>

@@ -73,6 +73,26 @@ namespace C64DreamsTool.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bigbox {
+            get {
+                object obj = ResourceManager.GetObject("bigbox", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bigbox32px {
+            get {
+                object obj = ResourceManager.GetObject("bigbox32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Commodore {
             get {
                 object obj = ResourceManager.GetObject("Commodore", resourceCulture);

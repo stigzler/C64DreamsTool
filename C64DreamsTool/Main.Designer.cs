@@ -111,7 +111,11 @@
             ToggleWordWrapBT = new stigzler.Winforms.Base.ToolStripElements.Button();
             label22 = new stigzler.Winforms.Base.UIElements.Label();
             UtilitiesTP = new TabPage();
+            groupBox5 = new stigzler.Winforms.Base.UIElements.GroupBox();
+            RunBigBoxBT = new stigzler.Winforms.Base.UIElements.Button();
+            RunLaunchboxBT = new stigzler.Winforms.Base.UIElements.Button();
             groupBox3 = new stigzler.Winforms.Base.UIElements.GroupBox();
+            RefreshImageInstallBT = new stigzler.Winforms.Base.UIElements.Button();
             label25 = new stigzler.Winforms.Base.UIElements.Label();
             PlatformMediaPackCB = new stigzler.Winforms.Base.UIElements.ComboBox();
             InstallImagesBT = new stigzler.Winforms.Base.UIElements.Button();
@@ -124,6 +128,7 @@
             SettsOPenConfigBT = new stigzler.Winforms.Base.UIElements.Button();
             label23 = new stigzler.Winforms.Base.UIElements.Label();
             SettingsTP = new TabPage();
+            label30 = new stigzler.Winforms.Base.UIElements.Label();
             VersionLB = new stigzler.Winforms.Base.UIElements.Label();
             label26 = new stigzler.Winforms.Base.UIElements.Label();
             groupBox4 = new stigzler.Winforms.Base.UIElements.GroupBox();
@@ -164,6 +169,7 @@
             GamesSC.SuspendLayout();
             GamesListControlsTS.SuspendLayout();
             UtilitiesTP.SuspendLayout();
+            groupBox5.SuspendLayout();
             groupBox3.SuspendLayout();
             groupBox2.SuspendLayout();
             SettingsTP.SuspendLayout();
@@ -1594,6 +1600,7 @@
             // UtilitiesTP
             // 
             UtilitiesTP.BackColor = Color.FromArgb(35, 35, 35);
+            UtilitiesTP.Controls.Add(groupBox5);
             UtilitiesTP.Controls.Add(groupBox3);
             UtilitiesTP.Controls.Add(groupBox2);
             UtilitiesTP.Controls.Add(label23);
@@ -1605,12 +1612,84 @@
             UtilitiesTP.TabIndex = 4;
             UtilitiesTP.Text = "Utilities";
             // 
+            // groupBox5
+            // 
+            groupBox5.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            groupBox5.BorderColor = Color.FromArgb(100, 100, 100);
+            groupBox5.BorderStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            groupBox5.BorderThickness = 1;
+            groupBox5.Controls.Add(RunBigBoxBT);
+            groupBox5.Controls.Add(RunLaunchboxBT);
+            groupBox5.ForeColor = Color.FromArgb(220, 220, 220);
+            groupBox5.Location = new Point(17, 253);
+            groupBox5.Name = "groupBox5";
+            groupBox5.Size = new Size(503, 83);
+            groupBox5.TabIndex = 11;
+            groupBox5.TabStop = false;
+            groupBox5.Text = "Launchbox";
+            groupBox5.TitleColor = Color.FromArgb(220, 220, 220);
+            // 
+            // RunBigBoxBT
+            // 
+            RunBigBoxBT.BackColor = Color.FromArgb(55, 55, 55);
+            RunBigBoxBT.DefocusOnClick = true;
+            RunBigBoxBT.DisabledBackColor = Color.FromArgb(30, 30, 30);
+            RunBigBoxBT.DisabledBorderColor = Color.FromArgb(60, 60, 60);
+            RunBigBoxBT.DisabledForeColor = Color.FromArgb(125, 125, 125);
+            RunBigBoxBT.FlatAppearance.BorderColor = Color.FromArgb(100, 100, 100);
+            RunBigBoxBT.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 102, 215);
+            RunBigBoxBT.FlatStyle = FlatStyle.Flat;
+            RunBigBoxBT.Font = new Font("Segoe UI", 10F);
+            RunBigBoxBT.ForeColor = Color.FromArgb(240, 240, 240);
+            RunBigBoxBT.Image = Properties.Resources.bigbox32px;
+            RunBigBoxBT.ImageAlign = ContentAlignment.MiddleRight;
+            RunBigBoxBT.Location = new Point(180, 22);
+            RunBigBoxBT.Name = "RunBigBoxBT";
+            RunBigBoxBT.Size = new Size(160, 49);
+            RunBigBoxBT.TabIndex = 7;
+            RunBigBoxBT.Text = "Run BigBox";
+            RunBigBoxBT.TextImageRelation = TextImageRelation.ImageBeforeText;
+            RunBigBoxBT.ToolTip = MainTT;
+            RunBigBoxBT.ToolTipImage = null;
+            RunBigBoxBT.ToolTipText = null;
+            RunBigBoxBT.ToolTipTitle = null;
+            RunBigBoxBT.UseVisualStyleBackColor = false;
+            RunBigBoxBT.Click += RunBigBoxBT_Click;
+            // 
+            // RunLaunchboxBT
+            // 
+            RunLaunchboxBT.BackColor = Color.FromArgb(55, 55, 55);
+            RunLaunchboxBT.DefocusOnClick = true;
+            RunLaunchboxBT.DisabledBackColor = Color.FromArgb(30, 30, 30);
+            RunLaunchboxBT.DisabledBorderColor = Color.FromArgb(60, 60, 60);
+            RunLaunchboxBT.DisabledForeColor = Color.FromArgb(125, 125, 125);
+            RunLaunchboxBT.FlatAppearance.BorderColor = Color.FromArgb(100, 100, 100);
+            RunLaunchboxBT.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 102, 215);
+            RunLaunchboxBT.FlatStyle = FlatStyle.Flat;
+            RunLaunchboxBT.Font = new Font("Segoe UI", 10F);
+            RunLaunchboxBT.ForeColor = Color.FromArgb(240, 240, 240);
+            RunLaunchboxBT.Image = Properties.Resources.launchbox_32x32;
+            RunLaunchboxBT.ImageAlign = ContentAlignment.MiddleRight;
+            RunLaunchboxBT.Location = new Point(14, 22);
+            RunLaunchboxBT.Name = "RunLaunchboxBT";
+            RunLaunchboxBT.Size = new Size(160, 49);
+            RunLaunchboxBT.TabIndex = 6;
+            RunLaunchboxBT.Text = "Run Launchbox";
+            RunLaunchboxBT.TextImageRelation = TextImageRelation.ImageBeforeText;
+            RunLaunchboxBT.ToolTip = MainTT;
+            RunLaunchboxBT.ToolTipImage = null;
+            RunLaunchboxBT.ToolTipText = null;
+            RunLaunchboxBT.ToolTipTitle = null;
+            RunLaunchboxBT.UseVisualStyleBackColor = false;
+            RunLaunchboxBT.Click += RunLaunchboxBT_Click;
+            // 
             // groupBox3
             // 
             groupBox3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             groupBox3.BorderColor = Color.FromArgb(100, 100, 100);
             groupBox3.BorderStyle = System.Drawing.Drawing2D.DashStyle.Solid;
             groupBox3.BorderThickness = 1;
+            groupBox3.Controls.Add(RefreshImageInstallBT);
             groupBox3.Controls.Add(label25);
             groupBox3.Controls.Add(PlatformMediaPackCB);
             groupBox3.Controls.Add(InstallImagesBT);
@@ -1620,11 +1699,39 @@
             groupBox3.ForeColor = Color.FromArgb(220, 220, 220);
             groupBox3.Location = new Point(17, 128);
             groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(503, 107);
+            groupBox3.Size = new Size(503, 119);
             groupBox3.TabIndex = 10;
             groupBox3.TabStop = false;
             groupBox3.Text = "Install C64Dreams Images";
             groupBox3.TitleColor = Color.FromArgb(220, 220, 220);
+            // 
+            // RefreshImageInstallBT
+            // 
+            RefreshImageInstallBT.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            RefreshImageInstallBT.BackColor = Color.FromArgb(55, 55, 55);
+            RefreshImageInstallBT.DefocusOnClick = true;
+            RefreshImageInstallBT.DisabledBackColor = Color.FromArgb(30, 30, 30);
+            RefreshImageInstallBT.DisabledBorderColor = Color.FromArgb(60, 60, 60);
+            RefreshImageInstallBT.DisabledForeColor = Color.FromArgb(125, 125, 125);
+            RefreshImageInstallBT.FlatAppearance.BorderColor = Color.FromArgb(100, 100, 100);
+            RefreshImageInstallBT.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 102, 215);
+            RefreshImageInstallBT.FlatStyle = FlatStyle.Flat;
+            RefreshImageInstallBT.Font = new Font("Segoe UI", 9F);
+            RefreshImageInstallBT.ForeColor = Color.FromArgb(240, 240, 240);
+            RefreshImageInstallBT.Image = Properties.Resources.refresh;
+            RefreshImageInstallBT.ImageAlign = ContentAlignment.MiddleRight;
+            RefreshImageInstallBT.Location = new Point(306, 83);
+            RefreshImageInstallBT.Name = "RefreshImageInstallBT";
+            RefreshImageInstallBT.Size = new Size(75, 25);
+            RefreshImageInstallBT.TabIndex = 9;
+            RefreshImageInstallBT.Text = "Refresh";
+            RefreshImageInstallBT.TextImageRelation = TextImageRelation.ImageBeforeText;
+            RefreshImageInstallBT.ToolTip = MainTT;
+            RefreshImageInstallBT.ToolTipImage = null;
+            RefreshImageInstallBT.ToolTipText = "Refreshes the Media Pack list (for exmaple if you add a media pack in Launchbox)";
+            RefreshImageInstallBT.ToolTipTitle = "Refresh Media Packs";
+            RefreshImageInstallBT.UseVisualStyleBackColor = false;
+            RefreshImageInstallBT.Click += RefreshImageInstallBT_Click;
             // 
             // label25
             // 
@@ -1659,7 +1766,7 @@
             PlatformMediaPackCB.Location = new Point(142, 54);
             PlatformMediaPackCB.Name = "PlatformMediaPackCB";
             PlatformMediaPackCB.SelectedColor = SystemColors.Highlight;
-            PlatformMediaPackCB.Size = new Size(231, 23);
+            PlatformMediaPackCB.Size = new Size(239, 23);
             PlatformMediaPackCB.TabIndex = 7;
             PlatformMediaPackCB.TextEmphasisColor = Color.White;
             PlatformMediaPackCB.TextEmphasisFont = new Font("Segoe UI", 9F, FontStyle.Bold);
@@ -1741,7 +1848,7 @@
             IconMediaPackCB.Location = new Point(142, 25);
             IconMediaPackCB.Name = "IconMediaPackCB";
             IconMediaPackCB.SelectedColor = SystemColors.Highlight;
-            IconMediaPackCB.Size = new Size(231, 23);
+            IconMediaPackCB.Size = new Size(239, 23);
             IconMediaPackCB.TabIndex = 0;
             IconMediaPackCB.TextEmphasisColor = Color.White;
             IconMediaPackCB.TextEmphasisFont = new Font("Segoe UI", 9F, FontStyle.Bold);
@@ -1868,6 +1975,7 @@
             // SettingsTP
             // 
             SettingsTP.BackColor = Color.FromArgb(35, 35, 35);
+            SettingsTP.Controls.Add(label30);
             SettingsTP.Controls.Add(VersionLB);
             SettingsTP.Controls.Add(label26);
             SettingsTP.Controls.Add(groupBox4);
@@ -1878,6 +1986,27 @@
             SettingsTP.Size = new Size(528, 535);
             SettingsTP.TabIndex = 5;
             SettingsTP.Text = "Settings";
+            // 
+            // label30
+            // 
+            label30.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            label30.Font = new Font("Segoe UI", 9F);
+            label30.FontStyle = FontStyle.Regular;
+            label30.ForeColor = Color.FromArgb(220, 220, 220);
+            label30.Image = Properties.Resources.WillyRound_32px;
+            label30.ImageAlign = ContentAlignment.MiddleLeft;
+            label30.Location = new Point(6, 496);
+            label30.Name = "label30";
+            label30.ScaleFont = 100;
+            label30.Size = new Size(100, 36);
+            label30.TabIndex = 7;
+            label30.Text = "by stigzler";
+            label30.TextAlign = ContentAlignment.MiddleRight;
+            label30.ToolTip = MainTT;
+            label30.ToolTipHorizontalAlignment = HorizontalAlignment.Right;
+            label30.ToolTipImage = null;
+            label30.ToolTipText = null;
+            label30.ToolTipTitle = null;
             // 
             // VersionLB
             // 
@@ -2240,6 +2369,7 @@
             GamesListControlsTS.PerformLayout();
             UtilitiesTP.ResumeLayout(false);
             UtilitiesTP.PerformLayout();
+            groupBox5.ResumeLayout(false);
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
             groupBox2.ResumeLayout(false);
@@ -2374,6 +2504,11 @@
         //private NavButton NavInstallBT;
         //private NavButton NavGamesBT;
         private NavButton NavGameslistBT;
+        private stigzler.Winforms.Base.UIElements.Label label30;
+        private stigzler.Winforms.Base.UIElements.GroupBox groupBox5;
+        private stigzler.Winforms.Base.UIElements.Button RunLaunchboxBT;
+        private stigzler.Winforms.Base.UIElements.Button RunBigBoxBT;
+        private stigzler.Winforms.Base.UIElements.Button RefreshImageInstallBT;
         //private NavButton NavUtilitiesBT;
     }
 }

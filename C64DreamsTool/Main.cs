@@ -413,8 +413,8 @@ namespace C64DreamsTool
             if (magazineModuleResult == null)
             {
                 Log(@"Magazine Module Import completed successfully. \o/");
-                RefereshInstallationStatus();
                 Settings.Default.MagsInstalled = true;
+                RefereshInstallationStatus();
             }
             else
             {
@@ -883,6 +883,41 @@ namespace C64DreamsTool
         private void ToggleWordWrapBT_Click(object sender, EventArgs e)
         {
             GameDetailsTB.WordWrap = ((ToolStripButton)sender).Checked;
+        }
+
+        private void RunLaunchboxBT_Click(object sender, EventArgs e)
+        {
+            string lbExePath = Path.Combine(Settings.Default.LaunchboxRootPath, "Launchbox.exe");
+            if (!File.Exists(lbExePath))
+            {
+                stigzler.Winforms.Base.Forms.MessageBox messageBox = new stigzler.Winforms.Base.Forms.MessageBox(
+                    $"Launchbox.exe not found. please check the Launchbox path is set in Settings.",
+                    "Launchbox Exe Not Found", MessageBoxButtons.OK, MessageBoxIcon.Error, "Launchbox Exe Not Found", DarkMode,
+                    stigzler.Winforms.Base.Forms.MessageBox.MessageBoxSize.Small);
+                messageBox.ShowDialog(this);
+                return;
+            }
+            Process.Start(Path.Combine(Settings.Default.LaunchboxRootPath, "Launchbox.exe"));
+        }
+
+        private void RunBigBoxBT_Click(object sender, EventArgs e)
+        {
+            string bbExePath = Path.Combine(Settings.Default.LaunchboxRootPath, "BigBox.exe");
+            if (!File.Exists(bbExePath))
+            {
+                stigzler.Winforms.Base.Forms.MessageBox messageBox = new stigzler.Winforms.Base.Forms.MessageBox(
+                    $"BigBox.exe not found. please check the Launchbox path is set in Settings.",
+                    "BigBox Exe Not Found", MessageBoxButtons.OK, MessageBoxIcon.Error, "BigBox Exe Not Found", DarkMode,
+                    stigzler.Winforms.Base.Forms.MessageBox.MessageBoxSize.Small);
+                messageBox.ShowDialog(this);
+                return;
+            }
+            Process.Start(Path.Combine(Settings.Default.LaunchboxRootPath, "BigBox.exe"));
+        }
+
+        private void RefreshImageInstallBT_Click(object sender, EventArgs e)
+        {
+            LoadImagesDropDowns();
         }
     }
 }
