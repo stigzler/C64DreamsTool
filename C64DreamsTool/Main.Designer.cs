@@ -44,11 +44,11 @@
             flowLayoutPanel1 = new stigzler.Winforms.Base.UIElements.FlowLayoutPanel();
             DarkLightModeBT = new stigzler.Winforms.Base.UIElements.Button();
             NavBarPN = new stigzler.Winforms.Base.UIElements.Panel();
-            navButton5 = new NavButton();
-            navButton4 = new NavButton();
-            navButton3 = new NavButton();
-            navButton2 = new NavButton();
-            navButton1 = new NavButton();
+            NavGamesBT = new NavButton();
+            NavGameslistBT = new NavButton();
+            NavUtilitiesBT = new NavButton();
+            NavSettingsBT = new NavButton();
+            NavInstallBT = new NavButton();
             MainTC = new stigzler.Winforms.Base.UIElements.TabControl();
             InstallTP = new TabPage();
             InstallPN = new stigzler.Winforms.Base.UIElements.Panel();
@@ -370,11 +370,11 @@
             // 
             NavBarPN.BackColor = Color.FromArgb(35, 35, 35);
             NavBarPN.BackgroundShadeFactor = 1D;
-            NavBarPN.Controls.Add(navButton5);
-            NavBarPN.Controls.Add(navButton4);
-            NavBarPN.Controls.Add(navButton3);
-            NavBarPN.Controls.Add(navButton2);
-            NavBarPN.Controls.Add(navButton1);
+            NavBarPN.Controls.Add(NavGamesBT);
+            NavBarPN.Controls.Add(NavGameslistBT);
+            NavBarPN.Controls.Add(NavUtilitiesBT);
+            NavBarPN.Controls.Add(NavSettingsBT);
+            NavBarPN.Controls.Add(NavInstallBT);
             NavBarPN.Dock = DockStyle.Left;
             NavBarPN.ForeColor = Color.FromArgb(220, 220, 220);
             NavBarPN.Location = new Point(0, 48);
@@ -382,70 +382,70 @@
             NavBarPN.Size = new Size(168, 561);
             NavBarPN.TabIndex = 4;
             // 
-            // navButton5
+            // NavGamesBT
             // 
-            navButton5.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            navButton5.BackColor = Color.FromArgb(32, 32, 32);
-            navButton5.BorderStyle = BorderStyle.FixedSingle;
-            navButton5.DarkMode = true;
-            navButton5.Image = Properties.Resources.InstallPackage;
-            navButton5.Label = "Add Game";
-            navButton5.Location = new Point(6, 56);
-            navButton5.Name = "navButton5";
-            navButton5.Size = new Size(156, 44);
-            navButton5.TabIndex = 5;
+            NavGamesBT.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            NavGamesBT.BackColor = Color.FromArgb(32, 32, 32);
+            NavGamesBT.BorderStyle = BorderStyle.FixedSingle;
+            NavGamesBT.DarkMode = true;
+            NavGamesBT.Image = Properties.Resources.games;
+            NavGamesBT.Label = "Add Game";
+            NavGamesBT.Location = new Point(6, 56);
+            NavGamesBT.Name = "NavGamesBT";
+            NavGamesBT.Size = new Size(156, 44);
+            NavGamesBT.TabIndex = 5;
             // 
-            // navButton4
+            // NavGameslistBT
             // 
-            navButton4.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            navButton4.BackColor = Color.FromArgb(32, 32, 32);
-            navButton4.BorderStyle = BorderStyle.FixedSingle;
-            navButton4.DarkMode = true;
-            navButton4.Image = Properties.Resources.InstallPackage;
-            navButton4.Label = "Games List";
-            navButton4.Location = new Point(6, 106);
-            navButton4.Name = "navButton4";
-            navButton4.Size = new Size(156, 44);
-            navButton4.TabIndex = 4;
+            NavGameslistBT.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            NavGameslistBT.BackColor = Color.FromArgb(32, 32, 32);
+            NavGameslistBT.BorderStyle = BorderStyle.FixedSingle;
+            NavGameslistBT.DarkMode = true;
+            NavGameslistBT.Image = Properties.Resources.list;
+            NavGameslistBT.Label = "Games List";
+            NavGameslistBT.Location = new Point(6, 106);
+            NavGameslistBT.Name = "NavGameslistBT";
+            NavGameslistBT.Size = new Size(156, 44);
+            NavGameslistBT.TabIndex = 4;
             // 
-            // navButton3
+            // NavUtilitiesBT
             // 
-            navButton3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            navButton3.BackColor = Color.FromArgb(32, 32, 32);
-            navButton3.BorderStyle = BorderStyle.FixedSingle;
-            navButton3.DarkMode = true;
-            navButton3.Image = Properties.Resources.InstallPackage;
-            navButton3.Label = "Utilties";
-            navButton3.Location = new Point(6, 156);
-            navButton3.Name = "navButton3";
-            navButton3.Size = new Size(156, 44);
-            navButton3.TabIndex = 3;
+            NavUtilitiesBT.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            NavUtilitiesBT.BackColor = Color.FromArgb(32, 32, 32);
+            NavUtilitiesBT.BorderStyle = BorderStyle.FixedSingle;
+            NavUtilitiesBT.DarkMode = true;
+            NavUtilitiesBT.Image = Properties.Resources.utilities;
+            NavUtilitiesBT.Label = "Utilties";
+            NavUtilitiesBT.Location = new Point(6, 156);
+            NavUtilitiesBT.Name = "NavUtilitiesBT";
+            NavUtilitiesBT.Size = new Size(156, 44);
+            NavUtilitiesBT.TabIndex = 3;
             // 
-            // navButton2
+            // NavSettingsBT
             // 
-            navButton2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            navButton2.BackColor = Color.FromArgb(32, 32, 32);
-            navButton2.BorderStyle = BorderStyle.FixedSingle;
-            navButton2.DarkMode = true;
-            navButton2.Image = Properties.Resources.InstallPackage;
-            navButton2.Label = "Settings";
-            navButton2.Location = new Point(6, 206);
-            navButton2.Name = "navButton2";
-            navButton2.Size = new Size(156, 44);
-            navButton2.TabIndex = 2;
+            NavSettingsBT.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            NavSettingsBT.BackColor = Color.FromArgb(32, 32, 32);
+            NavSettingsBT.BorderStyle = BorderStyle.FixedSingle;
+            NavSettingsBT.DarkMode = true;
+            NavSettingsBT.Image = Properties.Resources.settings;
+            NavSettingsBT.Label = "Settings";
+            NavSettingsBT.Location = new Point(6, 206);
+            NavSettingsBT.Name = "NavSettingsBT";
+            NavSettingsBT.Size = new Size(156, 44);
+            NavSettingsBT.TabIndex = 2;
             // 
-            // navButton1
+            // NavInstallBT
             // 
-            navButton1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            navButton1.BackColor = Color.FromArgb(32, 32, 32);
-            navButton1.BorderStyle = BorderStyle.FixedSingle;
-            navButton1.DarkMode = true;
-            navButton1.Image = Properties.Resources.InstallPackage;
-            navButton1.Label = "Install C64Dreams";
-            navButton1.Location = new Point(6, 6);
-            navButton1.Name = "navButton1";
-            navButton1.Size = new Size(156, 44);
-            navButton1.TabIndex = 1;
+            NavInstallBT.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            NavInstallBT.BackColor = Color.FromArgb(32, 32, 32);
+            NavInstallBT.BorderStyle = BorderStyle.FixedSingle;
+            NavInstallBT.DarkMode = true;
+            NavInstallBT.Image = Properties.Resources.InstallPackage;
+            NavInstallBT.Label = "Install C64Dreams";
+            NavInstallBT.Location = new Point(6, 6);
+            NavInstallBT.Name = "NavInstallBT";
+            NavInstallBT.Size = new Size(156, 44);
+            NavInstallBT.TabIndex = 1;
             // 
             // MainTC
             // 
@@ -991,7 +991,7 @@
             ImagesCB.SelectedColor = SystemColors.Highlight;
             ImagesCB.Size = new Size(109, 23);
             ImagesCB.TabIndex = 10;
-            ImagesCB.TextEmphasisColor = Color.FromArgb(220, 220, 220);
+            ImagesCB.TextEmphasisColor = Color.White;
             ImagesCB.TextEmphasisFont = new Font("Segoe UI", 9F, FontStyle.Bold);
             ImagesCB.SelectedIndexChanged += ImagesCB_SelectedIndexChanged;
             // 
@@ -1656,7 +1656,7 @@
             PlatformMediaPackCB.SelectedColor = SystemColors.Highlight;
             PlatformMediaPackCB.Size = new Size(231, 23);
             PlatformMediaPackCB.TabIndex = 7;
-            PlatformMediaPackCB.TextEmphasisColor = Color.FromArgb(220, 220, 220);
+            PlatformMediaPackCB.TextEmphasisColor = Color.White;
             PlatformMediaPackCB.TextEmphasisFont = new Font("Segoe UI", 9F, FontStyle.Bold);
             // 
             // InstallImagesBT
@@ -1738,7 +1738,7 @@
             IconMediaPackCB.SelectedColor = SystemColors.Highlight;
             IconMediaPackCB.Size = new Size(231, 23);
             IconMediaPackCB.TabIndex = 0;
-            IconMediaPackCB.TextEmphasisColor = Color.FromArgb(220, 220, 220);
+            IconMediaPackCB.TextEmphasisColor = Color.White;
             IconMediaPackCB.TextEmphasisFont = new Font("Segoe UI", 9F, FontStyle.Bold);
             // 
             // groupBox2
@@ -2319,7 +2319,7 @@
         private stigzler.Winforms.Base.UIElements.Button GamesSearchBT;
         private stigzler.Winforms.Base.UIElements.TextBox GamesSearchTB;
         private stigzler.Winforms.Base.UIElements.ListBox GamesListLB;
-        private NavButton NavGameslistBT;
+        //private NavButton NavGameslistBT;
         private stigzler.Winforms.Base.UIElements.ToolStrip GamesListControlsTS;
         private stigzler.Winforms.Base.UIElements.RichTextBox GameDetailsTB;
         private stigzler.Winforms.Base.UIElements.Panel GamesPN;
@@ -2363,15 +2363,12 @@
         private stigzler.Winforms.Base.UIElements.Label label27;
         private stigzler.Winforms.Base.UIElements.Label VersionLB;
         private NavButton NavInstallBT;
-        private NavButton NavGamesListBT;
+        //private NavButton NavGamesListBT;
         private NavButton NavUtiltiesBT;
-        //private NavButton NavSettingsBT;
         private NavButton NavAddGamesBT;
-        private NavButton navButton1;
-        private NavButton navButton5;
-        private NavButton navButton4;
-        private NavButton navButton3;
-        private NavButton navButton2;
         //private NavButton NavInstallBT;
+        //private NavButton NavGamesBT;
+        private NavButton NavGameslistBT;
+        //private NavButton NavUtilitiesBT;
     }
 }
