@@ -928,5 +928,13 @@ namespace C64DreamsTool
             }
             LoadImagesDropDowns();
         }
+
+        private void MarkAsInstalledBT_Click(object sender, EventArgs e)
+        {
+            Settings.Default.C64DInstalled = true;
+            Settings.Default.HotfixInstalled = true;
+            Settings.Default.MagsInstalled = true;
+            RefereshInstallationStatus();
+        }
     }
 }

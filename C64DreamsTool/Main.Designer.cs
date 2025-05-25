@@ -132,6 +132,7 @@
             VersionLB = new stigzler.Winforms.Base.UIElements.Label();
             label26 = new stigzler.Winforms.Base.UIElements.Label();
             groupBox4 = new stigzler.Winforms.Base.UIElements.GroupBox();
+            MarkAsInstalledBT = new stigzler.Winforms.Base.UIElements.Button();
             label29 = new stigzler.Winforms.Base.UIElements.Label();
             label28 = new stigzler.Winforms.Base.UIElements.Label();
             label27 = new stigzler.Winforms.Base.UIElements.Label();
@@ -2053,6 +2054,7 @@
             groupBox4.BorderColor = Color.FromArgb(100, 100, 100);
             groupBox4.BorderStyle = System.Drawing.Drawing2D.DashStyle.Solid;
             groupBox4.BorderThickness = 1;
+            groupBox4.Controls.Add(MarkAsInstalledBT);
             groupBox4.Controls.Add(label29);
             groupBox4.Controls.Add(label28);
             groupBox4.Controls.Add(label27);
@@ -2062,11 +2064,39 @@
             groupBox4.ForeColor = Color.FromArgb(220, 220, 220);
             groupBox4.Location = new Point(19, 36);
             groupBox4.Name = "groupBox4";
-            groupBox4.Size = new Size(501, 103);
+            groupBox4.Size = new Size(501, 132);
             groupBox4.TabIndex = 0;
             groupBox4.TabStop = false;
             groupBox4.Text = "Required";
             groupBox4.TitleColor = Color.FromArgb(220, 220, 220);
+            // 
+            // MarkAsInstalledBT
+            // 
+            MarkAsInstalledBT.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            MarkAsInstalledBT.BackColor = Color.FromArgb(55, 55, 55);
+            MarkAsInstalledBT.DefocusOnClick = true;
+            MarkAsInstalledBT.DisabledBackColor = Color.FromArgb(30, 30, 30);
+            MarkAsInstalledBT.DisabledBorderColor = Color.FromArgb(60, 60, 60);
+            MarkAsInstalledBT.DisabledForeColor = Color.FromArgb(125, 125, 125);
+            MarkAsInstalledBT.FlatAppearance.BorderColor = Color.FromArgb(100, 100, 100);
+            MarkAsInstalledBT.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 102, 215);
+            MarkAsInstalledBT.FlatStyle = FlatStyle.Flat;
+            MarkAsInstalledBT.Font = new Font("Segoe UI", 9F);
+            MarkAsInstalledBT.ForeColor = Color.FromArgb(240, 240, 240);
+            MarkAsInstalledBT.Image = Properties.Resources.greenCheck;
+            MarkAsInstalledBT.ImageAlign = ContentAlignment.TopRight;
+            MarkAsInstalledBT.Location = new Point(357, 99);
+            MarkAsInstalledBT.Name = "MarkAsInstalledBT";
+            MarkAsInstalledBT.Size = new Size(129, 25);
+            MarkAsInstalledBT.TabIndex = 10;
+            MarkAsInstalledBT.Text = "Mark as Installed";
+            MarkAsInstalledBT.TextImageRelation = TextImageRelation.TextBeforeImage;
+            MarkAsInstalledBT.ToolTip = MainTT;
+            MarkAsInstalledBT.ToolTipImage = null;
+            MarkAsInstalledBT.ToolTipText = "Marks C64Dreams as already installed. Use if running on a Launchbox installation with C64Dreams already installed.";
+            MarkAsInstalledBT.ToolTipTitle = "Mark as Installed";
+            MarkAsInstalledBT.UseVisualStyleBackColor = false;
+            MarkAsInstalledBT.Click += MarkAsInstalledBT_Click;
             // 
             // label29
             // 
@@ -2509,6 +2539,7 @@
         private stigzler.Winforms.Base.UIElements.Button RunLaunchboxBT;
         private stigzler.Winforms.Base.UIElements.Button RunBigBoxBT;
         private stigzler.Winforms.Base.UIElements.Button RefreshImageInstallBT;
+        private stigzler.Winforms.Base.UIElements.Button MarkAsInstalledBT;
         //private NavButton NavUtilitiesBT;
     }
 }
