@@ -44,11 +44,6 @@
             flowLayoutPanel1 = new stigzler.Winforms.Base.UIElements.FlowLayoutPanel();
             DarkLightModeBT = new stigzler.Winforms.Base.UIElements.Button();
             NavBarPN = new stigzler.Winforms.Base.UIElements.Panel();
-            NavUtilitiesBT = new NavButton();
-            NavGameslistBT = new NavButton();
-            NavGamesBT = new NavButton();
-            NavSettingsBT = new NavButton();
-            NavInstallBT = new NavButton();
             MainTC = new stigzler.Winforms.Base.UIElements.TabControl();
             InstallTP = new TabPage();
             InstallPN = new stigzler.Winforms.Base.UIElements.Panel();
@@ -141,6 +136,7 @@
             label20 = new stigzler.Winforms.Base.UIElements.Label();
             label21 = new stigzler.Winforms.Base.UIElements.Label();
             imageLabel1 = new stigzler.Winforms.Base.UIElements.ImageLabel();
+            navButton1 = new NavButton();
             TopLeftFLP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             statusStrip1.SuspendLayout();
@@ -370,87 +366,13 @@
             // 
             NavBarPN.BackColor = Color.FromArgb(35, 35, 35);
             NavBarPN.BackgroundShadeFactor = 1D;
-            NavBarPN.Controls.Add(NavUtilitiesBT);
-            NavBarPN.Controls.Add(NavGameslistBT);
-            NavBarPN.Controls.Add(NavGamesBT);
-            NavBarPN.Controls.Add(NavSettingsBT);
-            NavBarPN.Controls.Add(NavInstallBT);
+            NavBarPN.Controls.Add(navButton1);
             NavBarPN.Dock = DockStyle.Left;
             NavBarPN.ForeColor = Color.FromArgb(220, 220, 220);
             NavBarPN.Location = new Point(0, 48);
             NavBarPN.Name = "NavBarPN";
             NavBarPN.Size = new Size(160, 561);
             NavBarPN.TabIndex = 4;
-            // 
-            // NavUtilitiesBT
-            // 
-            NavUtilitiesBT.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            NavUtilitiesBT.BackColor = Color.FromArgb(32, 32, 32);
-            NavUtilitiesBT.BorderStyle = BorderStyle.FixedSingle;
-            NavUtilitiesBT.DarkMode = true;
-            NavUtilitiesBT.Image = Properties.Resources.utilities;
-            NavUtilitiesBT.Label = "Utilities";
-            NavUtilitiesBT.Location = new Point(4, 150);
-            NavUtilitiesBT.Name = "NavUtilitiesBT";
-            NavUtilitiesBT.Size = new Size(154, 43);
-            NavUtilitiesBT.TabIndex = 4;
-            NavUtilitiesBT.Click += NavUtilitiesBT_Click;
-            // 
-            // NavGameslistBT
-            // 
-            NavGameslistBT.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            NavGameslistBT.BackColor = Color.FromArgb(32, 32, 32);
-            NavGameslistBT.BorderStyle = BorderStyle.FixedSingle;
-            NavGameslistBT.DarkMode = true;
-            NavGameslistBT.Image = Properties.Resources.list;
-            NavGameslistBT.Label = "Games List";
-            NavGameslistBT.Location = new Point(4, 101);
-            NavGameslistBT.Name = "NavGameslistBT";
-            NavGameslistBT.Size = new Size(154, 43);
-            NavGameslistBT.TabIndex = 3;
-            NavGameslistBT.Click += NavGameslistBT_Click;
-            // 
-            // NavGamesBT
-            // 
-            NavGamesBT.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            NavGamesBT.BackColor = Color.FromArgb(32, 32, 32);
-            NavGamesBT.BorderStyle = BorderStyle.FixedSingle;
-            NavGamesBT.DarkMode = true;
-            NavGamesBT.Image = Properties.Resources.games;
-            NavGamesBT.Label = "Add Game";
-            NavGamesBT.Location = new Point(4, 52);
-            NavGamesBT.Name = "NavGamesBT";
-            NavGamesBT.Size = new Size(154, 43);
-            NavGamesBT.TabIndex = 2;
-            NavGamesBT.Click += NavGamesBT_Click;
-            // 
-            // NavSettingsBT
-            // 
-            NavSettingsBT.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            NavSettingsBT.BackColor = Color.FromArgb(32, 32, 32);
-            NavSettingsBT.BorderStyle = BorderStyle.FixedSingle;
-            NavSettingsBT.DarkMode = true;
-            NavSettingsBT.Image = Properties.Resources.settings;
-            NavSettingsBT.Label = "Settings + About";
-            NavSettingsBT.Location = new Point(4, 199);
-            NavSettingsBT.Name = "NavSettingsBT";
-            NavSettingsBT.Size = new Size(154, 43);
-            NavSettingsBT.TabIndex = 1;
-            NavSettingsBT.Click += NavSettingsBT_Click;
-            // 
-            // NavInstallBT
-            // 
-            NavInstallBT.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            NavInstallBT.BackColor = Color.FromArgb(32, 32, 32);
-            NavInstallBT.BorderStyle = BorderStyle.FixedSingle;
-            NavInstallBT.DarkMode = true;
-            NavInstallBT.Image = Properties.Resources.InstallPackage;
-            NavInstallBT.Label = "Install C64Dreams";
-            NavInstallBT.Location = new Point(3, 3);
-            NavInstallBT.Name = "NavInstallBT";
-            NavInstallBT.Size = new Size(154, 43);
-            NavInstallBT.TabIndex = 0;
-            NavInstallBT.Click += NavInstallBT_Click;
             // 
             // MainTC
             // 
@@ -2184,6 +2106,18 @@
             imageLabel1.ToolTipText = null;
             imageLabel1.ToolTipTitle = null;
             // 
+            // navButton1
+            // 
+            navButton1.BackColor = Color.Transparent;
+            navButton1.BorderStyle = BorderStyle.FixedSingle;
+            navButton1.DarkMode = true;
+            navButton1.Image = (Image)resources.GetObject("navButton1.Image");
+            navButton1.Label = "Text Here";
+            navButton1.Location = new Point(6, 6);
+            navButton1.Name = "navButton1";
+            navButton1.Size = new Size(148, 49);
+            navButton1.TabIndex = 0;
+            // 
             // Main
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -2366,5 +2300,6 @@
         private stigzler.Winforms.Base.UIElements.Label label28;
         private stigzler.Winforms.Base.UIElements.Label label27;
         private stigzler.Winforms.Base.UIElements.Label VersionLB;
+        private NavButton navButton1;
     }
 }
